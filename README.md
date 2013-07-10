@@ -28,10 +28,10 @@ Horizon is an extremely powerful framework to run WordPress websites on. Here ar
 
 ![Shortcodes](http://joemck.ie/wp-content/uploads/2013/07/shortcodes.png)
 
-**Issues and Feature Requests**
+**Issues & Feature Requests**
 ==========
 
-Issues will be tracked [here](https://github.com/joemckie/horizon-framework/issues), please if you find anything, make a note of it here, and I'll do my best to fix it!
+Issue and feature requests will be tracked [here](https://github.com/joemckie/horizon-framework/issues), please if you find anything or have an idea that will add to the project, make a note of it here, and I'll do my best to action it!
 
 **Contributors**
 ================

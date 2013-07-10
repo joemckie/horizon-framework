@@ -1,0 +1,43 @@
+@import '../../../../../includes/config.scss';
+
+$dev_mode_path: '../';
+$path: '_theme/templates/portfolio/revelio/';
+
+.search_results.portfolio-results.revelio-style {
+	
+	h1 {margin-bottom: 5px;}
+	
+	.portfolio-item {
+		margin-bottom: 65px;
+		position: relative;
+		text-align: center;
+	}
+	.portfolio-thumbnail {
+		@include border-radius(4px);
+		margin-bottom: 30px;
+		overflow: hidden;
+				
+		.flexslider {
+			img{@include border-radius(4px);}
+			li {list-style: none;}
+			.slides li {margin: 0;}
+		}
+		
+		.link-thumbnail,
+		.quote-thumbnail {
+			line-height: 2em;
+			padding: 30px 30px 30px 80px;
+			position: relative;
+			
+			i {
+				display: block;
+					height:100px;
+					width:60px;
+				position: absolute;
+					top:30px;
+					left: 30px;
+			}
+			p:last-child {margin: 0;}
+		}
+	}
+}

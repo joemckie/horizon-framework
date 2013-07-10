@@ -1,0 +1,67 @@
+/*! responsive-nav.js v1.0.14 by @viljamis */
+
+#responsive-menu {position: absolute; width: 90px;}
+#responsive-menu.alpha {left: 0;}
+#responsive-menu.omega {right: 0;}
+
+#responsive-nav ul {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	display: none;
+	list-style: none;
+}
+
+#responsive-nav ul.sub-menu {display: none;}
+#responsive-nav ul.sub-menu.active {display: block;}
+
+#responsive-nav li {
+	width: 100%;
+	display: block;
+	margin-bottom: 0;
+	padding: 5px;
+}
+
+#responsive-nav li ul {margin-left: 10px;}
+
+.js #responsive-nav {
+	padding: 1em 2em 2em 2em;
+	clip: rect(0 0 0 0);
+	position: absolute;
+	display: block;
+	overflow: hidden;
+	zoom: 1;
+}
+
+.js #responsive-nav > ul {
+	display:block; 
+	height: 100%;
+	visibility: hidden;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+
+}
+.js #responsive-nav.opened > ul {display:block; visibility: visible;}
+
+#responsive-nav.closed {visibility: hidden;}
+#responsive-nav.opened {visibility: visible;}
+
+#responsive-nav.animation {width: 0px;}
+
+#nav-toggle {
+	background-image: url("../../../_theme/images/icons/hamburger.gif");
+	background-repeat: no-repeat;
+	background-position: 50%;
+	height: 60px;
+	margin: 0 -2em 0em 0;
+	text-indent: -9999px;
+	overflow: hidden;
+	width: 70px;
+	display: block;
+}
+
+@media screen and (min-width: 40em) {
+	.js #responsive-nav {
+		position: relative;
+	}
+}

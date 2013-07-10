@@ -1,0 +1,198 @@
+/*
+ *
+ *  @copyright 2013 Joe McKie
+ *  @version 1.0
+ *  @author Joe McKie
+ * 	@link http://joemck.ie/
+ *
+ *	This file is part of the Horizon Framework.
+ *
+ *  Horizon Framework is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  Horizon Framework is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with the Horizon Framework.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ *	Horizon Framework is built and maintained by Joe McKie (http://joemck.ie/)
+ *
+*/
+
+#theme-options .closed {display:none;}
+#theme-options .open {display:block;}
+#theme-options a:active,
+#theme-options a:focus {outline:none !important;}
+#theme-options {
+	margin-top:20px; 
+	max-width:98%; 
+	min-width: 720px;
+}
+#theme-options h3 {
+	cursor:default;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 20px 15px;
+	margin: 0;
+	line-height: 1;
+}
+#theme-options h3:hover {color:#464646;}
+#theme-options h3 span {font-weight:inherit;}
+#theme-options select {
+	border-radius:0px;
+	color:#797979;
+	padding:1em;
+}
+#theme-options input[type="checkbox"] {margin-right: 3px;}
+#theme-options input[type="checkbox"].checktoggle,
+#theme-options input[type="radio"] {display:none;visibility:hidden;}
+#theme-options label.checkbox {
+	background:url(../images/icons/sprites/switches.png); 
+	background-position:0px 0px;
+	display:inline-block;
+	height:29px; 
+	width:69px;
+}
+#theme-options label.checkbox.checked {background-position:0px 30px;}
+#theme-options .typography-variants {display: none;}
+#theme-options .overlay {
+	background:#000;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	display:none;
+	height:100%;
+	padding-top:5em;
+	position:absolute;
+	opacity:0;
+	width:100%;
+}
+#theme-options .overlay #message_box {
+	background:#f9f9f9;
+	border:1px solid #333;
+	padding:2em;
+	position:relative;
+	margin: auto;
+	width:30px;
+}
+#theme-options .save-panel {padding:7px;}
+#theme-options .save-panel.top {border-bottom:1px solid #dfdfdf;}
+#theme-options .save-panel.bottom {border-top:1px solid #dfdfdf;}
+#theme-options #horizon-theme-options-sidebar {
+	clear:left;
+	color:#a4a4a4;
+	float:left;
+	margin:0;
+	padding:0;
+	width:187px;
+}
+#theme-options #horizon-theme-options-sidebar > li {
+	background:#f6f6f6;
+	border-top:1px solid #f9f9f9;
+	border-bottom:1px solid #ddd;
+	list-style:none;
+	margin-bottom:0;
+	position:relative;
+}
+#theme-options #horizon-theme-options-sidebar > li:hover > .wp-menu-name a {color: #8b8b8b;}
+#theme-options #horizon-theme-options-sidebar li ul.active {display:block;}
+#theme-options #horizon-theme-options-sidebar li ul {
+	background:#fff; 
+	border-top:1px solid #dfdfdf; 
+	display:none; 
+	margin:0; 
+	padding:0.5em 0.5em 0.5em 1em;
+}
+#theme-options #horizon-theme-options-sidebar li ul li {margin:10px 0;}
+#theme-options #horizon-theme-options-sidebar li div.wp-menu-name {
+	cursor:pointer;
+	font-weight:bold;
+	padding:11px 11px 11px 0;
+}
+#theme-options #horizon-theme-options-sidebar li div.menu-image {
+	background-image: url(../images/icons/menu/menu_icons.png); 
+	background-position-y: -32px; 
+	float:left; 
+	height:30px; 
+	width:30px;
+}
+#theme-options #horizon-theme-options-sidebar li.active div.menu-image {background-position-y: 0px;}
+#theme-options #horizon-theme-options-sidebar li.menu-icon.general div.menu-image {background-position-x:-119px} /* General */
+#theme-options #horizon-theme-options-sidebar li.menu-icon.elements div.menu-image {background-position-x:-90px;} /* Elements */
+#theme-options #horizon-theme-options-sidebar li.menu-icon.color div.menu-image {background-position-x:-2px} /* Colours */
+#theme-options #horizon-theme-options-sidebar li.menu-icon.typography div.menu-image {background-position-x:-32px;} /* Typography */
+#theme-options #horizon-theme-options-sidebar li.menu-icon.sidebars div.menu-image {background-position-x:-60px} /* Sidebar */
+#theme-options #horizon-theme-options-sidebar li.menu-icon.portfolio div.menu-image {background-position-x:-201px} /* Sidebar */
+#theme-options #horizon-theme-options-sidebar li.menu-icon.blog div.menu-image {background-position-x:-147px;} /* Sidebar */
+#theme-options #horizon-theme-options-sidebar li.menu-icon.custom-code div.menu-image {background-position-x:-175px;} /* Sidebar */
+#theme-options #horizon-theme-options-sidebar li.menu-icon.page div.menu-image {background-position-x:-227px;} /* Sidebar */
+#theme-options #horizon-theme-options-sidebar li.menu-icon.social div.menu-image {background-position-x:-255px;} /* Sidebar */
+#theme-options #horizon-theme-options-sidebar li.menu-icon.comments div.menu-image {background-position-x:-284px;} /* Sidebar */
+#theme-options #horizon-theme-options-sidebar li.menu-icon.header div.menu-image {background-position-x:-314px;} /* Sidebar */
+#theme-options #horizon-theme-options-sidebar li.menu-icon.footer div.menu-image {background-position-x:-344px;} /* Sidebar */
+
+#theme-options #horizon-theme-options-sidebar li a {color:#a4a4a4; text-decoration:none;}
+#theme-options #horizon-theme-options-sidebar li.active a.parent {color:#8b8b8b;}
+
+#theme-options #horizon-theme-options-sidebar li ul li {background:url(../images/icons/menu/right_arrow.png) no-repeat;}
+#theme-options #horizon-theme-options-sidebar li ul li a {
+	background:#fff; 
+	color:#a4a4a4;
+	line-height:15px;
+	transition:all 200ms ease-in;
+	-moz-transition:all 200ms ease-in;
+	-o-transition:all 200ms ease-in;
+	-webkit-transition:all 200ms ease-in;
+}
+#theme-options #horizon-theme-options-sidebar li ul li a:hover {text-decoration: underline;}
+#theme-options #horizon-theme-options-sidebar li ul li a.active {color:#8b8b8b !important; margin-left:22px;}
+
+#theme-options #horizon-theme-options-main-panel {
+	background:#fff;
+	border-left:1px solid #ddd;
+	margin-left:187px;
+	min-height:800px;
+	padding:20px 15px;
+}
+#theme-options #horizon-theme-options-main-panel h2 {border-bottom:1px solid #ddd; font-size:15px;margin:0 0 0.5em 0; padding-bottom:0.5em;}
+#theme-options #horizon-theme-options-main-panel .panel {display:none; width:100%;}
+#theme-options #horizon-theme-options-main-panel .panel.active {display:inline-block;}
+#theme-options #horizon-theme-options-main-panel .font-preview {
+	border:1px dashed #ddd;
+	border-radius:5px;
+	padding:20px;
+	margin-top: 11px;
+	max-width: 98%;
+	min-width: 720px;
+}
+#theme-options #horizon-theme-options-main-panel .template {display: none;}
+
+/* Sub elements */
+#theme-options #horizon-theme-options-main-panel .tab_list {margin: 15px 15px 0 15px;}
+#theme-options #horizon-theme-options-main-panel .tab_list li {
+	background:#fff;
+	border:1px solid #ddd;
+	display: none; 
+	float:left; 
+	margin: 5px;
+	position: relative;
+	width:30%;
+}
+#theme-options #horizon-theme-options-main-panel .tab_list li .delete-sub-item {
+	background:url(http://www.whichbigswitch.co.uk/resources/images/close.png) no-repeat; 
+	display:inline-block;
+	height:16px;
+	position: absolute;
+		top:-2px;
+		right:-2px;
+	width:16px;
+}
+#theme-options #horizon-theme-options-main-panel .tab_list li .tab_title {font-weight:bold;margin: 20px 20px 0 20px;}
+#theme-options #horizon-theme-options-main-panel .tab_list li .tab_input {margin: 5px 20px 20px 20px;}
+#theme-options #horizon-theme-options-main-panel .tab_list li textarea,
+#theme-options #horizon-theme-options-main-panel .tab_list li input {width:90% !important;}

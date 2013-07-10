@@ -1,0 +1,121 @@
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+
+/* Table of Contents
+==================================================
+    #Base 960 Grid
+    #Tablet (Portrait)
+    #Mobile (Portrait)
+    #Mobile (Landscape)
+    #Clearing */
+
+
+
+/* #Base 960 Grid
+================================================== */
+
+	div.page-wrapper {}
+	#responsive-menu {display:none; visibility:hidden; margin:0 auto;}
+	#responsive-menu select {width:100%;}
+    .container                                  { position: relative; width: 960px; margin: 0 auto; padding: 0; }
+    .full-width .container						{ padding: 0 30px 0 30px;width: 100%; }
+    .container .column,
+    .container .columns                         { float: left; display: inline; padding:0 10px; }
+    .row                                        { margin-bottom: 70px; }
+
+    /* Nested Column Classes */
+    .column.alpha, .columns.alpha               { padding-left: 0; }
+    .column.omega, .columns.omega               { padding-right: 0; }
+	
+	.border.top {border-top:1px dotted #ccc;}
+	.border.left {border-left:1px dotted #ccc;}
+	.border.bottom {border-bottom:1px dotted #ccc;}
+	.border.right {border-right:1px dotted #ccc;}
+	.border.none {border:none;}
+
+    /* Base Grid */
+    .container .one                     { width: 8.333%;  }
+	.container .outside-grid 			{ width: 12%; }
+    .container .two                     { width: 16.667%; }
+    .container .three                   { width: 25%; }
+    .container .four                    { width: 33.333%; }
+    .container .five                    { width: 41.667%; }
+    .container .six                     { width: 50%; }
+    .container .seven                   { width: 58.333%; }
+    .container .eight                   { width: 66.667%; }
+    .container .nine                    { width: 75%; }
+    .container .ten                     { width: 83.333%; }
+    .container .eleven                  { width: 91.667%; }
+    .container .twelve                  { width: 100%; }
+	
+	.container .column1-1 				{ width:100%; }
+	.container .column1-2 				{ width:50%; }
+	.container .column1-3 				{ width:33.333%; }
+	.container .column1-4 				{ width:25%; }
+	.container .column1-5 				{ width:20%; }
+	.container .column1-6 				{ width:16.667%; }
+	.container .column3-4 				{ width:75%; }
+	.container .column2-3 				{ width:66.667%; }
+	.container .column5-6 				{ width:83.333%; }
+
+
+    .container .one-third               { width: 33.333%; }
+    .container .two-thirds              { width: 66.667%; }
+
+    /* Offsets */
+    .container .offset-by-one           { margin-left: 8.333%;  }
+    .container .offset-by-two           { margin-left: 16.667%; }
+    .container .offset-by-three         { margin-left: 25%; }
+    .container .offset-by-four          { margin-left: 33.333%; }
+    .container .offset-by-five          { margin-left: 41.667%; }
+    .container .offset-by-six           { margin-left: 50%; }
+    .container .offset-by-seven         { margin-left: 58.333%; }
+    .container .offset-by-eight         { margin-left: 66.667%; }
+    .container .offset-by-nine          { margin-left: 75%; }
+    .container .offset-by-ten           { margin-left: 83.333%; }
+    .container .offset-by-eleven        { margin-left: 91.667%; }
+
+
+
+
+/* #Clearing
+================================================== */
+
+    /* Self Clearing Goodness */
+    .container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+    /* Use clearfix class on parent to clear nested columns,
+    or wrap each row of columns in a <div class="row"> */
+    .clearfix:before,
+    .clearfix:after,
+    .row:before,
+    .row:after {
+      content: '\0020';
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0; }
+    .row:after,
+    .clearfix:after {
+      clear: both; }
+    .row,
+    .clearfix {
+      zoom: 1; }
+
+    /* You can also use a <br class="clear" /> to clear columns */
+    .clear {
+      clear: both;
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }

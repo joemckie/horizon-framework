@@ -1,0 +1,65 @@
+/*
+*
+*	@version: 1.0.0
+*	@author: Joe McKie
+*	@link: http://joemck.ie/
+*	@copyright: Joe McKie 2013
+*
+*	This file is part of the Horizon Framework.
+*
+*   Horizon Framework is free software: you can redistribute it and/or modify
+*   it under the terms of the GNU General Public License as published by
+*   the Free Software Foundation, either version 3 of the License, or
+*   (at your option) any later version.
+*
+*   Horizon Framework is distributed in the hope that it will be useful,
+*   but WITHOUT ANY WARRANTY; without even the implied warranty of
+*   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*   GNU General Public License for more details.
+*
+*   You should have received a copy of the GNU General Public License
+*   along with the Horizon Framework.  If not, see <http://www.gnu.org/licenses/>.
+*
+*	Horizon Framework is built and maintained by Joe McKie (http://joemck.ie/)
+*
+*/
+.search_results.portfolio-results.revelio-style h1 {
+  margin-bottom: 5px; }
+.search_results.portfolio-results.revelio-style .portfolio-item {
+  margin-bottom: 65px;
+  position: relative;
+  text-align: center; }
+.search_results.portfolio-results.revelio-style .portfolio-thumbnail {
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  margin-bottom: 30px;
+  overflow: hidden; }
+  .search_results.portfolio-results.revelio-style .portfolio-thumbnail .flexslider img {
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    -webkit-border-radius: 4px; }
+  .search_results.portfolio-results.revelio-style .portfolio-thumbnail .flexslider li {
+    list-style: none; }
+  .search_results.portfolio-results.revelio-style .portfolio-thumbnail .flexslider .slides li {
+    margin: 0; }
+  .search_results.portfolio-results.revelio-style .portfolio-thumbnail .link-thumbnail,
+  .search_results.portfolio-results.revelio-style .portfolio-thumbnail .quote-thumbnail {
+    line-height: 2em;
+    padding: 30px 30px 30px 80px;
+    position: relative; }
+    .search_results.portfolio-results.revelio-style .portfolio-thumbnail .link-thumbnail i,
+    .search_results.portfolio-results.revelio-style .portfolio-thumbnail .quote-thumbnail i {
+      display: block;
+      height: 100px;
+      width: 60px;
+      position: absolute;
+      top: 30px;
+      left: 30px; }
+    .search_results.portfolio-results.revelio-style .portfolio-thumbnail .link-thumbnail p:last-child,
+    .search_results.portfolio-results.revelio-style .portfolio-thumbnail .quote-thumbnail p:last-child {
+      margin: 0; }

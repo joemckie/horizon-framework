@@ -1,0 +1,135 @@
+body{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 16px;font-weight: 400;}
+a{color: #00cbe9;text-decoration: none;font-weight: 400;}
+a:hover, a:focus{color: #3b3b3b;text-decoration: none;font-weight: 400;}
+h1{color: #666666;font-family: "Open Sans", sans-serif;;font-size: 50px;font-weight: 700;}
+h2{color: #666666;font-family: "Open Sans", sans-serif;;font-size: 30px;font-weight: 700;}
+h3{color: #666666;font-family: "Open Sans", sans-serif;;font-size: 24px;font-weight: 700;}
+h4{color: #666666;font-family: "Open Sans", sans-serif;;font-size: 21px;font-weight: 700;}
+h5{color: #666666;font-family: "Open Sans", sans-serif;;font-size: 17px;font-weight: 700;}
+h6{color: #666666;font-family: "Open Sans", sans-serif;;font-size: 14px;font-weight: 700;}
+::selection{background-color: #00cbe9;}
+.page-wrapper{background-color: #ffffff;}
+::selection{color: #ffffff;}
+.sf-menu > li a{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 14px;text-transform: uppercase;font-weight: 700;}
+.sf-menu li a:hover, .sf-menu li.sfHover > a{color: #00cbe9;}
+.sf-menu li.current-menu-ancestor > a, .sf-menu li.current-menu-item > a, .sf-menu li li.current-menu-item > a, .sf-menu li li.current-menu-ancestor > a, .sf-menu li li.current-menu-ancestor li.current-menu-item > a{color: #00cbe9;}
+sf-menu li ul li a, .sf-menu li ul li a{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 14px;text-transform: uppercase;font-weight: 700;}
+sf-menu li ul li a:hover, .sf-menu li ul li a:hover{color: #00cbe9;}
+.sf-menu li.current-menu-ancestor ul li.current-menu-item > a{color: #00cbe9;}
+#page-header h1{color: #ff5f59;font-family: "Open Sans", sans-serif;;font-size: 50px;font-weight: 300;}
+header{background-color: #ffffff;}
+.sf-menu li ul li a{background-color: #ffffff;}
+header ul.sub-menu li a{border-color: #ededed;}
+footer #footer h3{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 14px;font-weight: 700;}
+footer #footer a{color: #a7a7a7;}
+footer #footer a:hover, footer #footer a:focus{color: #ffffff;}
+footer #footer{color: #a7a7a7;font-family: "Helvetica Neue", sans-serif;;font-size: 14px;font-weight: 400;}
+footer #copyright{color: #a7a7a7;font-family: "Helvetica Neue", sans-serif;;font-size: 14px;font-weight: 400;}
+footer #copyright a{color: #c0c0c0;}
+footer #copyright a:hover, footer #copyright a:focus{color: #dadada;}
+footer #copyright{background-color: transparent;}
+.horizon-accordion h6, .horizon-toggle h6{color: #666666;font-family: "Open Sans", sans-serif;;font-size: 14px;font-weight: 700;}
+.horizon-accordion h6.ui-accordion-header-active{color: #ff5f59;}
+.horizon-accordion, .horizon-toggle{background-color: #ffffff;}
+.horizon-accordion, .horizon-accordion h6, .horizon-toggle, .horizon-toggle h6{border-color: #dfdfdf;}
+blockquote{color: #666666;font-family: "PT Sans", sans-serif;;font-size: 16px;font-style: italic;font-weight: 400;}
+blockquote{border-color: transparent;}
+.horizon-button, #submit{color: #ffffff;font-family: "PT Sans", sans-serif;;font-size: 16px;font-style: italic;font-weight: 400;}
+.horizon-button:hover, #submit:hover{color: #ffffff;}
+.horizon-button, #submit{background-color: #00cbe9;}
+.horizon-button:hover, #submit:hover{background-color: #3b3b3b;}
+.horizon-col-services .icon{background-color: #00cbe9;}
+.horizon-col-services .icon i{color: #ffffff;}
+.horizon-divider-colour{background-color: #efefef;}
+.horizon-scroll-to-top{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 16px;font-weight: 400;}
+.horizon-form input[type='text'], .horizon-form textarea, #respond input[type='text'], #respond textarea, .horizon_sidebar_wrapper #searchform input.searchbar{color: #666666;font-family: "PT Sans", sans-serif;;font-size: 18px;font-style: italic;font-weight: 400;}
+.horizon-form .required, #respond .required{color: #00cbe9;}
+.horizon-post-scroller .post-item h2 a{color: #666666;text-decoration: none;font-family: "Open Sans", sans-serif;;font-size: 50px;font-weight: 700;}
+.horizon-post-scroller .post-item h2 a:hover{color: #3b3b3b;text-decoration: none;}
+.horizon-post-scroller .post-info, .horizon-post-scroller .post-info a{color: #a7a7a7;text-decoration: none;font-family: "Helvetica Neue", sans-serif;;font-size: 12px;font-weight: 700;}
+.horizon-post-scroller .post-info a{font-weight: 700;}
+.horizon-post-scroller .post-info i{color: #dcdcdc;}
+pre{color: #666666;font-family: "Lekton", sans-serif;;font-size: 16px;font-weight: 400;}
+table, table tr, table tr td, table tr th{border-color: #dfdfdf;}
+table th{color: #666666;font-family: "Open Sans", sans-serif;;font-size: 16px;font-weight: 700;}
+table th{background-color: #ffffff;}
+.horizon-tabs ul.tabs-nav li a{color: #a7a7a7;font-family: "Helvetica Neue", sans-serif;;font-size: 18px;font-weight: 400;}
+.horizon-tabs ul.tabs-nav li a{background-color: #ffffff;}
+.horizon-tabs ul.tabs-nav li.ui-state-active a{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 18px;font-weight: 400;}
+.horizon-tabs ul.tabs-nav li.ui-state-active a{background-color: #ffffff;}
+.horizon-tabs .tabs-inner{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 16px;font-weight: 400;}
+.horizon-tabs .tabs-inner{background-color: #ffffff;}
+.horizon-tabs .tabs-inner{border-color: #dfdfdf;}
+.horizon-testimonials p{font-family: "PT Sans", sans-serif;;font-size: 16px;font-style: italic;font-weight: 400;}
+.horizon-testimonials strong.author{font-family: "Helvetica Neue", sans-serif;;font-size: 16px;font-weight: 700;}
+.search_results h4 a{color: #666666;font-family: "Open Sans", sans-serif;;font-size: 30px;font-weight: 700;}
+.vcard h6{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 18px;font-weight: 700;}
+.comment-body p{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 16px;font-weight: 400;}
+.commentmetadata{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 15px;font-weight: 400;}
+.bypostauthor .vcard h6{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 16px;font-weight: 700;}
+.horizon_sidebar_wrapper h3.custom-sidebar-title{color: #666666;font-family: "Open Sans", sans-serif;;font-size: 14px;text-transform: uppercase;font-weight: 700;}
+.horizon_sidebar_wrapper{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 14px;font-weight: 400;}
+.horizon_sidebar_wrapper .tagcloud a{color: #959595;font-family: "Helvetica Neue", sans-serif;;font-weight: 400;}
+.horizon_sidebar_wrapper .tagcloud a{background-color: #ffffff;}
+.horizon_sidebar_wrapper .tagcloud a{border-color: #e7e7e7;}
+.horizon_sidebar_wrapper .tagcloud a:hover{color: #7c7c7c;}
+.horizon_sidebar_wrapper .tagcloud a:hover{background-color: #ffffff;}
+.horizon_sidebar_wrapper .tagcloud a:hover{border-color: #cecece;}
+.single-blog-post.revelio-style .blog-title h2{color: #666666;font-family: "Montserrat", sans-serif;;font-size: 30px;font-weight: 700;}
+.single-blog-post.revelio-style .author-info{background-color: #efefef;}
+.single-blog-post.revelio-style .author-info h6{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 12px;font-weight: 700;}
+.single-blog-post.revelio-style .author-info .author-name{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 18px;font-weight: 700;}
+.single-blog-post.revelio-style .author-info{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 16px;font-weight: 400;}
+.single-blog-post.revelio-style .post-info .post-icon{background-color: #efefef;}
+.single-blog-post.revelio-style .post-info .post-icon{color: #a7a7a7;}
+.single-blog-post.revelio-style .post-info .post-icon:hover{background-color: #00cbe9;}
+.single-blog-post.revelio-style .post-info .post-icon:hover{color: #ffffff;}
+.single-blog-post.revelio-style .link-thumbnail i{color: #d7d7d7;}
+.single-blog-post.revelio-style .link-thumbnail a{color: #00cbe9;font-family: "Droid Serif", sans-serif;;font-size: 24px;font-style: italic;font-weight: 400;}
+.single-blog-post.revelio-style .link-thumbnail a:hover{color: #3b3b3b;}
+.single-blog-post.revelio-style .link-thumbnail p{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 16px;font-weight: 400;}
+.single-blog-post.revelio-style .quote-thumbnail i{color: #d7d7d7;}
+.single-blog-post.revelio-style .quote-thumbnail p{color: #666666;font-family: "Droid Serif", sans-serif;;font-size: 24px;font-style: italic;font-weight: 400;}
+.single-blog-post.revelio-style .quote-thumbnail span.author{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 18px;font-weight: 700;}
+.page-builder-blog.revelio-style .blog-title a{color: #666666;font-family: "Montserrat", sans-serif;;font-size: 30px;font-weight: 700;}
+.page-builder-blog.revelio-style .blog-title a:hover{color: #4d4d4d;text-decoration: none;}
+.page-builder-blog.revelio-style .post-info .post-icon{background-color: #efefef;}
+.page-builder-blog.revelio-style .post-info .post-icon{color: #a7a7a7;}
+.page-builder-blog.revelio-style .post-info .post-icon:hover{background-color: #00cbe9;}
+.page-builder-blog.revelio-style .post-info .post-icon:hover{color: #ffffff;}
+.page-builder-blog.revelio-style .link-thumbnail i{color: #d7d7d7;}
+.page-builder-blog.revelio-style .link-thumbnail a{color: #00cbe9;font-family: "Droid Serif", sans-serif;;font-size: 24px;font-style: italic;font-weight: 400;}
+.page-builder-blog.revelio-style .link-thumbnail a:hover{color: #3b3b3b;}
+.page-builder-blog.revelio-style .link-thumbnail p{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 16px;font-weight: 400;}
+.page-builder-blog.revelio-style .quote-thumbnail i{color: #d7d7d7;}
+.page-builder-blog.revelio-style .quote-thumbnail p{color: #666666;font-family: "Droid Serif", sans-serif;;font-size: 24px;font-style: italic;font-weight: 400;}
+.page-builder-blog.revelio-style .quote-thumbnail span.author{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 18px;font-weight: 700;}
+.search_results.blog-results.revelio-style .blog-title a{color: #666666;font-family: "Montserrat", sans-serif;;font-size: 30px;font-weight: 700;}
+.search_results.blog-results.revelio-style .blog-title a:hover{color: #4d4d4d;text-decoration: none;}
+.search_results.blog-results.revelio-style .post-info .post-icon{background-color: #efefef;}
+.search_results.blog-results.revelio-style .post-info .post-icon{color: #a7a7a7;}
+.search_results.blog-results.revelio-style .post-info .post-icon:hover{background-color: #00cbe9;}
+.search_results.blog-results.revelio-style .post-info .post-icon:hover{color: #ffffff;}
+.search_results.blog-results.revelio-style .link-thumbnail i{color: #d7d7d7;}
+.search_results.blog-results.revelio-style .link-thumbnail a{color: #00cbe9;font-family: "Droid Serif", sans-serif;;font-size: 24px;font-style: italic;font-weight: 400;}
+.search_results.blog-results.revelio-style .link-thumbnail a:hover{color: #3b3b3b;}
+.search_results.blog-results.revelio-style .link-thumbnail p{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 16px;font-weight: 400;}
+.search_results.blog-results.revelio-style .quote-thumbnail i{color: #d7d7d7;}
+.search_results.blog-results.revelio-style .quote-thumbnail p{color: #666666;font-family: "Droid Serif", sans-serif;;font-size: 24px;font-style: italic;font-weight: 400;}
+.search_results.blog-results.revelio-style .quote-thumbnail span.author{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 18px;font-weight: 700;}
+.single-blog-post .blog-image a.lightbox img:hover{opacity: ;}
+.single-blog-post.revelio-style .blog-line{background-color: #efefef;}
+.single-blog-post.revelio-style span.tooltip{background-color: #00cbe9;}
+.single-blog-post.revelio-style span.tooltip{color: #ffffff;}
+.single-blog-post.revelio-style .link-thumbnail{background-image: url(http://themes/horizon/wp-content/themes/horizon/_horizon/images/patterns/3.jpg);}
+.single-blog-post.revelio-style .quote-thumbnail{background-image: url(http://themes/horizon/wp-content/themes/horizon/_horizon/images/patterns/3.jpg);}
+.page-builder-blog.revelio-style .blog-line{background-color: #efefef;}
+.page-builder-blog.revelio-style span.tooltip{background-color: #00cbe9;}
+.page-builder-blog.revelio-style span.tooltip{color: #ffffff;}
+.page-builder-blog.revelio-style .link-thumbnail{background-image: url(http://themes/horizon/wp-content/themes/horizon/_horizon/images/patterns/3.jpg);}
+.page-builder-blog.revelio-style .quote-thumbnail{background-image: url(http://themes/horizon/wp-content/themes/horizon/_horizon/images/patterns/3.jpg);}
+.search_results.revelio-style .blog-line{background-color: #efefef;}
+.search_results.revelio-style span.tooltip{background-color: #00cbe9;}
+.search_results.revelio-style span.tooltip{color: #ffffff;}
+.search_results.revelio-style .link-thumbnail{background-image: url(http://themes/horizon/wp-content/themes/horizon/_horizon/images/patterns/3.jpg);}
+.search_results.revelio-style .quote-thumbnail{background-image: url(http://themes/horizon/wp-content/themes/horizon/_horizon/images/patterns/3.jpg);}

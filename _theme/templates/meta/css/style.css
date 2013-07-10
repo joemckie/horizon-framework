@@ -1,0 +1,56 @@
+/*
+*
+*	@version: 1.0.0
+*	@author: Joe McKie
+*	@link: http://joemck.ie/
+*	@copyright: Joe McKie 2013
+*
+*	This file is part of the Horizon Framework.
+*
+*   Horizon Framework is free software: you can redistribute it and/or modify
+*   it under the terms of the GNU General Public License as published by
+*   the Free Software Foundation, either version 3 of the License, or
+*   (at your option) any later version.
+*
+*   Horizon Framework is distributed in the hope that it will be useful,
+*   but WITHOUT ANY WARRANTY; without even the implied warranty of
+*   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*   GNU General Public License for more details.
+*
+*   You should have received a copy of the GNU General Public License
+*   along with the Horizon Framework.  If not, see <http://www.gnu.org/licenses/>.
+*
+*	Horizon Framework is built and maintained by Joe McKie (http://joemck.ie/)
+*
+*/
+.horizon-buttons a {
+  float: left;
+  color: #fff; }
+
+.horizon-button {
+  box-shadow: 0 1px 2px -1px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 10px 10px 0;
+  padding: 8px 15px;
+  outline: none;
+  width: auto; }
+  .horizon-button.rounded {
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    -webkit-border-radius: 4px; }
+  .horizon-button.small {
+    font-size: 12px;
+    padding: 8px 16px; }
+  .horizon-button.medium {
+    font-size: 14px;
+    padding: 10px 18px; }
+  .horizon-button.large {
+    font-size: 16px;
+    padding: 12px 20px; }
+
+.horizon-button:hover {
+  font-weight: inherit; }

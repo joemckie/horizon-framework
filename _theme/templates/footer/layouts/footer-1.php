@@ -1,0 +1,1 @@
+<div class="twelve columns"><?=horizon_get_dynamic_sidebar('Footer 1');?></div>

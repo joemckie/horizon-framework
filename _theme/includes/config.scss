@@ -1,0 +1,64 @@
+/*
+*
+*	@version: 1.0.0
+*	@author: Joe McKie
+*	@link: http://joemck.ie/
+*	@copyright: Joe McKie 2013
+*
+*	This file is part of the Horizon Framework.
+*
+*   Horizon Framework is free software: you can redistribute it and/or modify
+*   it under the terms of the GNU General Public License as published by
+*   the Free Software Foundation, either version 3 of the License, or
+*   (at your option) any later version.
+*
+*   Horizon Framework is distributed in the hope that it will be useful,
+*   but WITHOUT ANY WARRANTY; without even the implied warranty of
+*   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*   GNU General Public License for more details.
+*
+*   You should have received a copy of the GNU General Public License
+*   along with the Horizon Framework.  If not, see <http://www.gnu.org/licenses/>.
+*
+*	Horizon Framework is built and maintained by Joe McKie (http://joemck.ie/)
+*
+*/
+
+
+$dev_mode: true;
+
+@function format_image_path($dev_mode, $dev_mode_path, $path) {
+  @if ($dev_mode == true) {
+    @return $dev_mode_path;
+  } @else {
+    @return $path;
+  }
+}
+
+@mixin border-radius($radius) {
+	border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-o-border-radius: $radius;
+	-webkit-border-radius: $radius;
+}
+
+@mixin clear {
+    &:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+}
+
+@mixin transition ($transition) {
+	transition: $transition;
+	-moz-transition: $transition;
+	-ms-transition: $transition;
+	-o-transition: $transition;
+	-webkit-transition: $transition;
+}
+
+@mixin opacity ($opacity) {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$opacity+")";
+	filter: alpha(opacity=$opacity);
+	-moz-opacity: $opacity;
+	-khtml-opacity: $opacity;
+	opacity: $opacity;
+}

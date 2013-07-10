@@ -36,6 +36,8 @@ Issue and feature requests will be tracked [here](https://github.com/joemckie/ho
 **Contributors**
 ================
 
-If you want to contribute to the project, please do so, but you **MUST test before you commit**! Anyone who contributes will be referenced below:
+If you want to contribute to the project, please do so, but you **MUST test before you commit**! 
+
+Anyone who contributes will be referenced below:
 
 * No contributors yet... :(

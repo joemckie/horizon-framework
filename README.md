@@ -11,6 +11,13 @@ Here it is! A boilerplate theme for the Horizon Framework.
 
 Feel free to use this however you want, and please contact me if you need any help, I'd be more than willing to help out.
 
+**Quick Start**
+===============
+
+1. Import the SAMPLE_DATA.xml file using WordPress Import plugin (tools -> import -> WordPress)
+2. Dry-save the admin panel (load it up and hit save)
+3. Set the left and right menus respectively in the menu page
+
 **Features**
 ============
 

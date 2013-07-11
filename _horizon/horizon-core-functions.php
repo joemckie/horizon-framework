@@ -248,7 +248,7 @@
 	// Get all google fonts
 	function horizon_get_google_fonts($api="AIzaSyCLXgNjOCHlE_3fHng8HUMkTTXd7DVfuyE"){
 		$all_fonts = json_decode(horizon_get_file("https://www.googleapis.com/webfonts/v1/webfonts?key=".$api));
-		foreach ($all_fonts as $fonts){
+		foreach ((array)$all_fonts as $fonts){
 			if(gettype($fonts) !== "string") {
 				foreach($fonts as $font){
 					$google_fonts[] = $font;

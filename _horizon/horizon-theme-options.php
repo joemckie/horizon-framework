@@ -710,7 +710,7 @@
 	
 	$loaded_fonts = array();
 	$google_fonts = horizon_get_google_fonts();
-	foreach($google_fonts as $google_font){
+	foreach((array)$google_fonts as $google_font){
 		$google_fonts_array[$google_font->family] = $google_font;
 	}
 	$basic_fonts = array(

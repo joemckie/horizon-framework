@@ -33,10 +33,8 @@
 		"_horizon/horizon-core-filters.php",
 		"_horizon/horizon-core-functions.php",
 		"_horizon/horizon-page-builder.php",
-		"_horizon/horizon-theme-options.php",
 		"_horizon/horizon-ajax-functions.php",
 		"_horizon/horizon-shortcodes.php",
-		"_horizon/horizon-custom-styles.php",
 		"_horizon/horizon-custom-scripts.php",
 		// plugins
 		"_horizon/plugins/dropdown-menus.php",
@@ -46,15 +44,25 @@
 		// Custom Widgets
 		"_horizon/custom-widgets/recent-portfolios.php",
 		"_horizon/custom-widgets/twitter-feed.php",
-		// meta
+	);
+	$admin_array = array(
+		"_horizon/horizon-theme-options.php",
 		"_horizon/meta/meta-print-templates.php",
 		"_horizon/meta/page-meta.php",
 		"_horizon/meta/post-meta.php",
-		
+		"_horizon/horizon-custom-styles.php",
 	);
+	
 	foreach($include_array as $include){
 		$t = horizon_get_root_directory( $include );
 		require_once($t . $include); 
+	}
+	
+	if(is_admin()){
+		foreach($admin_array as $include){
+			$t = horizon_get_root_directory( $include );
+			require_once($t . $include); 
+		}
 	}
 			
 ?>

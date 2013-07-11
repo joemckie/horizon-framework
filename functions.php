@@ -48,24 +48,7 @@
 	
 	$include_array = array(
 		// Include Horizon
-		"_horizon/horizon-register-functions.php",
-		"_horizon/horizon-core-hooks.php",
-		"_horizon/horizon-core-filters.php",
-		"_horizon/horizon-core-functions.php",
-		"_horizon/horizon-page-builder.php",
-		"_horizon/horizon-theme-options.php",
-		"_horizon/horizon-ajax-functions.php",
-		"_horizon/horizon-shortcodes.php",
-		"_horizon/horizon-custom-styles.php",
-		"_horizon/horizon-custom-scripts.php",
-		// plugins
-		"_horizon/plugins/dropdown-menus.php",
-		// Custom Post Types
-		"_horizon/custom-pt/testimonial.php",
-		"_horizon/custom-pt/portfolio.php",
-		// Custom Widgets
-		"_horizon/custom-widgets/recent-portfolios.php",
-		"_horizon/custom-widgets/twitter-feed.php",
+		"_horizon/horizon-bootstrap.php",
 		// Custom theme files
 		"_theme/includes/hooks.php",
 		"_theme/includes/custom-styles.php",
@@ -73,11 +56,6 @@
 		"_theme/includes/theme-abilities.php",
 		"_theme/options/page.php",
 		"_theme/options/theme-options.php",
-		// meta
-		"_horizon/meta/meta-print-templates.php",
-		"_horizon/meta/page-meta.php",
-		"_horizon/meta/post-meta.php",
-		
 	);
 		
 	foreach($include_array as $include){

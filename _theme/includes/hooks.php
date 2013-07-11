@@ -50,12 +50,12 @@
 			define( 'PORTFOLIO_SINGLE_STYLE', horizon_create_slug(get_option( THEME_SHORT_NAME.'_options_portfolio_single_type', '' )) );
 			
 		$config_array = array(
-			TEMPLATE_PATH.'/blog/single-post/'.BLOG_SINGLE_STYLE.'/config/config.php',
-			TEMPLATE_PATH.'/blog/section/'.BLOG_STYLE.'/config/config.php',
-			TEMPLATE_PATH.'/blog/archive/'.BLOG_ARCHIVE_STYLE.'/config/config.php',
-			TEMPLATE_PATH.'/portfolio/single-post/'.PORTFOLIO_SINGLE_STYLE.'/config/config.php',
-			TEMPLATE_PATH.'/portfolio/section/'.PORTFOLIO_STYLE.'/config/config.php',
-			TEMPLATE_PATH.'/portfolio/archive/'.PORTFOLIO_ARCHIVE_STYLE.'/config/config.php',
+			TEMPLATE_PATH.'/blog/single-post/'.BLOG_SINGLE_STYLE.'horizon/config/config.php',
+			TEMPLATE_PATH.'/blog/section/'.BLOG_STYLE.'horizon/config/config.php',
+			TEMPLATE_PATH.'/blog/archive/'.BLOG_ARCHIVE_STYLE.'horizon/config/config.php',
+			TEMPLATE_PATH.'/portfolio/single-post/'.PORTFOLIO_SINGLE_STYLE.'horizon/config/config.php',
+			TEMPLATE_PATH.'/portfolio/section/'.PORTFOLIO_STYLE.'horizon/config/config.php',
+			TEMPLATE_PATH.'/portfolio/archive/'.PORTFOLIO_ARCHIVE_STYLE.'horizon/config/config.php',
 		);
 		
 		return $config_array;
@@ -65,9 +65,9 @@
 	add_action('horizon_include_theme_admin_scripts', 'horizon_include_theme_admin_scripts');
 	function horizon_include_theme_admin_scripts(){
 		$js_array = array(
-			TEMPLATE_PATH.'/blog/single-post/'.BLOG_SINGLE_STYLE.'/config/config.js',
-			TEMPLATE_PATH.'/blog/section/'.BLOG_STYLE.'/config/config.js',
-			TEMPLATE_PATH.'/blog/archive/'.BLOG_ARCHIVE_STYLE.'/config/config.js',
+			TEMPLATE_PATH.'/blog/single-post/'.BLOG_SINGLE_STYLE.'horizon/config/config.js',
+			TEMPLATE_PATH.'/blog/section/'.BLOG_STYLE.'horizon/config/config.js',
+			TEMPLATE_PATH.'/blog/archive/'.BLOG_ARCHIVE_STYLE.'horizon/config/config.js',
 		);
 		$i=0;
 		foreach($js_array as $path){

@@ -261,8 +261,15 @@
 	
 	.left {float: left;}
 	.right {float: right;}
-
-
-/* #WordPress Styles
-================================================== */
-
+	
+	.dev_toolbar {
+		background: #333;
+		box-shadow: 0px 6px 10px rgba(0,0,0,0.85);
+		color: #fff;
+		padding: 10px;
+		position: fixed;
+			bottom: 0;
+			left: 0;
+		width: 100%;
+	}
+	.dev-mode .body-wrap {padding-bottom: 60px;}

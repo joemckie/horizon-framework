@@ -51,7 +51,8 @@
 	// Register custom menus
 	if(function_exists( 'register_nav_menus' )){
 		register_nav_menus(array(
-			'main_menu' => "Main Menu",
+			'left_menu' => "Left Menu",
+			'right_menu' => "Right Menu",
 		));
 	}
 	

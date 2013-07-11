@@ -60,7 +60,8 @@ jQuery(document).ready(function($) {
 	});
 	
 	// Switch individual panels
-	$(".panel_link").click(function(){
+	$(".panel_link").click(function(e){
+        e.preventDefault();
 		// Find active tab
 		var sidebar_active = sidebar.children("li.active");
 		var menu_active = sidebar_active.children("ul.active");

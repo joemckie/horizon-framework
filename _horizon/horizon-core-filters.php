@@ -143,7 +143,7 @@
 	 
 	add_filter( 'wp_trim_excerpt', 'horizon_custom_excerpt_more' );
 	function horizon_custom_excerpt_more( $excerpt ) {
-		$excerpt_more = apply_filters('horizon_excerpt_more', $excerpt_more);
+		$excerpt_more = apply_filters('horizon_excerpt_more', $excerpt);
 		return str_replace( '[...]', $excerpt_more, $excerpt );
 	}
 	

@@ -472,6 +472,8 @@
 	// Determine which save function to run depending on the post type
 	add_action( 'save_post', 'horizon_save_metas' );
 	function horizon_save_metas ($id) {
+		if(!$_POST) return;
+		
 		switch($_POST['post_type']):
 		
 			case "gallery": 

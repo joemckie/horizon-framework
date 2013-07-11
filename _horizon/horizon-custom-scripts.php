@@ -144,10 +144,6 @@
 		wp_register_style( 'base', ROOT.'/_theme/css/base.css', false, '1.0', 'all' );
 		wp_enqueue_style( 'base' );
 		
-		wp_deregister_style( 'layout' );
-		wp_register_style( 'layout', ROOT.'/_theme/css/layout.css', false, '1.0', 'all' );
-		wp_enqueue_style( 'layout' );
-		
 		wp_deregister_style( 'custom-styles' );
 		wp_register_style( 'custom-styles', ROOT.'/custom-styles.css', false, '1.0', 'all' );
 		wp_enqueue_style( 'custom-styles' );

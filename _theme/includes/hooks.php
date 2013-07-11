@@ -32,22 +32,22 @@
 		global $config_array;
 		
 		if(!defined('BLOG_STYLE'))
-			define( 'BLOG_STYLE', horizon_create_slug(get_option( THEME_SHORT_NAME.'_options_blog_type', '' )) );
+			define( 'BLOG_STYLE', horizon_create_slug(get_option( THEME_SHORT_NAME.'_options_blog_type', 'horizon' )) );
 			
 		if(!defined('BLOG_ARCHIVE_STYLE'))
-			define( 'BLOG_ARCHIVE_STYLE', horizon_create_slug(get_option( THEME_SHORT_NAME.'_options_blog_archive_type', '' )) );
+			define( 'BLOG_ARCHIVE_STYLE', horizon_create_slug(get_option( THEME_SHORT_NAME.'_options_blog_archive_type', 'horizon' )) );
 			
 		if(!defined('BLOG_SINGLE_STYLE'))
-			define( 'BLOG_SINGLE_STYLE', horizon_create_slug(get_option( THEME_SHORT_NAME.'_options_blog_single_type', '' )) );
+			define( 'BLOG_SINGLE_STYLE', horizon_create_slug(get_option( THEME_SHORT_NAME.'_options_blog_single_type', 'horizon' )) );
 			
 		if(!defined('PORTFOLIO_STYLE'))
-			define( 'PORTFOLIO_STYLE', horizon_create_slug(get_option( THEME_SHORT_NAME.'_options_portfolio_type', '' )) );
+			define( 'PORTFOLIO_STYLE', horizon_create_slug(get_option( THEME_SHORT_NAME.'_options_portfolio_type', 'horizon' )) );
 			
 		if(!defined('PORTFOLIO_ARCHIVE_STYLE'))
-			define( 'PORTFOLIO_ARCHIVE_STYLE', horizon_create_slug(get_option( THEME_SHORT_NAME.'_options_portfolio_archive_type', '' )) );
+			define( 'PORTFOLIO_ARCHIVE_STYLE', horizon_create_slug(get_option( THEME_SHORT_NAME.'_options_portfolio_archive_type', 'horizon' )) );
 			
 		if(!defined('PORTFOLIO_SINGLE_STYLE'))
-			define( 'PORTFOLIO_SINGLE_STYLE', horizon_create_slug(get_option( THEME_SHORT_NAME.'_options_portfolio_single_type', '' )) );
+			define( 'PORTFOLIO_SINGLE_STYLE', horizon_create_slug(get_option( THEME_SHORT_NAME.'_options_portfolio_single_type', 'horizon' )) );
 		
 		$config_array = array(
 			TEMPLATE_PATH.'/blog/single-post/'.BLOG_SINGLE_STYLE.'/config/config.php',

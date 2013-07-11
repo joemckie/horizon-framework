@@ -28,7 +28,7 @@
 
 	get_header();
 	do_action( 'horizon_before_404' );
-	?>
+?>
 	   	<div class="container">
 	   		<div class="row">
 	   			<!-- START CONTENT -->
@@ -40,8 +40,7 @@
 		        </div>
 		    </div>
 	    </div><!-- end container -->
-	<?php 
+<?php 
 	do_action( 'horizon_after_404' );
 	get_footer(); 
-	
 ?>

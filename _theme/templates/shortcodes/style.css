@@ -18,7 +18,7 @@ blockquote.center {
   -webkit-border-radius: 4px;
   margin-bottom: 30px; }
   .horizon-accordion h6 {
-    background: url("accordion/images/closed.png") no-repeat 96.5% center;
+    background: url("_theme/templates/shortcodes/accordion/images/closed.png") no-repeat 96.5% center;
     border-style: solid;
     border-width: 1px 0 0 0;
     cursor: pointer;
@@ -29,7 +29,7 @@ blockquote.center {
     .horizon-accordion h6:first-child {
       border-top: none; }
     .horizon-accordion h6.ui-state-active {
-      background: url("accordion/images/opened.png") no-repeat 96.5% center; }
+      background: url("_theme/templates/shortcodes/accordion/images/opened.png") no-repeat 96.5% center; }
   .horizon-accordion p {
     padding: 0 20px 20px 20px;
     margin-bottom: 0; }
@@ -44,7 +44,7 @@ blockquote.center {
   -webkit-border-radius: 4px;
   margin-bottom: 30px; }
   .horizon-toggle h6 {
-    background: url("accordion/images/closed.png") no-repeat 96.5% center;
+    background: url("_theme/templates/shortcodes/accordion/images/closed.png") no-repeat 96.5% center;
     border-style: solid;
     border-width: 1px 0 0 0;
     cursor: pointer;
@@ -55,7 +55,7 @@ blockquote.center {
     .horizon-toggle h6:first-child {
       border-top: none; }
     .horizon-toggle h6.active {
-      background: url("accordion/images/opened.png") no-repeat 96.5% center; }
+      background: url("_theme/templates/shortcodes/accordion/images/opened.png") no-repeat 96.5% center; }
   .horizon-toggle div {
     display: none; }
   .horizon-toggle div.active {
@@ -211,7 +211,7 @@ blockquote.center {
 .horizon-shortcode-list ul {
   margin-bottom: 0 !important; }
 .horizon-shortcode-list li {
-  background: url("list/images/bullets.png") no-repeat;
+  background: url("_theme/templates/shortcodes/list/images/bullets.png") no-repeat;
   margin: 0 !important;
   padding: 5px 5px 5px 25px !important; }
 .horizon-shortcode-list.check li {

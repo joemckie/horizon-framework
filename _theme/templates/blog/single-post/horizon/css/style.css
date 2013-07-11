@@ -35,9 +35,9 @@
       .single-blog-post.horizon-style .blog-thumbnail .quote-thumbnail p:last-child {
         margin: 0; }
     .single-blog-post.horizon-style .blog-thumbnail .link-thumbnail .icon {
-      background-image: url("../images/url.png"); }
+      background-image: url("_theme/templates/blog/single-post/horizon/images/url.png"); }
     .single-blog-post.horizon-style .blog-thumbnail .quote-thumbnail .icon {
-      background-image: url("../images/post_quotes.png"); }
+      background-image: url("_theme/templates/blog/single-post/horizon/images/post_quotes.png"); }
   .single-blog-post.horizon-style ul li {
     list-style: disc;
     margin: 0 0 6px 40px; }

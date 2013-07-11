@@ -1607,24 +1607,24 @@
 					"type" => "select",
 					"name" => THEME_SHORT_NAME. "_options_blog_type",
 					"title" => "Blog Type",
-					"default" => "SECTION STYLE",
-					"options" => array("SECTION STYLE"),
+					"default" => "horizon",
+					"options" => array("horizon"),
 					"description" => "Layout style of the blog listings."
 				),
 				__("Blog Single Type") => array(
 					"type" => "select",
 					"name" => THEME_SHORT_NAME. "_options_blog_single_type",
 					"title" => "Blog Single Type",
-					"default" => "SINGLE POST STYLE",
-					"options" => array("SINGLE POST STYLE"),
+					"default" => "horizon",
+					"options" => array("horizon"),
 					"description" => "Layout style of the single blog posts."
 				),
 				__("Blog Archive Type") => array(
 					"type" => "select",
 					"name" => THEME_SHORT_NAME. "_options_blog_archive_type",
 					"title" => "Blog Archive Type",
-					"default" => "ARCHIVE STYLE",
-					"options" => array("ARCHIVE STYLE"),
+					"default" => "horizon",
+					"options" => array("horizon"),
 					"description" => "Layout style of the archive blog posts."
 				),
 				__("Default Post Title") => array(
@@ -1664,24 +1664,24 @@
 					"type" => "select",
 					"name" => THEME_SHORT_NAME. "_options_portfolio_type",
 					"title" => "Portfolio Type",
-					"default" => "SECTION STYLE",
-					"options" => array("SECTION STYLE"),
+					"default" => "horizon",
+					"options" => array("horizon"),
 					"description" => "Layout style of the portfolio listings."
 				),
 				__("Portfolio Single Type") => array(
 					"type" => "select",
 					"name" => THEME_SHORT_NAME. "_options_portfolio_single_type",
 					"title" => "Portfolio Single Type",
-					"default" => "SINGLE POST STYLE",
-					"options" => array("SINGLE POST STYLE"),
+					"default" => "horizon",
+					"options" => array("horizon"),
 					"description" => "Layout style of the single portfolio posts."
 				),
 				__("Portfolio Archive Type") => array(
 					"type" => "select",
 					"name" => THEME_SHORT_NAME. "_options_portfolio_archive_type",
 					"title" => "Portfolio Archive Type",
-					"default" => "ARCHIVE STYLE",
-					"options" => array("ARCHIVE STYLE"),
+					"default" => "horizon",
+					"options" => array("horizon"),
 					"description" => "Layout style of the archive portfolio posts."
 				),
 				__("Default Post Title") => array(

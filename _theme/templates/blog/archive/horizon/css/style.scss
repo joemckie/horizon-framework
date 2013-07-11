@@ -1,0 +1,12 @@
+@import '../../../../../includes/config.scss';
+
+// insert the style name here 
+// and it will compile in the CSS
+$style: 'horizon';
+
+$dev_mode_path: '../';
+$path: '_theme/templates/blog/#{$style}/';
+
+.search_results.blog-results.#{$style}-style {
+display: block;
+}

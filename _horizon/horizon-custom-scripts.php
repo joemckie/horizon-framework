@@ -183,8 +183,7 @@
 	
 	function horizon_localise_meta (){
 		global $page_meta_boxes;
-		
-		wp_localize_script('page-builder', 'meta', $page_meta_boxes["Page Builder"]);
+		wp_localize_script('page-builder', 'meta', $page_meta_boxes['page-builder']["Page Builder"]);
 	}
 
 	function horizon_load_colour_picker() {

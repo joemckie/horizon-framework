@@ -26,18 +26,29 @@
 	*
 	*/
 	
-	add_action( 'init', 'horizon_set_variable_styles' );
+	//add_action( 'init', 'horizon_set_variable_styles' );
 	add_action( 'horizon_set_variable_styles', 'horizon_set_variable_styles' );
 	function horizon_set_variable_styles() {
 		global $config_array;
-	
-		define( 'BLOG_STYLE', horizon_create_slug(get_option( THEME_SHORT_NAME.'_options_blog_type', '' )) );
-		define( 'BLOG_ARCHIVE_STYLE', horizon_create_slug(get_option( THEME_SHORT_NAME.'_options_blog_archive_type', '' )) );
-		define( 'BLOG_SINGLE_STYLE', horizon_create_slug(get_option( THEME_SHORT_NAME.'_options_blog_single_type', '' )) );
-		define( 'PORTFOLIO_STYLE', horizon_create_slug(get_option( THEME_SHORT_NAME.'_options_portfolio_type', '' )) );
-		define( 'PORTFOLIO_ARCHIVE_STYLE', horizon_create_slug(get_option( THEME_SHORT_NAME.'_options_portfolio_archive_type', '' )) );
-		define( 'PORTFOLIO_SINGLE_STYLE', horizon_create_slug(get_option( THEME_SHORT_NAME.'_options_portfolio_single_type', '' )) );
 		
+		if(!defined('BLOG_STYLE'))
+			define( 'BLOG_STYLE', horizon_create_slug(get_option( THEME_SHORT_NAME.'_options_blog_type', '' )) );
+			
+		if(!defined('BLOG_ARCHIVE_STYLE'))
+			define( 'BLOG_ARCHIVE_STYLE', horizon_create_slug(get_option( THEME_SHORT_NAME.'_options_blog_archive_type', '' )) );
+			
+		if(!defined('BLOG_SINGLE_STYLE'))
+			define( 'BLOG_SINGLE_STYLE', horizon_create_slug(get_option( THEME_SHORT_NAME.'_options_blog_single_type', '' )) );
+			
+		if(!defined('PORTFOLIO_STYLE'))
+			define( 'PORTFOLIO_STYLE', horizon_create_slug(get_option( THEME_SHORT_NAME.'_options_portfolio_type', '' )) );
+			
+		if(!defined('PORTFOLIO_ARCHIVE_STYLE'))
+			define( 'PORTFOLIO_ARCHIVE_STYLE', horizon_create_slug(get_option( THEME_SHORT_NAME.'_options_portfolio_archive_type', '' )) );
+			
+		if(!defined('PORTFOLIO_SINGLE_STYLE'))
+			define( 'PORTFOLIO_SINGLE_STYLE', horizon_create_slug(get_option( THEME_SHORT_NAME.'_options_portfolio_single_type', '' )) );
+			
 		$config_array = array(
 			TEMPLATE_PATH.'/blog/single-post/'.BLOG_SINGLE_STYLE.'/config/config.php',
 			TEMPLATE_PATH.'/blog/section/'.BLOG_STYLE.'/config/config.php',

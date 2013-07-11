@@ -1,5 +1,5 @@
 <?php global $portfolio_atts; ?>
-<div class="page-builder-portfolio INSERT-STYE-HERE-style clearfix">
+<div class="page-builder-portfolio horizon-style clearfix">
 	<?php 
 		if((string)$portfolio_atts['title'] != ""){
 			echo '<h2 class="section-title">'.$portfolio_atts['title'].'</h2>';

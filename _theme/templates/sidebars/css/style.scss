@@ -2,8 +2,6 @@
 
 .horizon_sidebar_wrapper {
 
-	margin-bottom: 70px;
-	
 	h3 {line-height:inherit;}
 	.custom-sidebar {
 		margin-bottom: 20px;
@@ -15,7 +13,7 @@
 		&:last-child {border-bottom: 0; padding-bottom: 0;}
 	}
 	&.three {
-		.custom-sidebar #searchform input {width: 172px;}
+		.custom-sidebar #searchform input {width: 192px;}
 	}
 }
 
@@ -23,12 +21,8 @@
 .tagcloud a {
 	@include border-radius(4px);
 	border:1px solid;
-	box-shadow: 0 1px 2px -1px rgba(#000, 0.25);
 	display: inline-block;
 	line-height: 13px;
 	margin-bottom: 5px;
 	padding: 5px 12px;	
-}
-.tagcloud a:hover {
-	box-shadow: 0 1px 2px -1px rgba(#000,0.25);
 }

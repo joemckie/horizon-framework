@@ -2,7 +2,6 @@
 
 body {line-height: 1.5em;}
 
-//* {box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;}
 .content-box {box-sizing: content-box !important; -moz-box-sizing: content-box !important; -webkit-box-sizing: content-box !important;}
 
 a {
@@ -28,7 +27,42 @@ pre {line-height: 24px; margin-bottom: 30px; padding: 30px;}
 
 .horizon-form,
 #respond {
-	// Insert comment form styling here
+	div.input-wrap {
+		border: 1px solid #dfdfdf;
+		border-radius: 3px;
+		margin: 0 0 20px 0;
+		position: relative;
+		
+		span.required {
+			font-size: 30px;
+			line-height: 12px;
+			position: absolute;
+				top:27px;
+				right: 25px;
+			vertical-align: middle;
+		}
+		
+		&.required {
+			input {padding-right: 50px;}
+			
+			span.required {display: block;}
+		}
+
+		* {display: inline-block; vertical-align: middle;}
+		input,
+		textarea,
+		button {
+			border: 0;
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			margin: 0;
+			padding: 16px 60px 16px 16px;
+			width: 100%;
+		}
+		textarea {height: 200px;}
+	}
+	button {width: 100%;}
 }
 
 .border-left {

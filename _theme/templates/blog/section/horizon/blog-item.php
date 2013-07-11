@@ -6,10 +6,10 @@
 			<h2><a href="<?=get_permalink();?>"><?=get_the_title();?></a></h2>
 		</div>
 		
-		<?php get_template_part( TEMPLATE_PATH.'/blog/section/revelio/post-info' ); ?>
+		<?php get_template_part( TEMPLATE_PATH.'/blog/section/'.BLOG_STYLE.'/post-info' ); ?>
 		
 		<div class="blog-thumbnail">
-			<?php get_template_part( TEMPLATE_PATH.'/blog/section/revelio/thumbnail' ); ?>
+			<?php get_template_part( TEMPLATE_PATH.'/blog/section/'.BLOG_STYLE.'/thumbnail' ); ?>
 		</div>
 		
 		<?php echo horizon_filter_content(get_the_excerpt()); ?>

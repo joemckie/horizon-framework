@@ -1,7 +1,52 @@
 @import '../../../../../includes/config.scss';
 
 $dev_mode_path: '../';
-$path: '_theme/templates/portfolio/INSERT STYLE HERE/';
+$path: '_theme/templates/portfolio/single-post/horizon/';
 
-.page-builder-portfolio.INSERT-STYLE-HERE-style {
+.page-builder-portfolio.horizon-style {
+	position: relative;
+
+	.portfolio-item {
+		margin-bottom: 30px;
+	}
+
+	.portfolio-thumbnail {
+		margin-bottom: 30px;
+		
+		img {
+			@include border-radius(4px);
+		}
+				
+		.flexslider {
+			img{@include border-radius(4px);}
+			li {list-style: none;}
+			.slides li {margin: 0;}
+		}
+		
+		.link-thumbnail,
+		.quote-thumbnail {
+			line-height: 2em;
+			padding: 30px 30px 30px 80px;
+			position: relative;
+			
+			i {
+				display: block;
+					height:100px;
+					width:60px;
+				position: absolute;
+					top:30px;
+					left: 30px;
+			}
+			p:last-child {margin: 0;}
+		}
+	}
+	
+	.project-images {
+		img {
+			@include border-radius(4px);
+			margin-bottom: 30px;
+		}
+	}
+	
+	ul li {list-style:disc; margin: 0 0 6px 40px;}
 }

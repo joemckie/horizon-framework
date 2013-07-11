@@ -1,3 +1,71 @@
 @import '../../../includes/config.scss';
 
-header {}
+header {
+	position: relative;
+	z-index: 5;
+
+	&.left-logo .sf-menu {float: right;}
+	&.right-logo .sf-menu {float: left;}
+	&.center-logo .menu-left .sf-menu {float: right;}
+	
+	.sf-menu > li,
+	.sf-menu > li > a > .sf-sub-indicator,
+	#logo a {
+		display: block;
+	}
+	.sf-menu > li > a {padding: 0 10px;}
+	#logo {
+		text-align:center;
+		img {
+			vertical-align: middle;
+		}
+	}
+	
+	ul.sub-menu {
+		border:0;
+		position: absolute;
+		left: 0;
+		padding: 20px 0 0 0;
+		
+		li {						
+			a {
+				display: block;
+				height: auto;
+				margin: 0;
+				line-height: 20px;
+				padding: 9px 35px 9px 15px;
+				min-width: 125px;
+				border: solid #dfdfdf;
+				border-width: 0px 1px 1px 1px;
+			}
+			&:first-child > a {
+				border-top-left-radius: 4px; 
+				border-top-right-radius: 4px; 
+				border-top-width: 1px;
+	
+			}
+			&:last-child > a {
+				border-bottom-left-radius: 4px; 
+				border-bottom-right-radius: 4px; 
+			}
+		}
+		
+		.sub-menu {
+			padding-top: 0px;
+			
+			li {
+				&:first-child > a {
+					border-top-left-radius: 0px; 
+					border-top-right-radius: 4px; 
+					border-top-width: 1px;
+		
+				}
+				&:last-child > a {
+					border-bottom-left-radius: 0px; 
+					border-bottom-right-radius: 4px; 
+				}
+			}
+		}
+	}
+	
+}

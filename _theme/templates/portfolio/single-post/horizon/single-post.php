@@ -1,6 +1,6 @@
 <?php global $post_meta, $options; ?>
 
-<div class="single-portfolio-post INSERT-STYLE-HERE-style">
+<div class="single-portfolio-post horizon-style">
     <div class="portfolio-item">
         <div class="portfolio-content">
 

@@ -1,21 +1,31 @@
 <?php 
 
 	/*
-	*	XXXXXX Style Blog - Single Post Settings
+	*	Horizon Style Portfolio - Single Post Settings
 	*/
 	
-	global $portfolio_tabs, $portfolio_meta_boxes;
+	global $portfolio_tabs, $portfolio_meta_boxes, $theme_defaults;
 
 	$sidebar_array[__("Portfolio")]['menus']['Single Post Style'] = array("id" => "portfolio-single-portfolio-style");
-	$elements_array[__('Single Portfolio Style - XXXXX Style')] = 
+	$elements_array[__('Single Portfolio Style - Horizon Style')] = 
 	array(
 		"id" => "portfolio-single-portfolio-style",
 		"elements" => array(
-			// Insert as you would theme options
+			"Lightbox Hover Opacity" => array(
+				"type" => "input",
+				"spinner" => true,
+				"decimal" => true,
+				"name" => THEME_SHORT_NAME.'_options_portfolio_horizon_single_lightbox_opacity',
+				"title" => "Lightbox Hover Opacity",
+				"default" => "0.85",
+				"min_value" => "0.00",
+				"max_value" => "1.00"
+			),
 		),
 	);
 	
-	// SINGLE POST OPTIONS
+	// POST OPTIONS
+	
 	$portfolio_tabs = array(
 		"Sidebar" => "sidebar",
 		"Single Post Settings" => "single-post-settings",

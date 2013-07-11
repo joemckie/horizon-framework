@@ -12,7 +12,7 @@ header {
   header #logo a {
     display: block; }
   header .sf-menu > li > a {
-    padding: 0 25px; }
+    padding: 0 10px; }
   header #logo {
     text-align: center; }
     header #logo img {

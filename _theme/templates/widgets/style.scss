@@ -1,1 +1,19 @@
 @import '../../includes/config.scss';
+
+.widget-portfolio {
+	.portfolio-item {
+		float: left; 
+		margin: 0 10px 10px 0;
+		
+		img {
+			border: 3px solid #666;
+			@include transition(all .2s linear);
+			
+			&:hover {opacity: 0.85;}
+		}
+	}
+}
+
+.horizon-twitter-widget {
+	p {margin: 0;}
+}

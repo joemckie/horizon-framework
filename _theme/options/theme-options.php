@@ -25,24 +25,37 @@
 	*	Horizon Framework is built and maintained by Joe McKie (http://joemck.ie/)
 	*
 	*/
-	 
-	 $header_font = 'Open Sans';
-	 $body_font = 'Helvetica Neue';
-	 $alternate_font = 'PT Sans';
-	 
 	
+	// Variables used here are for quickly setting repeated values.
+	// You may need to edit individual arrays for your needs!
+	
+	global $theme_defaults;
+	
+	$theme_defaults = array(
+		'header_font' 		=> 'Open Sans',
+		'body_font'			=> 'Helvetica Neue',
+		'alternate_font'	=> 'PT Sans',
+		
+		'header_colour' 	=> '#333333',
+		'body_colour' 		=> '#333333',
+		'link_colour' 		=> '#333333',
+		'link_hover_colour' => '#333333',
+	);
+	 
+	//**===============================**//
+	 	
 	// MAIN MENUS => SUB MENUS
 	$sidebar_array = array(
 		__("General") => array(
-			"id" => "general-settings",
-			"menu_icon" => "general",
-			"default" => true,
-			"menus" => array(
-				__("Settings") => array ("id" => "general-settings","default" => true),
-				__("Typography") => array ("id" => "general-typography"),
-				__("Colours") => array ("id" => "general-colours"),
-				__("Archive / Search Style") => array ("id" => "archive-search-style"),
-				__("Favicon") => array("id" => "favicon"),
+			'id' => 'general-settings',
+			'menu_icon' => 'general',
+			'default' => true,
+			'menus' => array(
+				__('Settings') => array ('id' => "general-settings","default" => true),
+				__('Typography') => array ('id' => "general-typography"),
+				__('Colours') => array ('id' => "general-colours"),
+				__('Archive / Search Style') => array ("id" => "archive-search-style"),
+				__('Favicon') => array("id" => "favicon"),
 			)
 		),
 		__("Header") => array(
@@ -150,7 +163,7 @@
 					"type" => "checktoggle",
 					"name" => THEME_SHORT_NAME. "_options_enable_full_width",
 					"title" => "Enable Full Width",
-					"default" => "Yes",
+					"default" => "No",
 					"selected_value" => "Yes",
 				),
 				__("Enable Responsive") => array(
@@ -165,7 +178,7 @@
 					"type" => "radio-image",
 					"name" => THEME_SHORT_NAME. "_options_default_page_layout",
 					"title" => "Default Page Layout",
-					"default" => "No Sidebars",
+					"default" => "Right Sidebar",
 					"options" => array(
 						"Left Sidebar" => ROOT."/_horizon/images/icons/radio-image/left-sidebar.png", 
 						"Right Sidebar" => ROOT."/_horizon/images/icons/radio-image/right-sidebar.png", 
@@ -207,9 +220,9 @@
 					"name" => THEME_SHORT_NAME. "_options_body_text_typography",
 					"title" => "Body Text",
 					"defaults" => array(
-						"colour" => "#666666",
-						"font" => $body_font,
-						"size" => "16",
+						"colour" => $theme_defaults['body_colour'],
+						"font" => $theme_defaults['body_font'],
+						"size" => "15",
 						"size_type" => "px",
 						"weight" => "regular"
 					),
@@ -226,7 +239,7 @@
 					"name" => THEME_SHORT_NAME. "_options_link",
 					"title" => "Links",
 					"defaults" => array(
-						"colour" => "#00cbe9",
+						"colour" => $theme_defaults['link_colour'],
 						"decoration" => "none",
 						"weight" => "regular",
 					),
@@ -243,8 +256,8 @@
 					"name" => THEME_SHORT_NAME. "_options_link_hover",
 					"title" => "Links Hover",
 					"defaults" => array(
-						"colour" => "#3b3b3b",
-						"decoration" => "none",
+						"colour" => $theme_defaults['link_hover_colour'],
+						"decoration" => "underline",
 						"weight" => "regular",
 					),
 					"selector" => "a:hover, a:focus",
@@ -260,8 +273,8 @@
 					"name" => THEME_SHORT_NAME. "_options_h1_typography",
 					"title" => "H1",
 					"defaults" => array(
-						"colour" => "#666666",
-						"font" => $header_font,
+						"colour" => $theme_defaults['header_colour'],
+						"font" => $theme_defaults['header_font'],
 						"size" => "50",
 						"size_type" => "px",
 						"weight" => "700"
@@ -279,8 +292,8 @@
 					"name" => THEME_SHORT_NAME. "_options_h2_typography",
 					"title" => "H2",
 					"defaults" => array(
-						"colour" => "#666666",
-						"font" => $header_font,
+						"colour" => $theme_defaults['header_colour'],
+						"font" => $theme_defaults['header_font'],
 						"size" => "30",
 						"size_type" => "px",
 						"weight" => "700"
@@ -298,8 +311,8 @@
 					"name" => THEME_SHORT_NAME. "_options_h3_typography",
 					"title" => "H3",
 					"defaults" => array(
-						"colour" => "#666666",
-						"font" => $header_font,
+						"colour" => $theme_defaults['header_colour'],
+						"font" => $theme_defaults['header_font'],
 						"size" => "24",
 						"size_type" => "px",
 						"weight" => "700"
@@ -317,8 +330,8 @@
 					"name" => THEME_SHORT_NAME. "_options_h4_typography",
 					"title" => "H4",
 					"defaults" => array(
-						"colour" => "#666666",
-						"font" => $header_font,
+						"colour" => $theme_defaults['header_colour'],
+						"font" => $theme_defaults['header_font'],
 						"size" => "21",
 						"size_type" => "px",
 						"weight" => "700"
@@ -336,8 +349,8 @@
 					"name" => THEME_SHORT_NAME. "_options_h5_typography",
 					"title" => "H5",
 					"defaults" => array(
-						"colour" => "#666666",
-						"font" => $header_font,
+						"colour" => $theme_defaults['header_colour'],
+						"font" => $theme_defaults['header_font'],
 						"size" => "17",
 						"size_type" => "px",
 						"weight" => "700"
@@ -355,8 +368,8 @@
 					"name" => THEME_SHORT_NAME. "_options_h6_typography",
 					"title" => "H6",
 					"defaults" => array(
-						"colour" => "#666666",
-						"font" => $header_font,
+						"colour" => $theme_defaults['header_colour'],
+						"font" => $theme_defaults['header_font'],
 						"size" => "14",
 						"size_type" => "px",
 						"weight" => "700"
@@ -387,7 +400,7 @@
 					"type" => "colourpicker",
 					"name" => THEME_SHORT_NAME. "_options_body_background_colour",
 					"title" => "Background Colour",
-					"default" => "#ffffff",
+					"default" => "#f0f0f0",
 					"selector" => "html",
 					"attr" => array("background-color"),
 					"no_hr" => true,
@@ -430,16 +443,8 @@
 					"type" => "colourpicker",
 					"name" => THEME_SHORT_NAME. "_options_selection_background_colour",
 					"title" => "Selection Background Colour",
-					"default" => "#00cbe9",
+					"default" => "#333333",
 					"selector" => "::selection",
-					"attr" => array("background-color"),
-				),
-				__("Wrapper Background Colour") => array(
-					"type" => "colourpicker",
-					"name" => THEME_SHORT_NAME. "_options_wrapper_background_colour",
-					"title" => "Wrapper Background Colour",
-					"default" => "#ffffff",
-					"selector" => ".page-wrapper",
 					"attr" => array("background-color"),
 				),
 				__("Selection Colour") => array(
@@ -449,6 +454,14 @@
 					"default" => "#ffffff",
 					"selector" => "::selection",
 					"attr" => array("color"),
+				),
+				__("Wrapper Background Colour") => array(
+					"type" => "colourpicker",
+					"name" => THEME_SHORT_NAME. "_options_wrapper_background_colour",
+					"title" => "Wrapper Background Colour",
+					"default" => "#ffffff",
+					"selector" => ".page-wrapper",
+					"attr" => array("background-color"),
 				),
 			),
 		),
@@ -565,11 +578,11 @@
 					"name" => THEME_SHORT_NAME. "_options_navigation_typography",
 					"title" => "Navigation Font",
 					"defaults" => array(
-						"colour" => "#666666",
-						"font" => $body_font,
+						"colour" => $theme_defaults['link_colour'],
+						"font" => $theme_defaults['body_font'],
 						"size" => "14",
 						"size_type" => "px",
-						"transform" => "uppercase",
+						"transform" => "none",
 						"weight" => "700"
 					),
 					"selector" => ".sf-menu > li a",
@@ -585,7 +598,7 @@
 					"type" => "typography",
 					"name" => THEME_SHORT_NAME. "_options_navigation_link_hover",
 					"title" => "Navigation Hover",
-					"defaults" => array("colour" => "#00cbe9"),
+					"defaults" => array("colour" => $theme_defaults['link_hover_colour']),
 					"selector" => ".sf-menu li a:hover, .sf-menu li.sfHover > a",
 					"attr" => array("colour" => "color"),
 					"preview" => false
@@ -594,7 +607,7 @@
 					"type" => "typography",
 					"name" => THEME_SHORT_NAME. "_options_navigation_link_active",
 					"title" => "Navigation Active",
-					"defaults" => array("colour" => "#00cbe9"),
+					"defaults" => array("colour" => $theme_defaults['link_hover_colour']),
 					"selector" => ".sf-menu li.current-menu-ancestor > a, .sf-menu li.current-menu-item > a, .sf-menu li li.current-menu-item > a, .sf-menu li li.current-menu-ancestor > a, .sf-menu li li.current-menu-ancestor li.current-menu-item > a",
 					"attr" => array("colour" => "color"),
 					"preview" => false
@@ -604,11 +617,11 @@
 					"name" => THEME_SHORT_NAME. "_options_sub_navigation_typography",
 					"title" => "Sub Navigation Font",
 					"defaults" => array(
-						"colour" => "#666666",
-						"font" => $body_font,
+						"colour" => $theme_defaults['link_colour'],
+						"font" => $theme_defaults['body_font'],
 						"size" => "14",
 						"size_type" => "px",
-						"transform" => "uppercase",
+						"transform" => "none",
 						"weight" => "700"
 					),
 					"selector" => "sf-menu li ul li a, .sf-menu li ul li a",
@@ -624,7 +637,7 @@
 					"type" => "typography",
 					"name" => THEME_SHORT_NAME. "_options_sub_navigation_link_hover",
 					"title" => "Sub Navigation Hover",
-					"defaults" => array("colour" => "#00cbe9"),
+					"defaults" => array("colour" => $theme_defaults['link_hover_colour']),
 					"selector" => "sf-menu li ul li a:hover, .sf-menu li ul li a:hover",
 					"attr" => array("colour" => "color"),
 					"preview" => false
@@ -633,7 +646,7 @@
 					"type" => "typography",
 					"name" => THEME_SHORT_NAME. "_options_sub_navigation_link_active",
 					"title" => "Sub Navigation Active",
-					"defaults" => array("colour" => "#00cbe9"),
+					"defaults" => array("colour" => $theme_defaults['link_hover_colour']),
 					"selector" => ".sf-menu li.current-menu-ancestor ul li.current-menu-item > a",
 					"attr" => array("colour" => "color"),
 					"preview" => false
@@ -643,8 +656,8 @@
 					"name" => THEME_SHORT_NAME. "_options_page_title_typography",
 					"title" => "Page Title Font",
 					"defaults" => array(
-						"colour" => "#ff5f59",
-						"font" => $header_font,
+						"colour" => $theme_defaults['header_colour'],
+						"font" => $theme_defaults['header_font'],
 						"size" => "50",
 						"size_type" => "px",
 						"weight" => "300"
@@ -695,7 +708,7 @@
 					"type" => "checktoggle",
 					"name" => THEME_SHORT_NAME. "_options_enable_footer",
 					"title" => "Enable Footer",
-					"default" => "Yes",
+					"default" => "No",
 					"selected_value" => "Yes",
 				),
  				__("Footer Layout") => array(
@@ -725,13 +738,13 @@
 					"type" => "textarea",
 					"name" => THEME_SHORT_NAME. "_options_footer_copyright_left_text",
 					"title" => "Copyright Left Text",
-					"default" => '<a href="#">Home</a> | <a href="#">Site Map</a> | <a href="#">Support</a> | <a href="#">Contact</a>'
+					"default" => '<a target="_blank"  href="https://github.com/joemckie/horizon-framework">Project Home</a> | <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=joe%40joemck%2eie&lc=GB&item_name=Joe%20McKie&item_number=horizon_demo&no_note=0&currency_code=GBP&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHostedGuest" target="_blank">Buy me a beer</a>'
 				),
 				__("Copyright Right Text") => array(
-					"type" => "textarea",
+					"type" =>'textarea',
 					"name" => THEME_SHORT_NAME. "_options_footer_copyright_right_text",
 					"title" => "Copyright Right Text",
-					"default" => 'Revelio Theme by <a href="http://themeforest.net/user/JoeMcKie" target="_blank">Joe McKie</a> &copy; 2013'
+					"default" => 'Horizon Framework built and maintained by <a href="http://joemck.ie/" target="_blank">Joe McKie</a> © 2013'
 				),
 			)
 		),
@@ -743,8 +756,8 @@
 					"name" => THEME_SHORT_NAME. "_options_footer_title_typography",
 					"title" => "Title Font",
 					"defaults" => array(
-						"colour" => "#666666",
-						"font" => $body_font,
+						"colour" => $theme_defaults['header_colour'],
+						"font" => $theme_defaults['header_font'],
 						"size" => "14",
 						"size_type" => "px",
 						"weight" => "700"
@@ -761,7 +774,7 @@
 					"type" => "typography",
 					"name" => THEME_SHORT_NAME. "_options_footer_link",
 					"title" => "Link Colour",
-					"defaults" => array("colour" => "#a7a7a7"),
+					"defaults" => array("colour" => $theme_defaults['link_colour']),
 					"selector" => "footer #footer a",
 					"attr" => array("colour" => "color"),
 					"preview" => false
@@ -770,7 +783,7 @@
 					"type" => "typography",
 					"name" => THEME_SHORT_NAME. "_options_footer_link_hover",
 					"title" => "Link Hover Colour",
-					"defaults" => array("colour" => "#ffffff"),
+					"defaults" => array("colour" => $theme_defaults['link_colour']),
 					"selector" => "footer #footer a:hover, footer #footer a:focus",
 					"attr" => array("colour" => "color"),
 					"preview" => false
@@ -780,8 +793,8 @@
 					"name" => THEME_SHORT_NAME. "_options_footer_text_typography",
 					"title" => "Text Font",
 					"defaults" => array(
-						"colour" => "#a7a7a7",
-						"font" => $body_font,
+						"colour" => $theme_defaults['body_colour'],
+						"font" => $theme_defaults['body_font'],
 						"size" => "14",
 						"size_type" => "px",
 						"weight" => "regular"
@@ -799,8 +812,8 @@
 					"name" => THEME_SHORT_NAME. "_options_footer_copyright_typography",
 					"title" => "Copyright Font",
 					"defaults" => array(
-						"colour" => "#a7a7a7",
-						"font" => $body_font,
+						"colour" => $theme_defaults['link_colour'],
+						"font" => $theme_defaults['body_font'],
 						"size" => "14",
 						"size_type" => "px",
 						"weight" => "regular"
@@ -817,7 +830,7 @@
 					"type" => "typography",
 					"name" => THEME_SHORT_NAME. "_options_copyright_link",
 					"title" => "Copyright Link Colour",
-					"defaults" => array("colour" => "#c0c0c0"),
+					"defaults" => array("colour" => $theme_defaults['link_colour']),
 					"selector" => "footer #copyright a",
 					"attr" => array("colour" => "color"),
 					"preview" => false
@@ -826,7 +839,7 @@
 					"type" => "typography",
 					"name" => THEME_SHORT_NAME. "_options_copyright_link_hover",
 					"title" => "Copyright Link Hover Colour",
-					"defaults" => array("colour" => "#dadada"),
+					"defaults" => array("colour" => $theme_defaults['link_hover_colour']),
 					"selector" => "footer #copyright a:hover, footer #copyright a:focus",
 					"attr" => array("colour" => "color"),
 					"preview" => false
@@ -841,7 +854,7 @@
 					"name" => THEME_SHORT_NAME. "_options_footer_background_type",
 					"no_hr" => true,
 					"title" => __("Footer Background Type"),
-					"default" => "Pattern",
+					"default" => "Block Colour",
 					"options" => array("Block Colour", "Pattern", "Custom Image", "No Background"),
 					"slidecontrol" => true
 				),
@@ -849,7 +862,7 @@
 					"type" => "colourpicker",
 					"name" => THEME_SHORT_NAME. "_options_footer_background_colour",
 					"title" => "Background Colour",
-					"default" => "#292929",
+					"default" => "#333333",
 					"selector" => "footer",
 					"attr" => array("background-color"),
 					"no_hr" => true,
@@ -906,8 +919,8 @@
 					"name" => THEME_SHORT_NAME. "_options_acc_toggle_title_typography",
 					"title" => "Title Font",
 					"defaults" => array(
-						"colour" => "#666666",
-						"font" => $header_font,
+						"colour" => $theme_defaults['header_colour'],
+						"font" => $theme_defaults['header_font'],
 						"size" => "14",
 						"size_type" => "px",
 						"weight" => "700"
@@ -924,7 +937,7 @@
 					"type" => "typography",
 					"name" => THEME_SHORT_NAME. "_options_acc_toggle_active_title_typography",
 					"title" => "Active Title Colour",
-					"defaults" => array("colour" => "#ff5f59"),
+					"defaults" => array("colour" => $theme_defaults['header_colour']),
 					"selector" => ".horizon-accordion h6.ui-accordion-header-active",
 					"attr" => array("colour" => "color"),
 					"preview" => false
@@ -955,8 +968,8 @@
 					"name" => THEME_SHORT_NAME. "_options_blockquote_typography",
 					"title" => "Blockquote Font",
 					"defaults" => array(
-						"colour" => "#666666",
-						"font" => $alternate_font,
+						"colour" => $theme_defaults['body_colour'],
+						"font" => $theme_defaults['alternate_font'],
 						"size" => "16",
 						"size_type" => "px",
 						"weight" => "italic"
@@ -988,7 +1001,7 @@
 					"title" => "Button Font",
 					"defaults" => array(
 						"colour" => "#ffffff",
-						"font" => $alternate_font,
+						"font" => $theme_defaults['alternate_font'],
 						"size" => "16",
 						"size_type" => "px",
 						"weight" => "italic"
@@ -1014,7 +1027,7 @@
 					"type" => "colourpicker",
 					"name" => THEME_SHORT_NAME. "_options_button_background_colour",
 					"title" => "Button Background Colour",
-					"default" => "#00cbe9",
+					"default" => "#333333",
 					"selector" => ".horizon-button, #submit",
 					"attr" => array("background-color"),
 				),
@@ -1022,7 +1035,7 @@
 					"type" => "colourpicker",
 					"name" => THEME_SHORT_NAME. "_options_button_hover_background_colour",
 					"title" => "Button Hover Background Colour",
-					"default" => "#3b3b3b",
+					"default" => "#3a3a3a",
 					"selector" => ".horizon-button:hover, #submit:hover",
 					"attr" => array("background-color"),
 				),
@@ -1035,7 +1048,7 @@
 					"type" => "colourpicker",
 					"name" => THEME_SHORT_NAME. "_options_col_services_icon_background_colour",
 					"title" => "Icon Background Colour",
-					"default" => "#00cbe9",
+					"default" => $theme_defaults['header_colour'],
 					"selector" => ".horizon-col-services .icon",
 					"attr" => array("background-color"),
 				),
@@ -1056,7 +1069,7 @@
 					"type" => "colourpicker",
 					"name" => THEME_SHORT_NAME. "_options_divider_background_colour",
 					"title" => "Divider Background Colour",
-					"default" => "#efefef",
+					"default" => $theme_defaults['body_colour'],
 					"selector" => ".horizon-divider-colour",
 					"attr" => array("background-color"),
 				),
@@ -1065,8 +1078,8 @@
 					"name" => THEME_SHORT_NAME. "_options_divider_scroll_to_top_typography",
 					"title" => "Scroll To Top Typography",
 					"defaults" => array(
-						"colour" => "#666666",
-						"font" => $body_font,
+						"colour" => $theme_defaults['body_colour'],
+						"font" => $theme_defaults['body_font'],
 						"size" => "16",
 						"size_type" => "px",
 						"weight" => "regular"
@@ -1088,7 +1101,7 @@
 					"type" => "colourpicker",
 					"name" => THEME_SHORT_NAME. "_options_full_width_banner_default_bg",
 					"title" => "Default Background Colour",
-					"default" => "#00cbe9",
+					"default" => "#333333",
 					"disable_style_save" => true,
 				),
 				__("Default Font Colour") => array(
@@ -1107,7 +1120,7 @@
 					"type" => "colourpicker",
 					"name" => THEME_SHORT_NAME. "_options_highlight_default_bg",
 					"title" => "Default Background Colour",
-					"default" => "#ff0",
+					"default" => "#ffff00",
 					"disable_style_save" => true,
 				),
 				__("Default Font Colour") => array(
@@ -1127,8 +1140,8 @@
 					"name" => THEME_SHORT_NAME. "_options_input",
 					"title" => "Input Font",
 					"defaults" => array(
-						"colour" => "#666666",
-						"font" => $alternate_font,
+						"colour" => $theme_defaults['body_colour'],
+						"font" => $theme_defaults['alternate_font'],
 						"size" => "18",
 						"size_type" => "px",
 						"weight" => "italic"
@@ -1145,7 +1158,7 @@
 					"type" => "colourpicker",
 					"name" => THEME_SHORT_NAME. "_options_form_required_colour",
 					"title" => "Required (*) Colour",
-					"default" => "#00cbe9",
+					"default" => $theme_defaults['link_colour'],
 					"selector" => ".horizon-form .required, #respond .required",
 					"attr" => array("color"),
 				),
@@ -1159,8 +1172,8 @@
 					"name" => THEME_SHORT_NAME. "_options_post_slider_title_typography",
 					"title" => "Title Font",
 					"defaults" => array(
-						"colour" => "#666666",
-						"font" => $header_font,
+						"colour" => $theme_defaults['header_colour'],
+						"font" => $theme_defaults['header_font'],
 						"size" => "50",
 						"size_type" => "px",
 						"decoration" => "none",
@@ -1195,8 +1208,8 @@
 					"name" => THEME_SHORT_NAME. "_options_post_slider_metadata_typography",
 					"title" => "Metadata Font",
 					"defaults" => array(
-						"colour" => "#a7a7a7",
-						"font" => $body_font,
+						"colour" => $theme_defaults['body_colour'],
+						"font" => $theme_defaults['body_font'],
 						"size" => "12",
 						"size_type" => "px",
 						"decoration" => "none",
@@ -1215,26 +1228,18 @@
 					"type" => "typography",
 					"name" => THEME_SHORT_NAME. "_options_post_slider_metadata_link_typography",
 					"title" => "Metadata Link Weight",
-					"defaults" => array(
-						"weight" => "700"
-					),
+					"defaults" => array("weight" => "700"),
 					"selector" => ".horizon-post-scroller .post-info a",
-					"attr" => array(
-						"weight" => "font-weight"
-					),
+					"attr" => array("weight" => "font-weight"),
 					"preview" => false
 				),
 				__("Metadata Icon Color") => array(
 					"type" => "typography",
 					"name" => THEME_SHORT_NAME. "_options_post_slider_metadata_icon_colour",
 					"title" => "Metadata Icon Colour",
-					"defaults" => array(
-						"colour" => "#dcdcdc"
-					),
+					"defaults" => array("colour" => $theme_defaults['body_colour']),
 					"selector" => ".horizon-post-scroller .post-info i",
-					"attr" => array(
-						"colour" => "color"
-					),
+					"attr" => array("colour" => "color"),
 					"preview" => false
 				),
 			),
@@ -1331,8 +1336,8 @@
 					"name" => THEME_SHORT_NAME. "_options_table_header_typography",
 					"title" => "Table Header Font",
 					"defaults" => array(
-						"colour" => "#666666",
-						"font" => $header_font,
+						"colour" => $theme_defaults['header_colour'],
+						"font" => $theme_defaults['header_font'],
 						"size" => "16",
 						"size_type" => "px",
 						"weight" => "700"
@@ -1345,7 +1350,7 @@
 						"weight" => "font-weight"
 					),
 				),
-				__("Table Header Border") => array(
+				__("Table Header Background Colour") => array(
 					"type" => "colourpicker",
 					"name" => THEME_SHORT_NAME. "_options_table_header_bg_colour",
 					"title" => "Table Header Background Colour",
@@ -1363,8 +1368,8 @@
 					"name" => THEME_SHORT_NAME. "_options_tab_title_typography",
 					"title" => "Tab Title Font",
 					"defaults" => array(
-						"colour" => "#a7a7a7",
-						"font" => $body_font,
+						"colour" => $theme_defaults['header_colour'],
+						"font" => $theme_defaults['body_font'],
 						"size" => "18",
 						"size_type" => "px",
 						"weight" => "regular"
@@ -1390,8 +1395,8 @@
 					"name" => THEME_SHORT_NAME. "_options_active_tab_title_typography",
 					"title" => "Active Tab Title Font",
 					"defaults" => array(
-						"colour" => "#666666",
-						"font" => $body_font,
+						"colour" => $theme_defaults['header_colour'],
+						"font" => $theme_defaults['body_font'],
 						"size" => "18",
 						"size_type" => "px",
 						"weight" => "regular"
@@ -1417,8 +1422,8 @@
 					"name" => THEME_SHORT_NAME. "_options_tab_content_typography",
 					"title" => "Tab Content Font",
 					"defaults" => array(
-						"colour" => "#666666",
-						"font" => $body_font,
+						"colour" => $theme_defaults['body_colour'],
+						"font" => $theme_defaults['body_font'],
 						"size" => "16",
 						"size_type" => "px",
 						"weight" => "regular"
@@ -1457,7 +1462,7 @@
 					"name" => THEME_SHORT_NAME. "_options_testimonial_content_typography",
 					"title" => "Testimonial Font",
 					"defaults" => array(
-						"font" => $alternate_font,
+						"font" => $theme_defaults['alternate_font'],
 						"size" => "16",
 						"size_type" => "px",
 						"weight" => "italic"
@@ -1474,7 +1479,7 @@
 					"name" => THEME_SHORT_NAME. "_options_testimonial_author_typography",
 					"title" => "Testimonial Author Font",
 					"defaults" => array(
-						"font" => $body_font,
+						"font" => $theme_defaults['body_font'],
 						"size" => "16",
 						"size_type" => "px",
 						"weight" => "700"
@@ -1584,8 +1589,8 @@
 					"name" => THEME_SHORT_NAME. "_options_pages_title_typography",
 					"title" => "Title Font",
 					"defaults" => array(
-						"colour" => "#666666",
-						"font" => $header_font,
+						"colour" => $theme_defaults['header_colour'],
+						"font" => $theme_defaults['header_font'],
 						"size" => "30",
 						"size_type" => "px",
 						"weight" => "700"
@@ -1732,8 +1737,8 @@
 					"name" => THEME_SHORT_NAME. "_options_comments_author_typography",
 					"title" => "Author Font",
 					"defaults" => array(
-						"colour" => "#666666",
-						"font" => $body_font,
+						"colour" => $theme_defaults['body_colour'],
+						"font" => $theme_defaults['body_font'],
 						"size" => "18",
 						"size_type" => "px",
 						"weight" => "700"
@@ -1751,8 +1756,8 @@
 					"name" => THEME_SHORT_NAME. "_options_comments_body_typography",
 					"title" => "Comment Body Font",
 					"defaults" => array(
-						"colour" => "#666666",
-						"font" => $body_font,
+						"colour" => $theme_defaults['body_colour'],
+						"font" => $theme_defaults['body_font'],
 						"size" => "16",
 						"size_type" => "px",
 						"weight" => "regular"
@@ -1770,8 +1775,8 @@
 					"name" => THEME_SHORT_NAME. "_options_comments_metadata_typography",
 					"title" => "Metadata Font",
 					"defaults" => array(
-						"colour" => "#666666",
-						"font" => $body_font,
+						"colour" => $theme_defaults['body_colour'],
+						"font" => $theme_defaults['body_font'],
 						"size" => "15",
 						"size_type" => "px",
 						"weight" => "regular"
@@ -1789,8 +1794,8 @@
 					"name" => THEME_SHORT_NAME. "_options_comments_authorreply_title",
 					"title" => "Author Reply Title Font",
 					"defaults" => array(
-						"colour" => "#666666",
-						"font" => $body_font,
+						"colour" => $theme_defaults['body_colour'],
+						"font" => $theme_defaults['body_font'],
 						"size" => "16",
 						"size_type" => "px",
 						"weight" => "700"
@@ -1853,8 +1858,8 @@
 					"name" => THEME_SHORT_NAME. "_options_sidebar_title_typography",
 					"title" => "Title Font",
 					"defaults" => array(
-						"colour" => "#666666",
-						"font" => $header_font,
+						"colour" => $theme_defaults['header_colour'],
+						"font" => $theme_defaults['header_font'],
 						"size" => "14",
 						"size_type" => "px",
 						"transform" => "uppercase",
@@ -1874,8 +1879,8 @@
 					"name" => THEME_SHORT_NAME. "_options_sidebar_body_typography",
 					"title" => "Body Font",
 					"defaults" => array(
-						"colour" => "#666666",
-						"font" => $body_font,
+						"colour" => $theme_defaults['body_colour'],
+						"font" => $theme_defaults['body_font'],
 						"size" => "14",
 						"size_type" => "px",
 						"weight" => "regular"
@@ -1893,8 +1898,8 @@
 					"name" => THEME_SHORT_NAME. "_options_sidebar_tag_typography",
 					"title" => "Tag Font",
 					"defaults" => array(
-						"colour" => "#959595",
-						"font" => $body_font,
+						"colour" => $theme_defaults['body_colour'],
+						"font" => $theme_defaults['body_font'],
 						"weight" => "regular"
 					),
 					"selector" => ".horizon_sidebar_wrapper .tagcloud a",
@@ -1924,7 +1929,7 @@
 					"type" => "colourpicker",
 					"name" => THEME_SHORT_NAME. "_options_sidebar_tag_hover_colour",
 					"title" => "Tag Hover Font Colour",
-					"default" => "#7c7c7c",
+					"default" => $theme_defaults['body_colour'],
 					"selector" => ".horizon_sidebar_wrapper .tagcloud a:hover",
 					"attr" => array("color"),
 				),

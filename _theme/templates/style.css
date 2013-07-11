@@ -63,6 +63,50 @@ pre {
   margin-bottom: 30px;
   padding: 30px; }
 
+.horizon-form div.input-wrap,
+#respond div.input-wrap {
+  border: 1px solid #dfdfdf;
+  border-radius: 3px;
+  margin: 0 0 20px 0;
+  position: relative; }
+  .horizon-form div.input-wrap span.required,
+  #respond div.input-wrap span.required {
+    font-size: 30px;
+    line-height: 12px;
+    position: absolute;
+    top: 27px;
+    right: 25px;
+    vertical-align: middle; }
+  .horizon-form div.input-wrap.required input,
+  #respond div.input-wrap.required input {
+    padding-right: 50px; }
+  .horizon-form div.input-wrap.required span.required,
+  #respond div.input-wrap.required span.required {
+    display: block; }
+  .horizon-form div.input-wrap *,
+  #respond div.input-wrap * {
+    display: inline-block;
+    vertical-align: middle; }
+  .horizon-form div.input-wrap input,
+  .horizon-form div.input-wrap textarea,
+  .horizon-form div.input-wrap button,
+  #respond div.input-wrap input,
+  #respond div.input-wrap textarea,
+  #respond div.input-wrap button {
+    border: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 16px 60px 16px 16px;
+    width: 100%; }
+  .horizon-form div.input-wrap textarea,
+  #respond div.input-wrap textarea {
+    height: 200px; }
+.horizon-form button,
+#respond button {
+  width: 100%; }
+
 .border-left {
   border-left-style: solid;
   border-left-width: 1px;

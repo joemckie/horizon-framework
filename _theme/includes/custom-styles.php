@@ -58,7 +58,60 @@
 			$temp_att = horizon_style_attribute( 'margin-top', get_option( THEME_SHORT_NAME. '_options_site_logo_top_margin', '0') . 'px' );
 			horizon_build_selector ( '#logo', $temp_att );
 		*/
+		
+		// Logo
+		$temp_att = horizon_style_attribute( 'margin-top', get_option( THEME_SHORT_NAME. '_options_site_logo_top_margin', '0') . 'px' );
+		horizon_build_selector( '#logo', $temp_att );
+		$temp_att = horizon_style_attribute( 'margin-bottom', get_option( THEME_SHORT_NAME. '_options_site_logo_bottom_margin', '0') . 'px' );
+		horizon_build_selector( '#logo', $temp_att );
+		
+		// Nav
+		$temp_att = horizon_style_attribute( 'margin-top', get_option( THEME_SHORT_NAME. '_options_site_nav_top_margin', '0') . 'px' );
+		horizon_build_selector( '.top-menu', $temp_att );
+		$temp_att = horizon_style_attribute( 'margin-bottom', get_option( THEME_SHORT_NAME. '_options_site_nav_bottom_margin', '0') . 'px' );
+		horizon_build_selector( '.top-menu', $temp_att );
+		
+		// Full width page-wrapper
+		if(get_option( THEME_SHORT_NAME. '_options_enable_full_width', 'Yes') == "Yes") {
+			horizon_write_css("div.layout-style{margin:0 auto; max-width:100%;}");
+			horizon_write_css(".page-wrapper{background:transparent;}");
+		} else {
+			horizon_write_css(".page-wrapper{-webkit-box-shadow:0 0 8px rgba(0,0,0,0.4);}");
+			horizon_write_css(".body-wrap{padding:20px 0;}");
+			horizon_write_css(".layout-style{margin:0 auto; max-width:1000px;}");
+		}
+		
+		// Body Background
+		if(get_option( THEME_SHORT_NAME. '_options_body_background_type', 'Pattern' ) == "Block Colour" ) {
+			$temp_att = horizon_style_attribute( 'background-color', get_option( THEME_SHORT_NAME. '_options_body_background_colour', '#ffffff') );
+			horizon_build_selector( 'html', $temp_att );
+		} else if(get_option( THEME_SHORT_NAME. '_options_body_background_type', 'Pattern' ) == "Pattern" ) {
+			$temp_att = horizon_style_attribute( 'background-image', 'url('.get_option( THEME_SHORT_NAME. '_options_body_background_pattern', ROOT."/_horizon/images/patterns/1.jpg" ) . ')' );
+			horizon_build_selector( 'html', $temp_att );
+		} else if(get_option( THEME_SHORT_NAME. '_options_body_background_type', 'Pattern' ) == "Custom Image" ) {
+			$src = wp_get_attachment_image_src(get_option( THEME_SHORT_NAME. '_options_body_custom_background' ), 'full' );
+			$temp_att = horizon_style_attribute( 'background-image', 'url('.$src[0].')' );
+			horizon_build_selector( 'html', $temp_att );
+		}
 	
+		// Footer Background
+		if(get_option( THEME_SHORT_NAME. '_options_footer_background_type', 'Pattern' ) == "Block Colour" ) {
+			$temp_att = horizon_style_attribute( 'background-color', get_option( THEME_SHORT_NAME. '_options_footer_background_colour', '#ffffff') );
+			horizon_build_selector( 'footer', $temp_att );
+		} else if(get_option( THEME_SHORT_NAME. '_options_footer_background_type', 'Pattern' ) == "Pattern" ) {
+			$temp_att = horizon_style_attribute( 'background-image', 'url('.get_option( THEME_SHORT_NAME. '_options_footer_background_pattern', ROOT."/_horizon/images/patterns/1.jpg" ) . ')' );
+			horizon_build_selector( 'footer', $temp_att );
+		} else if(get_option( THEME_SHORT_NAME. '_options_footer_background_type', 'Pattern' ) == "Custom Image" ) {
+			$src = wp_get_attachment_image_src(get_option( THEME_SHORT_NAME. '_options_footer_custom_background' ), 'full' );
+			$temp_att = horizon_style_attribute( 'background-image', 'url('.$src[0].')' );
+			horizon_build_selector( 'footer', $temp_att );
+		}
+	
+		// Comments
+		$temp_att = horizon_style_attribute( 'margin-left', (get_option( THEME_SHORT_NAME. '_options_comments_avatar_size', '60')+20) . 'px' );
+		horizon_build_selector( '.depth-2, .depth-3, .depth-4, .depth-5', $temp_att );
+		$temp_att = horizon_style_attribute( 'padding-left', (get_option( THEME_SHORT_NAME. '_options_comments_avatar_size', '60')+20) . 'px' );
+		horizon_build_selector( '.horizon-comment', $temp_att );	
 	} 
 			
 ?>

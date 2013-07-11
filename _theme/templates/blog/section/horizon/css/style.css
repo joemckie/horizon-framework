@@ -1,10 +1,10 @@
-.page-builder-blog.revelio-style h2 {
+.page-builder-blog.horizon-style h2 {
   margin-bottom: 5px; }
-.page-builder-blog.revelio-style .blog-item {
-  margin-bottom: 95px;
+.page-builder-blog.horizon-style .blog-item {
+  margin-bottom: 50px;
   min-height: 200px;
   position: relative; }
-.page-builder-blog.revelio-style .blog-thumbnail {
+.page-builder-blog.horizon-style .blog-thumbnail {
   border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
@@ -12,114 +12,33 @@
   -webkit-border-radius: 4px;
   margin-bottom: 30px;
   overflow: hidden; }
-  .page-builder-blog.revelio-style .blog-thumbnail .flexslider img {
+  .page-builder-blog.horizon-style .blog-thumbnail .flexslider img {
     border-radius: 4px;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
     -webkit-border-radius: 4px; }
-  .page-builder-blog.revelio-style .blog-thumbnail .flexslider li {
+  .page-builder-blog.horizon-style .blog-thumbnail .flexslider li {
     list-style: none; }
-  .page-builder-blog.revelio-style .blog-thumbnail .flexslider .slides li {
+  .page-builder-blog.horizon-style .blog-thumbnail .flexslider .slides li {
     margin: 0; }
-  .page-builder-blog.revelio-style .blog-thumbnail .link-thumbnail,
-  .page-builder-blog.revelio-style .blog-thumbnail .quote-thumbnail {
+  .page-builder-blog.horizon-style .blog-thumbnail .link-thumbnail,
+  .page-builder-blog.horizon-style .blog-thumbnail .quote-thumbnail {
     line-height: 2em;
     padding: 30px 30px 30px 80px;
     position: relative; }
-    .page-builder-blog.revelio-style .blog-thumbnail .link-thumbnail i,
-    .page-builder-blog.revelio-style .blog-thumbnail .quote-thumbnail i {
+    .page-builder-blog.horizon-style .blog-thumbnail .link-thumbnail i,
+    .page-builder-blog.horizon-style .blog-thumbnail .quote-thumbnail i {
       display: block;
       height: 100px;
       width: 60px;
       position: absolute;
       top: 30px;
       left: 30px; }
-    .page-builder-blog.revelio-style .blog-thumbnail .link-thumbnail p:last-child,
-    .page-builder-blog.revelio-style .blog-thumbnail .quote-thumbnail p:last-child {
+    .page-builder-blog.horizon-style .blog-thumbnail .link-thumbnail p:last-child,
+    .page-builder-blog.horizon-style .blog-thumbnail .quote-thumbnail p:last-child {
       margin: 0; }
-.page-builder-blog.revelio-style .blog-line {
-  border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  position: absolute;
-  top: -20px;
-  width: 6px; }
-.page-builder-blog.revelio-style .post-info {
-  position: absolute;
-  top: 45px; }
-  .page-builder-blog.revelio-style .post-info a {
-    border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    margin: 0 auto 10px auto;
-    overflow: visible;
-    position: relative;
-    transition: background-color 0.2s linear;
-    -moz-transition: background-color 0.2s linear;
-    -ms-transition: background-color 0.2s linear;
-    -o-transition: background-color 0.2s linear;
-    -webkit-transition: background-color 0.2s linear; }
-  .page-builder-blog.revelio-style .post-info .post-icon.date {
-    height: 50px;
-    width: 60px;
-    padding-top: 10px;
-    text-decoration: none; }
-    .page-builder-blog.revelio-style .post-info .post-icon.date .day,
-    .page-builder-blog.revelio-style .post-info .post-icon.date .month {
-      display: block;
-      font-weight: bold;
-      text-align: center; }
-    .page-builder-blog.revelio-style .post-info .post-icon.date .day {
-      font-size: 30px; }
-    .page-builder-blog.revelio-style .post-info .post-icon.date .month {
-      margin-top: -2px;
-      font-size: 13px;
-      text-transform: uppercase; }
-  .page-builder-blog.revelio-style .post-info .post-icon {
-    display: block;
-    height: 30px;
-    width: 30px;
-    text-align: center; }
-    .page-builder-blog.revelio-style .post-info .post-icon i {
-      line-height: 30px; }
-    .page-builder-blog.revelio-style .post-info .post-icon span.tooltip {
-      position: absolute;
-      top: 0;
-      left: 25px;
-      padding: 0 12px;
-      text-align: center;
-      font-size: 13px;
-      font-weight: 600;
-      display: inline-table;
-      width: 150px;
-      height: 30px;
-      line-height: 30px;
-      border-radius: 4px;
-      -moz-border-radius: 4px;
-      -ms-border-radius: 4px;
-      -o-border-radius: 4px;
-      -webkit-border-radius: 4px;
-      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-      filter: alpha(opacity=0);
-      -moz-opacity: 0;
-      -khtml-opacity: 0;
-      opacity: 0;
-      display: none;
-      z-index: 1000; }
-
-.left-sidebar .page-builder-blog.revelio-style .blog-line {
-  right: -46px; }
-.left-sidebar .page-builder-blog.revelio-style .post-info {
-  right: -83px; }
-
-.right-sidebar .page-builder-blog.revelio-style .blog-line,
-.no-sidebar .page-builder-blog.revelio-style .blog-line {
-  left: -46px; }
-.right-sidebar .page-builder-blog.revelio-style .post-info,
-.no-sidebar .page-builder-blog.revelio-style .post-info {
-  left: -83px; }
+.page-builder-blog.horizon-style .post-info {
+  margin-bottom: 20px; }
+  .page-builder-blog.horizon-style .post-info a {
+    margin-right: 5px; }

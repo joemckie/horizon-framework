@@ -1,24 +1,54 @@
 <?php 
 	
 	/*
-	*	XXXXX Style Portfolio - Section Settings
-	* 	THIS WILL APPEAR IN THE THEME OPTIONS UNDER "SECTION SETTINGS"
+	*	Horizon Style Portfolio - Section Settings
 	*/
 	
-	global $portfolio_meta_boxes, $portfolio_tabs;
+	global $portfolio_meta_boxes, $portfolio_tabs, $theme_defaults;
 	
 	// Theme Options Settings	
 	$sidebar_array[__("Portfolio")]['menus']['Section Settings'] = array("id" => "portfolio-section-settings");	
-	$elements_array[__('Portfolio Section Settings - XXXXX Style')] = 
+	$elements_array[__('Portfolio Section Settings - Horizon Style')] = 
 	array(
 		"id" => "portfolio-section-settings",
 		"elements" => array(
-			// ADD ELEMENTS HERE AS YOU WOULD THE THEME OPTIONS PAGE
+			__("Title Typography") => array(
+				"type" => "typography",
+				"name" => THEME_SHORT_NAME. "_options_portfolio_horizon_section_title",
+				"title" => "Title Font",
+				"defaults" => array(
+					"colour" => $theme_defaults['header_colour'],
+					"font" => $theme_defaults['header_font'],
+					"size" => "30",
+					"size_type" => "px",
+					"weight" => "700"
+				),
+				"selector" => ".page-builder-portfolio.horizon-style .portfolio-title a",
+				"attr" => array(
+					"colour" => "color", 
+					"font" => "font-family", 
+					"size" => "font-size", 
+					"weight" => "font-weight"
+				),
+			),
+			__("Title Hover") => array(
+				"type" => "typography",
+				"name" => THEME_SHORT_NAME. "_options_portfolio_horizon_section_title_hover",
+				"title" => "Title Hover",
+				"defaults" => array(
+					"colour" => $theme_defaults['header_colour'],
+					"decoration" => "none",
+				),
+				"selector" => ".page-builder-portfolio.horizon-style .portfolio-title a:hover",
+				"attr" => array(
+					"colour" => "color",
+					"decoration" => "text-decoration",
+				),
+				"preview" => false
+			),
 		),
 	);
 	
-	
-	// THESE OPTIONS WILL SHOW IN PORTFOLIO META BOX. THIS IS ONLY USABLE FOR SECTION SETTINGS
 	$portfolio_tabs['Section Settings'] = 'section-settings';
 	$portfolio_meta_boxes['section-settings'] = array(
 		"Thumbnail Type" => array(
@@ -86,27 +116,12 @@
 
 	// Page Builder Options
 	$page_meta_boxes['page-builder']['Page Builder']['elements']['Portfolio'] = array(
-		"title" => array(
-			"title" => __("PORTFOLIO TITLE"),
-			"name" => "page-option-portfolio-title",
-			"type" => "input",
-		),
-		"portfolio_link" => array(
-			"title" => __("ALL PORTFOLIO LINK"),
-			"name" => "page-option-portfolio-link",
-			"type" => "input",
-		),
-		"portfolio_text" => array(
-			"title" => __("ALL PORTFOLIO TEXT"),
-			"name" => "page-option-portfolio-text",
-			"type" => "input",
-		),
 		"portfolio_size" => array(
 			"title" => __("PORTFOLIO SIZE"),
 			"name" => "page-option-portfolio-size",
 			"type" => "select",
 			"default" => get_option( 'post_meta_default_portfolio_size' ),
-			"options" => array("1/3 Width", "1/2 Width", "Full Width"),
+			"options" => array("1/2 Width", "Full Width"),
 		),
 		"num" => array(
 			"title" => __("PORTFOLIO COUNT"),

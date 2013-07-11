@@ -3,7 +3,6 @@
   padding-left: 65px;
   position: relative; }
   .horizon-col-services .icon {
-    background-image: url("column-service/images/icon-pattern.png");
     border-radius: 4px;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
@@ -34,7 +33,7 @@
 
 .horizon-full-width-wrapper {
   padding: 20px 0; }
-  .horizon-full-width-wrapper > h1 {
+  .horizon-full-width-wrapper h1 {
     margin-bottom: 0; }
   .horizon-full-width-wrapper > h1, .horizon-full-width-wrapper > div {
     text-align: center; }

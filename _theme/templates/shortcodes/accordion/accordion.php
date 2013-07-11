@@ -6,6 +6,6 @@ extract( shortcode_atts( array(
 ?>
 
 <div class="accordion-trigger horizon-accordion" role="tablist">
-	<?php if($header !== ""){?> <h3><?=$header;?></h3> <?php }?>
-	<?=do_shortcode($shortcode_atts['content']);?>
+	<?php if($header !== ""){?> <h3><?php echo $header;?></h3> <?php }?>
+	<?php echo do_shortcode($shortcode_atts['content']);?>
 </div>

@@ -10,12 +10,10 @@ if(!$title && !$caption) {return;}
 
 <div id="page-header" class="row">
 	<div class="container">
-		<div class="twelve columns alpha omega">
-			<h1><?=$title?></h1>
-			
-			<?php if($caption != ""){ ?>
-				<p><?=$caption;?></p>
-			<?php } ?>
-		</div>
+	<h1><?php echo $title?></h1>
+	
+	<?php if($caption != ""){ ?>
+		<p><?php echo $caption;?></p>
+	<?php } ?>
 	</div>
 </div>

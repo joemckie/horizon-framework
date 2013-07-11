@@ -1,6 +1,6 @@
 <?php global $portfolio_atts, $meta, $post_meta; ?>
 
-<div class="<?=$meta['alpha'] . $meta['omega'] . $meta['size'];?> columns">
+<div class="<?php echo $meta['alpha'] . $meta['omega'] . $meta['size'];?> columns">
 	<div class="portfolio-item">
 		<div class="portfolio-content">	
 			<div class="portfolio-thumbnail">

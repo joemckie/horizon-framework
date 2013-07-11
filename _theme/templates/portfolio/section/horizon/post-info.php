@@ -7,10 +7,10 @@ foreach(wp_get_post_terms($post->ID, 'portfolio-tag') as $tag){
 ?>
 
 <div class="portfolio-info">
-	<h6><a href="<?=get_permalink();?>"><?=get_the_title();?></a></h6>
+	<h6><a href="<?php echo get_permalink();?>"><?php echo get_the_title();?></a></h6>
 	<?php if(!empty($tags)) { ?>
 		<span class="portfolio-tags">
-			<?=horizon_format_tags($tags);?>
+			<?php echo horizon_format_tags($tags);?>
 		</span>
 	<?php } ?>
 </div>

@@ -11,4 +11,4 @@
 	$media = strtolower($media);
 	$size = strtolower($size);
 ?>
-<a href="<?=$shortcode_atts['content'];?>"><img src="<?=ROOT;?>/_theme/images/icons/social-media/<?=$size;?>/<?=$media;?>.png" /></a>
+<a href="<?php echo $shortcode_atts['content'];?>"><img src="<?php echo ROOT;?>/_theme/images/icons/social-media/<?php echo $size;?>/<?php echo $media;?>.png" /></a>

@@ -26,4 +26,4 @@ $hover_bg = $hover_bg !== "" ? ' data-hoverbg="'.$hover_bg.'"' : "";
 $hover_color = $hover_color !== "" ? ' data-hovercolor="'.$hover_color.'"' : "";
 
 ?>
-<a class="<?=$rounded;?> horizon-shortcode-button horizon-button <?=esc_attr($size);?>" href="<?=$href;?>" style="background-color:<?=$background;?> !important; color:<?=$color;?>;" target="<?=$target;?>" data-bg="<?=$background;?>" data-color="<?=$color;?>" <?=$hover_bg . $hover_color;?>><?=$shortcode_atts['content'];?></a>
+<a class="<?php echo $rounded;?> horizon-shortcode-button horizon-button <?php echo esc_attr($size);?>" href="<?php echo $href;?>" style="background-color:<?php echo $background;?> !important; color:<?php echo $color;?>;" target="<?php echo $target;?>" data-bg="<?php echo $background;?>" data-color="<?php echo $color;?>" <?php echo $hover_bg . $hover_color;?>><?php echo $shortcode_atts['content'];?></a>

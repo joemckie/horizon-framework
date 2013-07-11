@@ -6,4 +6,4 @@ extract( shortcode_atts( array(
 ), $shortcode_atts['atts'] ) );
 ?>	
 
-<span class="horizon-highlight" style="background-color:<?=$background;?>; color:<?=$color;?>;"><?=$shortcode_atts['content'];?></span>
+<span class="horizon-highlight" style="background-color:<?php echo $background;?>; color:<?php echo $color;?>;"><?php echo $shortcode_atts['content'];?></span>

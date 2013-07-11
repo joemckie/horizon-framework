@@ -1,6 +1,6 @@
 <?php global $options; ?>
 
-<h4><a href="<?=get_permalink();?>"><?=get_the_title();?></a></h4>
+<h4><a href="<?php echo get_permalink();?>"><?php echo get_the_title();?></a></h4>
 
 <?php 
 	if($options['default_search_content_display'] == "content"){$content = get_the_content();} 

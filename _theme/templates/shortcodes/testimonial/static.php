@@ -1,5 +1,5 @@
 <?php global $content, $author; ?>
 <div class="shortcode-testimonial static">
-	<?=$content;?>
-	<span class="author"><?=$author;?></span>
+	<?php echo $content;?>
+	<span class="author"><?php echo $author;?></span>
 </div>

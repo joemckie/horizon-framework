@@ -35,7 +35,7 @@
    	<div class="container">
    		<div class="row">
    			<!-- START CONTENT -->
-	        <div id="post-<?php the_ID(); ?>" <?php post_class(); ?> class="content <?=horizon_sidebar_layout();?>">
+	        <div id="post-<?php the_ID(); ?>" <?php post_class(); ?> class="content <?php echo horizon_sidebar_layout();?>">
 	        	<?php do_action( 'horizon_get_search_page' ); ?>
 	        </div>
 	    </div>

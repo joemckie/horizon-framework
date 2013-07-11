@@ -1,4 +1,4 @@
-$dev_mode: true;
+$dev_mode: false;
 
 @function format_image_path($dev_mode, $dev_mode_path, $path) {
   @if ($dev_mode == true) {

@@ -32,6 +32,9 @@
 		$time = explode(' ', $time);
 		$time = $time[1] + $time[0];
 		$start = $time;
+		$dev_class = 'dev-mode';
+	} else {
+		$dev_class = '';
 	}
 ?>
 
@@ -57,7 +60,7 @@
 </head>
 
 <!-- START BODY -->
-<body <?php body_class(); ?>>
+<body <?php body_class($dev_class); ?>>
 
 	<!-- START BODY WRAP -->
 	<div class="body-wrap">

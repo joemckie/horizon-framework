@@ -1,25 +1,50 @@
-/*
-*
-*	@version: 1.0.0
-*	@author: Joe McKie
-*	@link: http://joemck.ie/
-*	@copyright: Joe McKie 2013
-*
-*	This file is part of the Horizon Framework.
-*
-*   Horizon Framework is free software: you can redistribute it and/or modify
-*   it under the terms of the GNU General Public License as published by
-*   the Free Software Foundation, either version 3 of the License, or
-*   (at your option) any later version.
-*
-*   Horizon Framework is distributed in the hope that it will be useful,
-*   but WITHOUT ANY WARRANTY; without even the implied warranty of
-*   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-*   GNU General Public License for more details.
-*
-*   You should have received a copy of the GNU General Public License
-*   along with the Horizon Framework.  If not, see <http://www.gnu.org/licenses/>.
-*
-*	Horizon Framework is built and maintained by Joe McKie (http://joemck.ie/)
-*
-*/
+footer #footer {
+  margin: 0 !important;
+  padding-top: 30px;
+  width: auto; }
+  footer #footer .custom-sidebar {
+    margin-bottom: 20px; }
+    footer #footer .custom-sidebar .menu li {
+      float: left;
+      font-weight: bold;
+      line-height: inherit;
+      margin: 0 20px 0 0;
+      text-transform: uppercase; }
+      footer #footer .custom-sidebar .menu li a {
+        font-weight: inherit;
+        margin-right: 20px;
+        padding-bottom: 2px; }
+      footer #footer .custom-sidebar .menu li:after {
+        content: " // "; }
+      footer #footer .custom-sidebar .menu li:last-child:after {
+        content: ""; }
+    footer #footer .custom-sidebar .menu:after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
+footer #copyright {
+  padding: 30px 0; }
+  footer #copyright ul {
+    margin: 0; }
+  footer #copyright .menu li {
+    float: left;
+    font-weight: bold;
+    line-height: inherit;
+    margin: 0 20px 0 0;
+    text-transform: uppercase; }
+    footer #copyright .menu li a {
+      font-weight: inherit;
+      margin-right: 20px;
+      padding-bottom: 2px; }
+    footer #copyright .menu li:after {
+      content: " // "; }
+    footer #copyright .menu li:last-child:after {
+      content: ""; }
+  footer #copyright .menu:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }

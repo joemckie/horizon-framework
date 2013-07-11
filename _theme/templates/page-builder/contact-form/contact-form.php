@@ -42,7 +42,7 @@ if(isset($_POST['submitted'])){
 }
 ?>
 
-<form action="<?=get_permalink();?>" class="horizon-form" id="page-builder-contact-form" method="post">
+<form action="<?php echo get_permalink();?>" class="horizon-form" id="page-builder-contact-form" method="post">
 	<?php
 		if(isset($emailSent) && $emailSent == true) {
 			echo do_shortcode('[message rounded="true" type="success"]Your message has been successfully sent![/message]');
@@ -71,7 +71,7 @@ if(isset($_POST['submitted'])){
 			</div>
 		</li>
 		<li>
-			<button class="horizon-button" type="submit"><?=$button_text;?></button>
+			<button class="horizon-button" type="submit"><?php echo $button_text;?></button>
 		</li>
 	</ul>
 	<input type="hidden" name="submitted" id="submitted" value="true" />

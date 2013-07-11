@@ -37,8 +37,8 @@ endswitch;
 
 ?>
 	
-<div class="shortcode-col width<?=$width . $offset . $additional_class;?>">
- <?=do_shortcode($shortcode_atts['content']);?>
+<div class="shortcode-col width<?php echo $width . $offset . $additional_class;?>">
+ <?php echo do_shortcode($shortcode_atts['content']);?>
 </div>
 
 <?php if($last=='true') { ?>

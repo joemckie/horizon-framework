@@ -5,10 +5,10 @@ extract($post_slider_atts);
 
 <li>
 	<div class="container">
-		<div class="post-item" style="height:<?=$height;?>px; max-width:<?=$width;?>px">
+		<div class="post-item" style="height:<?php echo $height;?>px; max-width:<?php echo $width;?>px">
 			<div class="post-content">
 				<div class="post-title">
-					<h2><a href="<?=get_permalink();?>"><?=get_the_title();?></a></h2>
+					<h2><a href="<?php echo get_permalink();?>"><?php echo get_the_title();?></a></h2>
 				</div>
 				
 				<div class="post-image">

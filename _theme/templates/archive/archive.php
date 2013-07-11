@@ -6,7 +6,7 @@
 	}
 ?>
 
-<div class="search_results <?=$archive_type;?>-results <?=$style;?>-style">
+<div class="search_results <?php echo $archive_type;?>-results <?php echo $style;?>-style">
 
 	<?php 
 		if(have_posts()){

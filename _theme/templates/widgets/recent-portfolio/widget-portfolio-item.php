@@ -1,7 +1,7 @@
 <?php $thumbnail = get_the_post_thumbnail($post->ID, 'tiny_thumbnail'); ?>
 <div class="portfolio-item">
 	<div class="portfolio-image">
-		<a href="<?=get_permalink();?>">
+		<a href="<?php echo get_permalink();?>">
 			<?php if($thumbnail !== '') {
 				echo $thumbnail;
 			} else {

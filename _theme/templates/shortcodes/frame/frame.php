@@ -19,10 +19,10 @@ if($lightbox && $group){$rel = 'rel="lightbox['.$group.']"';}
 else if($lightbox){$rel = 'rel="lightbox"';}
 
 ?>
-<div class="horizon-shortcode-frame <?=$align;?>">
+<div class="horizon-shortcode-frame <?php echo $align;?>">
 	<?php if($lightbox) { ?>
-		<a href="<?=$src;?>" <?=$rel;?> title="<?=$caption;?>"><img class="<?=$rounded;?>" alt="<?=$caption;?>" height="<?=$height;?>" src="<?=$thumbnail;?>" title="<?=$caption;?>" width="<?=$width;?>" /></a>
+		<a href="<?php echo $src;?>" <?php echo $rel;?> title="<?php echo $caption;?>"><img class="<?php echo $rounded;?>" alt="<?php echo $caption;?>" height="<?php echo $height;?>" src="<?php echo $thumbnail;?>" title="<?php echo $caption;?>" width="<?php echo $width;?>" /></a>
 	<?php } else { ?>
-		<img alt="<?=$caption;?>" height="<?=$height;?>" src="<?=$thumbnail;?>" title="<?=$caption;?>" width="<?=$width;?>" />
+		<img alt="<?php echo $caption;?>" height="<?php echo $height;?>" src="<?php echo $thumbnail;?>" title="<?php echo $caption;?>" width="<?php echo $width;?>" />
 	<?php } ?>
 </div>

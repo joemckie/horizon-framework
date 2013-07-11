@@ -57,7 +57,7 @@
                     elseif($sidebar=="Both Sidebars"){$status = ""; $content_width = "six";}
                     else {$status = "alpha omega"; $content_width = "twelve";}
                 ?>
-                <div class="<?=$content_width;?> columns <?=$status;?>">
+                <div class="<?php echo $content_width;?> columns <?php echo $status;?>">
                     <div class="horizon_page_item">
 						<?php 
 						

@@ -4,7 +4,7 @@ extract($attributes);
 $header = (string)$header;
 ?>
 
-<?php if($header !== ""){?> <h3><?=$header;?></h3> <?php }?>
+<?php if($header !== ""){?> <h3><?php echo $header;?></h3> <?php }?>
 <div class="accordion-trigger horizon-accordion" role="tablist">
 	<?php
 		foreach($children as $acc_item){

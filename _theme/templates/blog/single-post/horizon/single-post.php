@@ -10,7 +10,7 @@
 				} ?>
 	
 				<div class="blog-title">
-					<h2><?=get_the_title();?></h2>
+					<h2><?php echo get_the_title();?></h2>
 				</div>		
 					    
 				<div class="blog-thumbnail">

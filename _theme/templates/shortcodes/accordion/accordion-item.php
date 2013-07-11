@@ -9,7 +9,7 @@ extract( shortcode_atts( array(
 $active = strtolower($active);	
 ?>
 	
-<h6 class="accordion-title <?=$active;?>" role="tab"><?=$title;?></h6>
+<h6 class="accordion-title <?php echo $active;?>" role="tab"><?php echo $title;?></h6>
 <div class="accordion-content" role="tabpanel">
-	<p><?=$shortcode_atts['content'];?></p>
+	<p><?php echo $shortcode_atts['content'];?></p>
 </div>

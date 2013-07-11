@@ -8,4 +8,4 @@ global $shortcode_atts;
 $type = strtolower($type);
 ?>	
 	
-<div class="horizon-shortcode-list <?=esc_attr($type);?>"><?=$shortcode_atts['content'];?></div>
+<div class="horizon-shortcode-list <?php echo esc_attr($type);?>"><?php echo $shortcode_atts['content'];?></div>

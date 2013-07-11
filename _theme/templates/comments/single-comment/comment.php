@@ -10,7 +10,7 @@
 	else {$tag = 'li';$add_below = 'div-comment';}
 ?>
 
-		<<?=$tag;?> <?php comment_class(empty( $args['has_children'] ) ? '' : 'parent') ?> id="comment-<?php comment_ID() ?>">
+		<<?php echo $tag;?> <?php comment_class(empty( $args['has_children'] ) ? '' : 'parent') ?> id="comment-<?php comment_ID() ?>">
 			<?php if ( $args['style'] != 'div' ) : ?>
 				<div id="div-comment-<?php comment_ID() ?>">
 			<?php endif; ?>

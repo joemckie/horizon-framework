@@ -15,6 +15,6 @@
 ?>
 
 <li>
-	<p><?=$text;?></p>
-	<p><a target="_blank" href="http://www.twitter.com/statuses/<?=$tweet->id;?>" title="<?=$title_date;?>"><?=$date;?></a></p>
+	<p><?php echo $text;?></p>
+	<p><a target="_blank" href="http://www.twitter.com/statuses/<?php echo $tweet->id;?>" title="<?php echo $title_date;?>"><?php echo $date;?></a></p>
 </li>

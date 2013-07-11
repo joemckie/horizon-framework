@@ -3,7 +3,7 @@ global $post_meta, $options, $meta, $blog_atts;
 do_action( 'horizon_before_content' ); 
 ?>
 
-    <div class="<?=$post_meta['content_meta']['width'];?> columns <?=$post_meta['content_meta']['padding'];?>">
+    <div class="<?php echo $post_meta['content_meta']['width'];?> columns <?php echo $post_meta['content_meta']['padding'];?>">
     
         <div class="horizon_page_item">
 			<?php 

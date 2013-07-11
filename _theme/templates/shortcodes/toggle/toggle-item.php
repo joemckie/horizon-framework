@@ -9,7 +9,7 @@ extract( shortcode_atts( array(
 $active = strtolower($active);	
 ?>
 	
-<h6 class="toggle-title <?=$active;?>" role="tab"><?=$title;?></h6>
-<div class="toggle-content <?=$active;?>" role="tabpanel">
-	<p><?=$shortcode_atts['content'];?></p>
+<h6 class="toggle-title <?php echo $active;?>" role="tab"><?php echo $title;?></h6>
+<div class="toggle-content <?php echo $active;?>" role="tabpanel">
+	<p><?php echo $shortcode_atts['content'];?></p>
 </div>

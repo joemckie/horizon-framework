@@ -3,7 +3,7 @@
 <div class="portfolio-item">
 	<div class="portfolio-content">
 		<div class="portfolio-title">
-			<h2><a href="<?=get_permalink();?>"><?=get_the_title();?></a></h2>
+			<h2><a href="<?php echo get_permalink();?>"><?php echo get_the_title();?></a></h2>
 		</div>
 		
 		<div class="portfolio-thumbnail">

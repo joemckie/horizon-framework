@@ -3,10 +3,10 @@
 <div id="page-header">
 	<div class="container">
 		<div class="twelve columns">
-			<h1><?=the_title();?></h1>
+			<h1><?php echo the_title();?></h1>
 			
 			<?php if($post_meta['page_caption'] != ""){ ?>
-				<p><?=$post_meta['page_caption'];?></p>
+				<p><?php echo $post_meta['page_caption'];?></p>
 			<?php } ?>
 		</div>
 	</div>

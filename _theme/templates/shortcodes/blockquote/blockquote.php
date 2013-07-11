@@ -7,6 +7,6 @@ extract( shortcode_atts( array(
 // Standardise text inputs
 $align = strtolower($align);
 ?>	
-<blockquote class="<?=esc_attr($align);?>">
-	<p><?=$shortcode_atts['content'];?></p>
+<blockquote class="<?php echo esc_attr($align);?>">
+	<p><?php echo $shortcode_atts['content'];?></p>
 </blockquote>

@@ -37,7 +37,7 @@
 	define('THEME_VERSION', '1.0' );
 	
 	// Development mode
-	define('DEV_MODE', true);
+	define('DEV_MODE', false);
 	
 	if( !function_exists('horizon_get_root_directory') ){
 		function horizon_get_root_directory( $path ){

@@ -1,78 +1,78 @@
 body{color: #333333;font-family: "Helvetica Neue", sans-serif;;font-size: 15px;font-weight: 400;}
-a{color: #7da6dd;text-decoration: none;font-weight: 400;}
-a:hover, a:focus{color: #3b3b3b;text-decoration: none;font-weight: 400;}
+a{color: #333333;text-decoration: none;font-weight: 400;}
+a:hover, a:focus{color: #333333;text-decoration: underline;font-weight: 400;}
 h1{color: #333333;font-family: "Open Sans", sans-serif;;font-size: 50px;font-weight: 700;}
 h2{color: #333333;font-family: "Open Sans", sans-serif;;font-size: 30px;font-weight: 700;}
 h3{color: #333333;font-family: "Open Sans", sans-serif;;font-size: 24px;font-weight: 700;}
 h4{color: #333333;font-family: "Open Sans", sans-serif;;font-size: 21px;font-weight: 700;}
 h5{color: #333333;font-family: "Open Sans", sans-serif;;font-size: 17px;font-weight: 700;}
 h6{color: #333333;font-family: "Open Sans", sans-serif;;font-size: 14px;font-weight: 700;}
-::selection{background-color: #7da6dd;}
+::selection{background-color: #e6e1e1;}
 ::selection{color: #ffffff;}
 .page-wrapper{background-color: #ffffff;}
-.sf-menu > li a{color: #555555;font-family: "Helvetica Neue", sans-serif;;font-size: 14px;text-transform: none;font-weight: 700;}
-.sf-menu li a:hover, .sf-menu li.sfHover > a{color: #7da6dd;}
-.sf-menu li.current-menu-ancestor > a, .sf-menu li.current-menu-item > a, .sf-menu li li.current-menu-item > a, .sf-menu li li.current-menu-ancestor > a, .sf-menu li li.current-menu-ancestor li.current-menu-item > a{color: #7da6dd;}
-sf-menu li ul li a, .sf-menu li ul li a{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 14px;text-transform: none;font-weight: 700;}
-sf-menu li ul li a:hover, .sf-menu li ul li a:hover{color: #7da6dd;}
-.sf-menu li.current-menu-ancestor ul li.current-menu-item > a{color: #7da6dd;}
-#page-header h1{color: #333333;font-family: "Open Sans", sans-serif;;font-size: 50px;font-weight: 700;}
+.sf-menu > li a{color: #333333;font-family: "Helvetica Neue", sans-serif;;font-size: 14px;text-transform: none;font-weight: 700;}
+.sf-menu li a:hover, .sf-menu li.sfHover > a{color: #333333;}
+.sf-menu li.current-menu-ancestor > a, .sf-menu li.current-menu-item > a, .sf-menu li li.current-menu-item > a, .sf-menu li li.current-menu-ancestor > a, .sf-menu li li.current-menu-ancestor li.current-menu-item > a{color: #333333;}
+sf-menu li ul li a, .sf-menu li ul li a{color: #333333;font-family: "Helvetica Neue", sans-serif;;font-size: 14px;text-transform: none;font-weight: 700;}
+sf-menu li ul li a:hover, .sf-menu li ul li a:hover{color: #333333;}
+.sf-menu li.current-menu-ancestor ul li.current-menu-item > a{color: #333333;}
+#page-header h1{color: #333333;font-family: "Open Sans", sans-serif;;font-size: 50px;font-weight: 300;}
 header{background-color: #ffffff;}
 .sf-menu li ul li a{background-color: #ffffff;}
 header ul.sub-menu li a{border-color: #ededed;}
-footer #footer h3{color: #ffffff;font-family: "Helvetica Neue", sans-serif;;font-size: 14px;font-weight: 700;}
+footer #footer h3{color: #333333;font-family: "Open Sans", sans-serif;;font-size: 14px;font-weight: 700;}
 footer #footer a{color: #333333;}
-footer #footer a:hover, footer #footer a:focus{color: #ffffff;}
-footer #footer{color: #ffffff;font-family: "Helvetica Neue", sans-serif;;font-size: 14px;font-weight: 400;}
-footer #copyright{color: #ffffff;font-family: "Helvetica Neue", sans-serif;;font-size: 14px;font-weight: 400;}
-footer #copyright a{color: #ffffff;}
-footer #copyright a:hover, footer #copyright a:focus{color: #f0f0f0;}
+footer #footer a:hover, footer #footer a:focus{color: #333333;}
+footer #footer{color: #333333;font-family: "Helvetica Neue", sans-serif;;font-size: 14px;font-weight: 400;}
+footer #copyright{color: #333333;font-family: "Helvetica Neue", sans-serif;;font-size: 14px;font-weight: 400;}
+footer #copyright a{color: #333333;}
+footer #copyright a:hover, footer #copyright a:focus{color: #333333;}
 footer #copyright{background-color: transparent;}
-.horizon-accordion h6, .horizon-toggle h6{color: #666666;font-family: "Open Sans", sans-serif;;font-size: 14px;font-weight: 700;}
-.horizon-accordion h6.ui-accordion-header-active{color: #ff5f59;}
+.horizon-accordion h6, .horizon-toggle h6{color: #333333;font-family: "Open Sans", sans-serif;;font-size: 14px;font-weight: 700;}
+.horizon-accordion h6.ui-accordion-header-active{color: #333333;}
 .horizon-accordion, .horizon-toggle{background-color: #ffffff;}
 .horizon-accordion, .horizon-accordion h6, .horizon-toggle, .horizon-toggle h6{border-color: #dfdfdf;}
-blockquote{color: #666666;font-family: "PT Sans", sans-serif;;font-size: 16px;font-style: italic;font-weight: 400;}
+blockquote{color: #333333;font-family: "PT Sans", sans-serif;;font-size: 16px;font-style: italic;font-weight: 400;}
 blockquote{border-color: transparent;}
-.horizon-button, #submit{color: #ffffff;font-family: "PT Sans", sans-serif;;font-size: 16px;font-weight: 400;}
+.horizon-button, #submit{color: #ffffff;font-family: "PT Sans", sans-serif;;font-size: 16px;font-style: italic;font-weight: 400;}
 .horizon-button:hover, #submit:hover{color: #ffffff;}
 .horizon-button, #submit{background-color: #333333;}
-.horizon-button:hover, #submit:hover{background-color: #4d4d4d;}
-.horizon-col-services .icon{background-color: #7da6dd;}
+.horizon-button:hover, #submit:hover{background-color: #3a3a3a;}
+.horizon-col-services .icon{background-color: #333333;}
 .horizon-col-services .icon i{color: #ffffff;}
-.horizon-divider-colour{background-color: #efefef;}
-.horizon-scroll-to-top{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 16px;font-weight: 400;}
-.horizon-form input[type='text'], .horizon-form textarea, #respond input[type='text'], #respond textarea, .horizon_sidebar_wrapper #searchform input.searchbar{color: #666666;font-family: "PT Sans", sans-serif;;font-size: 18px;font-weight: 400;}
+.horizon-divider-colour{background-color: #333333;}
+.horizon-scroll-to-top{color: #333333;font-family: "Helvetica Neue", sans-serif;;font-size: 16px;font-weight: 400;}
+.horizon-form input[type='text'], .horizon-form textarea, #respond input[type='text'], #respond textarea, .horizon_sidebar_wrapper #searchform input.searchbar{color: #333333;font-family: "PT Sans", sans-serif;;font-size: 18px;font-style: italic;font-weight: 400;}
 .horizon-form .required, #respond .required{color: #333333;}
-.horizon-post-scroller .post-item h2 a{color: #666666;text-decoration: none;font-family: "Open Sans", sans-serif;;font-size: 50px;font-weight: 700;}
+.horizon-post-scroller .post-item h2 a{color: #333333;text-decoration: none;font-family: "Open Sans", sans-serif;;font-size: 50px;font-weight: 700;}
 .horizon-post-scroller .post-item h2 a:hover{color: #3b3b3b;text-decoration: none;}
-.horizon-post-scroller .post-info, .horizon-post-scroller .post-info a{color: #a7a7a7;text-decoration: none;font-family: "Helvetica Neue", sans-serif;;font-size: 12px;font-weight: 700;}
+.horizon-post-scroller .post-info, .horizon-post-scroller .post-info a{color: #333333;text-decoration: none;font-family: "Helvetica Neue", sans-serif;;font-size: 12px;font-weight: 700;}
 .horizon-post-scroller .post-info a{font-weight: 700;}
-.horizon-post-scroller .post-info i{color: #dcdcdc;}
+.horizon-post-scroller .post-info i{color: #333333;}
 pre{color: #666666;font-family: "Lekton", sans-serif;;font-size: 16px;font-weight: 400;}
 table, table tr, table tr td, table tr th{border-color: #dfdfdf;}
-table th{color: #666666;font-family: "Open Sans", sans-serif;;font-size: 16px;font-weight: 700;}
+table th{color: #333333;font-family: "Open Sans", sans-serif;;font-size: 16px;font-weight: 700;}
 table th{background-color: #ffffff;}
-.horizon-tabs ul.tabs-nav li a{color: #a7a7a7;font-family: "Helvetica Neue", sans-serif;;font-size: 18px;font-weight: 400;}
+.horizon-tabs ul.tabs-nav li a{color: #333333;font-family: "Helvetica Neue", sans-serif;;font-size: 18px;font-weight: 400;}
 .horizon-tabs ul.tabs-nav li a{background-color: #ffffff;}
-.horizon-tabs ul.tabs-nav li.ui-state-active a{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 18px;font-weight: 400;}
+.horizon-tabs ul.tabs-nav li.ui-state-active a{color: #333333;font-family: "Helvetica Neue", sans-serif;;font-size: 18px;font-weight: 400;}
 .horizon-tabs ul.tabs-nav li.ui-state-active a{background-color: #ffffff;}
-.horizon-tabs .tabs-inner{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 16px;font-weight: 400;}
+.horizon-tabs .tabs-inner{color: #333333;font-family: "Helvetica Neue", sans-serif;;font-size: 16px;font-weight: 400;}
 .horizon-tabs .tabs-inner{background-color: #ffffff;}
 .horizon-tabs .tabs-inner{border-color: #dfdfdf;}
 .horizon-testimonials p{font-family: "PT Sans", sans-serif;;font-size: 16px;font-style: italic;font-weight: 400;}
 .horizon-testimonials strong.author{font-family: "Helvetica Neue", sans-serif;;font-size: 16px;font-weight: 700;}
-.search_results h4 a{color: #666666;font-family: "Open Sans", sans-serif;;font-size: 30px;font-weight: 700;}
-.vcard h6{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 18px;font-weight: 700;}
-.comment-body p{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 16px;font-weight: 400;}
-.commentmetadata{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 15px;font-weight: 400;}
-.bypostauthor .vcard h6{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 16px;font-weight: 700;}
-.horizon_sidebar_wrapper h3.custom-sidebar-title{color: #666666;font-family: "Open Sans", sans-serif;;font-size: 14px;text-transform: uppercase;font-weight: 700;}
-.horizon_sidebar_wrapper{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 14px;font-weight: 400;}
-.horizon_sidebar_wrapper .tagcloud a{color: #959595;font-family: "Helvetica Neue", sans-serif;;font-weight: 400;}
+.search_results h4 a{color: #333333;font-family: "Open Sans", sans-serif;;font-size: 30px;font-weight: 700;}
+.vcard h6{color: #333333;font-family: "Helvetica Neue", sans-serif;;font-size: 18px;font-weight: 700;}
+.comment-body p{color: #333333;font-family: "Helvetica Neue", sans-serif;;font-size: 16px;font-weight: 400;}
+.commentmetadata{color: #333333;font-family: "Helvetica Neue", sans-serif;;font-size: 15px;font-weight: 400;}
+.bypostauthor .vcard h6{color: #333333;font-family: "Helvetica Neue", sans-serif;;font-size: 16px;font-weight: 700;}
+.horizon_sidebar_wrapper h3.custom-sidebar-title{color: #333333;font-family: "Open Sans", sans-serif;;font-size: 14px;text-transform: uppercase;font-weight: 700;}
+.horizon_sidebar_wrapper{color: #333333;font-family: "Helvetica Neue", sans-serif;;font-size: 14px;font-weight: 400;}
+.horizon_sidebar_wrapper .tagcloud a{color: #333333;font-family: "Helvetica Neue", sans-serif;;font-weight: 400;}
 .horizon_sidebar_wrapper .tagcloud a{background-color: #ffffff;}
 .horizon_sidebar_wrapper .tagcloud a{border-color: #e7e7e7;}
-.horizon_sidebar_wrapper .tagcloud a:hover{color: #7c7c7c;}
+.horizon_sidebar_wrapper .tagcloud a:hover{color: #333333;}
 .horizon_sidebar_wrapper .tagcloud a:hover{background-color: #ffffff;}
 .horizon_sidebar_wrapper .tagcloud a:hover{border-color: #cecece;}
 .single-blog-post.horizon-style .blog-title h2{color: #333333;font-family: "Open Sans", sans-serif;;font-size: 30px;font-weight: 700;}
@@ -85,18 +85,18 @@ table th{background-color: #ffffff;}
 .single-blog-post.horizon-style .link-thumbnail i{color: #d7d7d7;}
 .single-blog-post.horizon-style .link-thumbnail a{color: #00cbe9;font-family: "Droid Serif", sans-serif;;font-size: 24px;font-style: italic;font-weight: 400;}
 .single-blog-post.horizon-style .link-thumbnail a:hover{color: #3b3b3b;}
-.single-blog-post.horizon-style .link-thumbnail p{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 16px;font-weight: 400;}
+.single-blog-post.horizon-style .link-thumbnail p{color: #666666;font-family: "Consolas", sans-serif;;font-size: 16px;font-weight: 400;}
 .single-blog-post.horizon-style .quote-thumbnail i{color: #d7d7d7;}
 .single-blog-post.horizon-style .quote-thumbnail p{color: #666666;font-family: "Droid Serif", sans-serif;;font-size: 24px;font-style: italic;font-weight: 400;}
 .single-blog-post.horizon-style .quote-thumbnail span.author{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 18px;font-weight: 700;}
-.page-builder-blog.horizon-style .blog-title a{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 30px;font-weight: 300;}
-.page-builder-blog.horizon-style .blog-title a:hover{color: #4d4d4d;text-decoration: none;}
+.page-builder-blog.horizon-style .blog-title a{color: #333333;font-family: "Open Sans", sans-serif;;font-size: 30px;font-weight: 700;}
+.page-builder-blog.horizon-style .blog-title a:hover{color: #333333;text-decoration: none;}
 .page-builder-blog.horizon-style .post-info .post-icon{color: #333333;}
-.page-builder-blog.horizon-style .post-info .post-icon:hover{color: #000000;}
-.page-builder-blog.horizon-style .link-thumbnail i{color: #333333;}
-.page-builder-blog.horizon-style .link-thumbnail a{color: #4d2e2e;font-family: "Helvetica Neue", sans-serif;;font-size: 24px;font-weight: 400;}
+.page-builder-blog.horizon-style .post-info .post-icon:hover{color: #333333;}
+.page-builder-blog.horizon-style .link-thumbnail i{color: #d7d7d7;}
+.page-builder-blog.horizon-style .link-thumbnail a{color: #00cbe9;font-family: "Droid Serif", sans-serif;;font-size: 24px;font-style: italic;font-weight: 400;}
 .page-builder-blog.horizon-style .link-thumbnail a:hover{color: #3b3b3b;}
-.page-builder-blog.horizon-style .link-thumbnail p{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 16px;font-weight: 400;}
+.page-builder-blog.horizon-style .link-thumbnail p{color: #666666;font-family: "Consolas", sans-serif;;font-size: 16px;font-weight: 400;}
 .page-builder-blog.horizon-style .quote-thumbnail i{color: #d7d7d7;}
 .page-builder-blog.horizon-style .quote-thumbnail p{color: #666666;font-family: "Droid Serif", sans-serif;;font-size: 24px;font-style: italic;font-weight: 400;}
 .page-builder-blog.horizon-style .quote-thumbnail span.author{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 18px;font-weight: 700;}
@@ -107,7 +107,7 @@ table th{background-color: #ffffff;}
 .search_results.blog-results.horizon-style .link-thumbnail i{color: #d7d7d7;}
 .search_results.blog-results.horizon-style .link-thumbnail a{color: #00cbe9;font-family: "Droid Serif", sans-serif;;font-size: 24px;font-style: italic;font-weight: 400;}
 .search_results.blog-results.horizon-style .link-thumbnail a:hover{color: #3b3b3b;}
-.search_results.blog-results.horizon-style .link-thumbnail p{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 16px;font-weight: 400;}
+.search_results.blog-results.horizon-style .link-thumbnail p{color: #666666;font-family: "Consolas", sans-serif;;font-size: 16px;font-weight: 400;}
 .search_results.blog-results.horizon-style .quote-thumbnail i{color: #d7d7d7;}
 .search_results.blog-results.horizon-style .quote-thumbnail p{color: #666666;font-family: "Droid Serif", sans-serif;;font-size: 24px;font-style: italic;font-weight: 400;}
 .search_results.blog-results.horizon-style .quote-thumbnail span.author{color: #666666;font-family: "Helvetica Neue", sans-serif;;font-size: 18px;font-weight: 700;}
@@ -118,10 +118,10 @@ table th{background-color: #ffffff;}
 .single-blog-post .blog-image a.lightbox img:hover{opacity: ;}
 .single-blog-post.horizon-style .blog-line{background-color: ;}
 .single-blog-post.horizon-style span.tooltip{background-color: ;}
-.single-blog-post.horizon-style span.tooltip{color: #333333;}
-.single-blog-post.horizon-style .link-thumbnail{background-image: url(http://themes/horizon/wp-content/themes/horizon/_horizon/images/patterns/3.jpg);}
-.single-blog-post.horizon-style .quote-thumbnail{background-image: url(http://themes/horizon/wp-content/themes/horizon/_horizon/images/patterns/3.jpg);}
-.single-portfolio-post .portfolio-thumbnail a.lightbox img:hover, .single-portfolio-post .project-images a.lightbox img:hover{opacity: 0.85;}
+.single-blog-post.horizon-style span.tooltip{color: ;}
+.single-blog-post.horizon-style .link-thumbnail{background-image: url(http://test.dev/wp-content/themes/horizon-framework/_horizon/images/patterns/1.jpg);}
+.single-blog-post.horizon-style .quote-thumbnail{background-image: url(http://test.dev/wp-content/themes/horizon-framework/_horizon/images/patterns/1.jpg);}
+.single-portfolio-post .portfolio-thumbnail a.lightbox img:hover, .single-portfolio-post .project-images a.lightbox img:hover{opacity: ;}
 #logo{margin-top: 47px;}
 #logo{margin-bottom: 43px;}
 .top-menu{margin-top: 66px;}
@@ -129,7 +129,7 @@ table th{background-color: #ffffff;}
 .page-wrapper{-webkit-box-shadow:0 0 8px rgba(0,0,0,0.4);}
 .body-wrap{padding:20px 0;}
 .layout-style{margin:0 auto; max-width:1000px;}
-html{background-color: #f0f0f0;}
-footer{background-color: #292929;}
+html{background-color: #665d5d;}
+footer{background-color: #333333;}
 .depth-2, .depth-3, .depth-4, .depth-5{margin-left: 80px;}
 .horizon-comment{padding-left: 80px;}

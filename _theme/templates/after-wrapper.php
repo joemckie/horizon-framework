@@ -1,5 +1,5 @@
-				<?php wp_footer(); ?>
-			</div>
-		</div> <!-- END BODY WRAP -->
-	</body> <!-- END BODY -->
+<?php wp_footer(); ?>
+</div>
+</div> <!-- END BODY WRAP -->
+</body> <!-- END BODY -->
 </html>

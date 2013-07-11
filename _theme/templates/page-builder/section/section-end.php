@@ -1,7 +1,7 @@
-<?php 
+<?php
 global $in_section;
-$in_section = false; 
+$in_section = false;
 ?>
-		</div>
-	</div>
+</div>
+</div>
 </div>

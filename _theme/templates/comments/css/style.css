@@ -1,65 +1,86 @@
 #comment_form,
 #comments {
-  margin-top: 70px; }
-  #comment_form h2,
-  #comments h2 {
-    margin-bottom: 40px; }
-  #comment_form li,
-  #comments li {
-    list-style: none;
-    margin-bottom: 0; }
+	margin-top: 70px;
+}
+
+#comment_form h2,
+#comments h2 {
+	margin-bottom: 40px;
+}
+
+#comment_form li,
+#comments li {
+	list-style: none;
+	margin-bottom: 0;
+}
 
 .horizon-comment {
-  position: relative; }
+	position: relative;
+}
 
 .comment-author {
-  margin-bottom: 5px; }
+	margin-bottom: 5px;
+}
 
 .comment-author-avatar {
-  margin-right: 20px;
-  position: absolute;
-  top: 0;
-  left: 0; }
-  .comment-author-avatar img {
-    border-radius: 4px; }
+	margin-right: 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.comment-author-avatar img {
+	border-radius: 4px;
+}
 
 .commentmetadata {
-  margin-top: 10px; }
-  .commentmetadata span {
-    padding: 0 5px; }
+	margin-top: 10px;
+}
+
+.commentmetadata span {
+	padding: 0 5px;
+}
 
 .comment-body {
-  border-bottom: 6px solid #efefef;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  float: left;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  width: 100%; }
+	border-bottom: 6px solid #efefef;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	float: left;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	width: 100%;
+}
 
 #comment_form form,
 #respond form {
-  margin-bottom: 0; }
-  #comment_form form p.form-submit,
-  #respond form p.form-submit {
-    margin-bottom: 0; }
-  #comment_form form input#submit,
-  #respond form input#submit {
-    background-image: none;
-    border: 0;
-    border-radius: 4px;
-    padding: 12px;
-    text-align: center;
-    transition: all .2s linear;
-    -webkit-transition: all .2s linear;
-    -moz-transition: all .2s linear;
-    -ms-transition: all .2s linear;
-    -o-transition: all .2s linear;
-    width: 100%; }
+	margin-bottom: 0;
+}
+
+#comment_form form p.form-submit,
+#respond form p.form-submit {
+	margin-bottom: 0;
+}
+
+#comment_form form input#submit,
+#respond form input#submit {
+	background-image: none;
+	border: 0;
+	border-radius: 4px;
+	padding: 12px;
+	text-align: center;
+	transition: all .2s linear;
+	-webkit-transition: all .2s linear;
+	-moz-transition: all .2s linear;
+	-ms-transition: all .2s linear;
+	-o-transition: all .2s linear;
+	width: 100%;
+}
 
 li.comment #respond {
-  margin-bottom: 20px; }
+	margin-bottom: 20px;
+}
 
 #reply-title small {
-  font-size: 12px; }
+	font-size: 12px;
+}

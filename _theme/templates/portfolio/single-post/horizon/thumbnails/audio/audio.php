@@ -1,19 +1,19 @@
 <div class="audio-thumbnail">
-	<?php 
-		global $post_meta;
-		$uri = horizon_format_soundcloud_link($post_meta['inside_thumbnail_audio_link']);
-		
-		if($post_meta['inside_thumbnail_audio_html5_player'] == "Yes"){
-			echo '<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url='.$uri.'"></iframe>';
-		} else {
-			echo '<object height="81" width="100%">
+	<?php
+	global $post_meta;
+	$uri = horizon_format_soundcloud_link( $post_meta['inside_thumbnail_audio_link'] );
+
+	if ( $post_meta['inside_thumbnail_audio_html5_player'] == "Yes" ) {
+		echo '<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=' . $uri . '"></iframe>';
+	} else {
+		echo '<object height="81" width="100%">
 			  <param name="movie" 
-			    value="http://player.soundcloud.com/player.swf?url='.$uri.'"></param>
+			    value="http://player.soundcloud.com/player.swf?url=' . $uri . '"></param>
 			  <param name="allowscriptaccess" value="always"></param>
 			  <embed 
-			    src="http://player.soundcloud.com/player.swf?url='.$uri.' allowscriptaccess="always" height="81"  type="application/x-shockwave-flash" width="100%">
+			    src="http://player.soundcloud.com/player.swf?url=' . $uri . ' allowscriptaccess="always" height="81"  type="application/x-shockwave-flash" width="100%">
 			  </embed>
 			</object>';
-		} 
+	}
 	?>
 </div>

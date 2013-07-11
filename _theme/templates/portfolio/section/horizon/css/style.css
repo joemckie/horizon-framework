@@ -1,48 +1,71 @@
 .page-builder-portfolio.horizon-style {
-  position: relative; }
-  .page-builder-portfolio.horizon-style .portfolio-item {
-    margin-bottom: 30px; }
-  .page-builder-portfolio.horizon-style .portfolio-thumbnail {
-    margin-bottom: 30px; }
-    .page-builder-portfolio.horizon-style .portfolio-thumbnail img {
-      border-radius: 4px;
-      -moz-border-radius: 4px;
-      -ms-border-radius: 4px;
-      -o-border-radius: 4px;
-      -webkit-border-radius: 4px; }
-    .page-builder-portfolio.horizon-style .portfolio-thumbnail .flexslider img {
-      border-radius: 4px;
-      -moz-border-radius: 4px;
-      -ms-border-radius: 4px;
-      -o-border-radius: 4px;
-      -webkit-border-radius: 4px; }
-    .page-builder-portfolio.horizon-style .portfolio-thumbnail .flexslider li {
-      list-style: none; }
-    .page-builder-portfolio.horizon-style .portfolio-thumbnail .flexslider .slides li {
-      margin: 0; }
-    .page-builder-portfolio.horizon-style .portfolio-thumbnail .link-thumbnail,
-    .page-builder-portfolio.horizon-style .portfolio-thumbnail .quote-thumbnail {
-      line-height: 2em;
-      padding: 30px 30px 30px 80px;
-      position: relative; }
-      .page-builder-portfolio.horizon-style .portfolio-thumbnail .link-thumbnail i,
-      .page-builder-portfolio.horizon-style .portfolio-thumbnail .quote-thumbnail i {
-        display: block;
-        height: 100px;
-        width: 60px;
-        position: absolute;
-        top: 30px;
-        left: 30px; }
-      .page-builder-portfolio.horizon-style .portfolio-thumbnail .link-thumbnail p:last-child,
-      .page-builder-portfolio.horizon-style .portfolio-thumbnail .quote-thumbnail p:last-child {
-        margin: 0; }
-  .page-builder-portfolio.horizon-style .project-images img {
-    border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    margin-bottom: 30px; }
-  .page-builder-portfolio.horizon-style ul li {
-    list-style: disc;
-    margin: 0 0 6px 40px; }
+	position: relative;
+}
+
+.page-builder-portfolio.horizon-style .portfolio-item {
+	margin-bottom: 30px;
+}
+
+.page-builder-portfolio.horizon-style .portfolio-thumbnail {
+	margin-bottom: 30px;
+}
+
+.page-builder-portfolio.horizon-style .portfolio-thumbnail img {
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+.page-builder-portfolio.horizon-style .portfolio-thumbnail .flexslider img {
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+.page-builder-portfolio.horizon-style .portfolio-thumbnail .flexslider li {
+	list-style: none;
+}
+
+.page-builder-portfolio.horizon-style .portfolio-thumbnail .flexslider .slides li {
+	margin: 0;
+}
+
+.page-builder-portfolio.horizon-style .portfolio-thumbnail .link-thumbnail,
+.page-builder-portfolio.horizon-style .portfolio-thumbnail .quote-thumbnail {
+	line-height: 2em;
+	padding: 30px 30px 30px 80px;
+	position: relative;
+}
+
+.page-builder-portfolio.horizon-style .portfolio-thumbnail .link-thumbnail i,
+.page-builder-portfolio.horizon-style .portfolio-thumbnail .quote-thumbnail i {
+	display: block;
+	height: 100px;
+	width: 60px;
+	position: absolute;
+	top: 30px;
+	left: 30px;
+}
+
+.page-builder-portfolio.horizon-style .portfolio-thumbnail .link-thumbnail p:last-child,
+.page-builder-portfolio.horizon-style .portfolio-thumbnail .quote-thumbnail p:last-child {
+	margin: 0;
+}
+
+.page-builder-portfolio.horizon-style .project-images img {
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	margin-bottom: 30px;
+}
+
+.page-builder-portfolio.horizon-style ul li {
+	list-style: disc;
+	margin: 0 0 6px 40px;
+}

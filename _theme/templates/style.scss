@@ -1,118 +1,196 @@
 @import '../includes/config.scss';
 
-body {line-height: 1.5em;}
+body {
+  line-height: 1.5em;
+}
 
-.content-box {box-sizing: content-box !important; -moz-box-sizing: content-box !important; -webkit-box-sizing: content-box !important;}
+.content-box {
+  box-sizing: content-box !important;
+  -moz-box-sizing: content-box !important;
+  -webkit-box-sizing: content-box !important;
+}
 
 a {
-	@include transition(all .2s linear);
+  @include transition(all .2s linear);
 }
+
 a.lightbox img {
-	@include transition(opacity .2s linear);
+  @include transition(opacity .2s linear);
 }
 
-h1 {line-height: 50px;margin-bottom: 14px;}
-h2 {line-height: 40px;margin-bottom: 10px;}
-h3 {line-height: 34px;margin-bottom: 8px;}
-h4 {line-height: 30px;margin-bottom: 4px;}
-h5 {line-height: 24px;}
-h6 {line-height: 21px;}
-h1, h2, h3 {letter-spacing: -0.0625em;}
+h1 {
+  line-height: 50px;
+  margin-bottom: 14px;
+}
 
-table {border-width: 1px; border-style: solid; width: 100%;}
-tr th {border-bottom:1px solid;text-align: left;}
-tr th, tr td {border-right:1px solid; padding: 9px 20px;}
+h2 {
+  line-height: 40px;
+  margin-bottom: 10px;
+}
 
-pre {line-height: 24px; margin-bottom: 30px; padding: 30px;}
+h3 {
+  line-height: 34px;
+  margin-bottom: 8px;
+}
+
+h4 {
+  line-height: 30px;
+  margin-bottom: 4px;
+}
+
+h5 {
+  line-height: 24px;
+}
+
+h6 {
+  line-height: 21px;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.0625em;
+}
+
+table {
+  border-width: 1px;
+  border-style: solid;
+  width: 100%;
+}
+
+tr th {
+  border-bottom: 1px solid;
+  text-align: left;
+}
+
+tr th, tr td {
+  border-right: 1px solid;
+  padding: 9px 20px;
+}
+
+pre {
+  line-height: 24px;
+  margin-bottom: 30px;
+  padding: 30px;
+}
 
 .horizon-form,
 #respond {
-	div.input-wrap {
-		border: 1px solid #dfdfdf;
-		border-radius: 3px;
-		margin: 0 0 20px 0;
-		position: relative;
-		
-		span.required {
-			font-size: 30px;
-			line-height: 12px;
-			position: absolute;
-				top:27px;
-				right: 25px;
-			vertical-align: middle;
-		}
-		
-		&.required {
-			input {padding-right: 50px;}
-			
-			span.required {display: block;}
-		}
+  div.input-wrap {
+	border: 1px solid #dfdfdf;
+	border-radius: 3px;
+	margin: 0 0 20px 0;
+	position: relative;
 
-		* {display: inline-block; vertical-align: middle;}
-		input,
-		textarea,
-		button {
-			border: 0;
-			box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			-webkit-box-sizing: border-box;
-			margin: 0;
-			padding: 16px 60px 16px 16px;
-			width: 100%;
-		}
-		textarea {height: 200px;}
+	span.required {
+	  font-size: 30px;
+	  line-height: 12px;
+	  position: absolute;
+	  top: 27px;
+	  right: 25px;
+	  vertical-align: middle;
 	}
-	button {width: 100%;}
+
+	&.required {
+	  input {
+		padding-right: 50px;
+	  }
+
+	  span.required {
+		display: block;
+	  }
+	}
+
+	* {
+	  display: inline-block;
+	  vertical-align: middle;
+	}
+	input,
+	textarea,
+	button {
+	  border: 0;
+	  box-sizing: border-box;
+	  -moz-box-sizing: border-box;
+	  -webkit-box-sizing: border-box;
+	  margin: 0;
+	  padding: 16px 60px 16px 16px;
+	  width: 100%;
+	}
+	textarea {
+	  height: 200px;
+	}
+  }
+  button {
+	width: 100%;
+  }
 }
 
 .border-left {
-	border-left-style: solid;
-	border-left-width: 1px;
-	border-left-color: #efefef;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: #efefef;
 }
 
 button.horizon-button {
-	background-image: none;
-	border: 0;
-	@include transition(all .2s linear);
+  background-image: none;
+  border: 0;
+  @include transition(all .2s linear);
 }
 
-.subheader {color: #777;}
-.noul {text-decoration: none;}
-.upper {text-transform: uppercase !important;}
+.subheader {
+  color: #777;
+}
 
-.force-full-width {position: absolute;}
+.noul {
+  text-decoration: none;
+}
 
-.isotope-item {z-index: 2;}
-.isotope-hidden.isotope-item {pointer-events: none;z-index: 1;}
+.upper {
+  text-transform: uppercase !important;
+}
+
+.force-full-width {
+  position: absolute;
+}
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
 .isotope,
 .isotope .isotope-item {
-	-webkit-transition-duration: 0.8s;
-	-moz-transition-duration: 0.8s;
-	-ms-transition-duration: 0.8s;
-	-o-transition-duration: 0.8s;
-	transition-duration: 0.8s;
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
 }
+
 .isotope {
-	-webkit-transition-property: height, width;
-	-moz-transition-property: height, width;
-	-ms-transition-property: height, width;
-	-o-transition-property: height, width;
-	transition-property: height, width;
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -ms-transition-property: height, width;
+  -o-transition-property: height, width;
+  transition-property: height, width;
 }
+
 .isotope .isotope-item {
-	-webkit-transition-property: -webkit-transform, opacity;
-	-moz-transition-property: -moz-transform, opacity;
-	-ms-transition-property: -ms-transform, opacity;
-	-o-transition-property: -o-transform, opacity;
-	transition-property: transform, opacity;
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  -ms-transition-property: -ms-transform, opacity;
+  -o-transition-property: -o-transform, opacity;
+  transition-property: transform, opacity;
 }
+
 .isotope.no-transition,
 .isotope.no-transition .isotope-item,
 .isotope .isotope-item.no-transition {
-	-webkit-transition-duration: 0s;
-	-moz-transition-duration: 0s;
-	-ms-transition-duration: 0s;
-	-o-transition-duration: 0s;
-	transition-duration: 0s;
+  -webkit-transition-duration: 0s;
+  -moz-transition-duration: 0s;
+  -ms-transition-duration: 0s;
+  -o-transition-duration: 0s;
+  transition-duration: 0s;
 }

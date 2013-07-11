@@ -4,45 +4,57 @@ $dev_mode_path: '../';
 $path: '_theme/templates/blog/horizon/';
 
 .page-builder-blog.horizon-style {
-	
-	h2 {margin-bottom: 5px;}
-	
-	.blog-item {
-		margin-bottom: 50px;
-		min-height: 200px;
-		position: relative;
-	}
-	.blog-thumbnail {
+
+  h2 {
+	margin-bottom: 5px;
+  }
+
+  .blog-item {
+	margin-bottom: 50px;
+	min-height: 200px;
+	position: relative;
+  }
+  .blog-thumbnail {
+	@include border-radius(4px);
+	margin-bottom: 30px;
+	overflow: hidden;
+
+	.flexslider {
+	  img {
 		@include border-radius(4px);
-		margin-bottom: 30px;
-		overflow: hidden;
-				
-		.flexslider {
-			img{@include border-radius(4px);}
-			li {list-style: none;}
-			.slides li {margin: 0;}
-		}
-		
-		.link-thumbnail,
-		.quote-thumbnail {
-			line-height: 2em;
-			padding: 30px 30px 30px 80px;
-			position: relative;
-			
-			i {
-				display: block;
-					height:100px;
-					width:60px;
-				position: absolute;
-					top:30px;
-					left: 30px;
-			}
-			p:last-child {margin: 0;}
-		}
+	  }
+	  li {
+		list-style: none;
+	  }
+	  .slides li {
+		margin: 0;
+	  }
 	}
-	.post-info {
-		margin-bottom: 20px;
-		
-		a {margin-right: 5px;}
+
+	.link-thumbnail,
+	.quote-thumbnail {
+	  line-height: 2em;
+	  padding: 30px 30px 30px 80px;
+	  position: relative;
+
+	  i {
+		display: block;
+		height: 100px;
+		width: 60px;
+		position: absolute;
+		top: 30px;
+		left: 30px;
+	  }
+	  p:last-child {
+		margin: 0;
+	  }
 	}
+  }
+  .post-info {
+	margin-bottom: 20px;
+
+	a {
+	  margin-right: 5px;
+	}
+  }
 }

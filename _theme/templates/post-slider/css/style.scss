@@ -1,22 +1,30 @@
 .horizon-post-scroller {
-	position: relative;
-	
-	.post-item {
-		margin: 0 auto;
-		
-		h1 {margin-bottom: 5px;}
-		
-		.post-content {text-align: center;}
-		.post-image {margin-bottom: 20px;}
-		.post-info {
-			margin-bottom: 20px;
-			
-			span {padding: 0 5px;}
-		}
+  position: relative;
+
+  .post-item {
+	margin: 0 auto;
+
+	h1 {
+	  margin-bottom: 5px;
 	}
-	
-	img {
-		display: inline-block !important;
-		width: auto !important;
+
+	.post-content {
+	  text-align: center;
 	}
+	.post-image {
+	  margin-bottom: 20px;
+	}
+	.post-info {
+	  margin-bottom: 20px;
+
+	  span {
+		padding: 0 5px;
+	  }
+	}
+  }
+
+  img {
+	display: inline-block !important;
+	width: auto !important;
+  }
 }

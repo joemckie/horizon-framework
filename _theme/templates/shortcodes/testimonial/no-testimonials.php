@@ -1,1 +1,1 @@
-<div>No testimonials matched your search!<br />Did you enter the right slug?</div>
+<div>No testimonials matched your search!<br/>Did you enter the right slug?</div>

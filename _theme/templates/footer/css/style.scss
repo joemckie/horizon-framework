@@ -1,61 +1,71 @@
 @import '../../../includes/config.scss';
 
 footer {
-	#footer {
-		margin: 0 !important;
-		padding-top: 30px;
-		width: auto;
-		
-		.custom-sidebar {
-			margin-bottom: 20px;
-			
-			.menu {
-				li {
-					float: left;
-					font-weight: bold;
-					line-height: inherit;
-					margin: 0 20px 0 0;
-					text-transform: uppercase;
-					
-					a {
-						font-weight: inherit;
-						margin-right: 20px;
-						padding-bottom: 2px;
-					}
-					
-					&:after {content: " // ";}
-					&:last-child:after {content: "";}
-				}
-				
-				@include clear;
-			}
+  #footer {
+	margin: 0 !important;
+	padding-top: 30px;
+	width: auto;
+
+	.custom-sidebar {
+	  margin-bottom: 20px;
+
+	  .menu {
+		li {
+		  float: left;
+		  font-weight: bold;
+		  line-height: inherit;
+		  margin: 0 20px 0 0;
+		  text-transform: uppercase;
+
+		  a {
+			font-weight: inherit;
+			margin-right: 20px;
+			padding-bottom: 2px;
+		  }
+
+		  &:after {
+			content: " // ";
+		  }
+		  &:last-child:after {
+			content: "";
+		  }
 		}
+
+		@include clear;
+	  }
 	}
-	
-	#copyright {
-		padding: 30px 0;
-		
-		ul {margin: 0;}
-		
-		.menu {
-			li {
-				float: left;
-				font-weight: bold;
-				line-height: inherit;
-				margin: 0 20px 0 0;
-				text-transform: uppercase;
-				
-				a {
-					font-weight: inherit;
-					margin-right: 20px;
-					padding-bottom: 2px;
-				}
-				
-				&:after {content: " // ";}
-				&:last-child:after {content: "";}
-			}
-			
-			@include clear;
+  }
+
+  #copyright {
+	padding: 30px 0;
+
+	ul {
+	  margin: 0;
+	}
+
+	.menu {
+	  li {
+		float: left;
+		font-weight: bold;
+		line-height: inherit;
+		margin: 0 20px 0 0;
+		text-transform: uppercase;
+
+		a {
+		  font-weight: inherit;
+		  margin-right: 20px;
+		  padding-bottom: 2px;
 		}
+
+		&:after {
+		  content: " // ";
+		}
+		&:last-child:after {
+		  content: "";
+		}
+	  }
+
+	  @include clear;
 	}
+  }
 }

@@ -111,10 +111,10 @@
 		
 	}
 		
-	// Add page options with the horizon_add_meta_boxes hook
-	add_action( 'horizon_add_meta_boxes', 'horizon_add_portfolio_options' );
+	// Add page options with the add_meta_boxes hook
+	add_action( 'add_meta_boxes', 'horizon_add_portfolio_options' );
 	function horizon_add_portfolio_options(){
-		horizon_add_meta_box( 'custom_meta_boxes', __('Portfolio Options'), 'horizon_build_portfolio_options', 'portfolio', 'normal', 'high' );
+		add_meta_box( 'custom_meta_boxes', __('Portfolio Options'), 'horizon_build_portfolio_options', 'portfolio', 'normal', 'high' );
 	}
 
 	// Let's build the custom page options!

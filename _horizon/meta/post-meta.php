@@ -26,10 +26,10 @@
 	*
 	*/
 
-	// Add page options with the horizon_add_meta_boxes hook
-	add_action( 'horizon_add_meta_boxes', 'horizon_add_post_options' );
+	// Add page options with the add_meta_boxes hook
+	add_action( 'add_meta_boxes', 'horizon_add_post_options' );
 	function horizon_add_post_options(){
-		horizon_add_meta_box( 'custom_meta_boxes', __('Post Options'), 'horizon_build_post_options', 'post', 'normal', 'high' );
+		add_meta_box( 'custom_meta_boxes', __('Post Options'), 'horizon_build_post_options', 'post', 'normal', 'high' );
 	}
 	
 	// Let's build the custom page options!

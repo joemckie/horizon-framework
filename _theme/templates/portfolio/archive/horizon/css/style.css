@@ -1,57 +1,40 @@
 .search_results.portfolio-results.revelio-style h1 {
-	margin-bottom: 5px;
-}
-
+  margin-bottom: 5px; }
 .search_results.portfolio-results.revelio-style .portfolio-item {
-	margin-bottom: 65px;
-	position: relative;
-	text-align: center;
-}
-
+  margin-bottom: 65px;
+  position: relative;
+  text-align: center; }
 .search_results.portfolio-results.revelio-style .portfolio-thumbnail {
-	border-radius: 4px;
-	-moz-border-radius: 4px;
-	-ms-border-radius: 4px;
-	-o-border-radius: 4px;
-	-webkit-border-radius: 4px;
-	margin-bottom: 30px;
-	overflow: hidden;
-}
-
-.search_results.portfolio-results.revelio-style .portfolio-thumbnail .flexslider img {
-	border-radius: 4px;
-	-moz-border-radius: 4px;
-	-ms-border-radius: 4px;
-	-o-border-radius: 4px;
-	-webkit-border-radius: 4px;
-}
-
-.search_results.portfolio-results.revelio-style .portfolio-thumbnail .flexslider li {
-	list-style: none;
-}
-
-.search_results.portfolio-results.revelio-style .portfolio-thumbnail .flexslider .slides li {
-	margin: 0;
-}
-
-.search_results.portfolio-results.revelio-style .portfolio-thumbnail .link-thumbnail,
-.search_results.portfolio-results.revelio-style .portfolio-thumbnail .quote-thumbnail {
-	line-height: 2em;
-	padding: 30px 30px 30px 80px;
-	position: relative;
-}
-
-.search_results.portfolio-results.revelio-style .portfolio-thumbnail .link-thumbnail i,
-.search_results.portfolio-results.revelio-style .portfolio-thumbnail .quote-thumbnail i {
-	display: block;
-	height: 100px;
-	width: 60px;
-	position: absolute;
-	top: 30px;
-	left: 30px;
-}
-
-.search_results.portfolio-results.revelio-style .portfolio-thumbnail .link-thumbnail p:last-child,
-.search_results.portfolio-results.revelio-style .portfolio-thumbnail .quote-thumbnail p:last-child {
-	margin: 0;
-}
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  margin-bottom: 30px;
+  overflow: hidden; }
+  .search_results.portfolio-results.revelio-style .portfolio-thumbnail .flexslider img {
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    -webkit-border-radius: 4px; }
+  .search_results.portfolio-results.revelio-style .portfolio-thumbnail .flexslider li {
+    list-style: none; }
+  .search_results.portfolio-results.revelio-style .portfolio-thumbnail .flexslider .slides li {
+    margin: 0; }
+  .search_results.portfolio-results.revelio-style .portfolio-thumbnail .link-thumbnail,
+  .search_results.portfolio-results.revelio-style .portfolio-thumbnail .quote-thumbnail {
+    line-height: 2em;
+    padding: 30px 30px 30px 80px;
+    position: relative; }
+    .search_results.portfolio-results.revelio-style .portfolio-thumbnail .link-thumbnail i,
+    .search_results.portfolio-results.revelio-style .portfolio-thumbnail .quote-thumbnail i {
+      display: block;
+      height: 100px;
+      width: 60px;
+      position: absolute;
+      top: 30px;
+      left: 30px; }
+    .search_results.portfolio-results.revelio-style .portfolio-thumbnail .link-thumbnail p:last-child,
+    .search_results.portfolio-results.revelio-style .portfolio-thumbnail .quote-thumbnail p:last-child {
+      margin: 0; }

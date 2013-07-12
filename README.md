@@ -47,4 +47,4 @@ If you want to contribute to the project, please do so, but you **MUST test befo
 
 Anyone who contributes will be referenced below:
 
-* No contributors yet... :(
+* [Victor Davydov](http://www.github.com/septembermd/)

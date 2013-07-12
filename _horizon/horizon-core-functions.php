@@ -336,26 +336,14 @@ function horizon_get_post_list( $post_type ) {
 
 // Get remote file contents
 function horizon_get_file( $url ) {
-	$ch = curl_init();
-	curl_setopt( $ch, CURLOPT_HEADER, 0 );
-	curl_setopt( $ch, CURLOPT_URL, $url );
-	curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );
-	$tmp = curl_exec( $ch );
-	curl_close( $ch );
-	if ( $tmp != false ) {
-		return $tmp;
-	}
-<<<<<<< HEAD
+	$response = wp_remote_get( $url );
 	
-	// Get all google fonts
-	function horizon_get_google_fonts($api="AIzaSyCLXgNjOCHlE_3fHng8HUMkTTXd7DVfuyE"){
-		$all_fonts = json_decode(horizon_get_file("https://www.googleapis.com/webfonts/v1/webfonts?key=".$api));
-		foreach ((array)$all_fonts as $fonts){
-			if(gettype($fonts) !== "string") {
-				foreach($fonts as $font){
-					$google_fonts[] = $font;
-				}
-=======
+	if( $response->errors ) {
+		// if response has errors
+		return;
+	} else {
+		return $response['body'];
+	}
 }
 
 // Format slug
@@ -368,11 +356,12 @@ function horizon_create_slug( $str ) {
 }
 
 // Get all google fonts
-function horizon_get_google_fonts( $api = "AIzaSyCLXgNjOCHlE_3fHng8HUMkTTXd7DVfuyE" ) {
-	$all_fonts = json_decode( horizon_get_file( "https://www.googleapis.com/webfonts/v1/webfonts?key=" . $api ) );
+function horizon_get_google_fonts( $api = 'AIzaSyCLXgNjOCHlE_3fHng8HUMkTTXd7DVfuyE' ) {
+	$all_fonts = json_decode( horizon_get_file( "https://www.googleapis.com/webfonts/v1/webfonts?key=$api") );
 
 	// If no fonts are returned (i.e. no internet), return the function
-	if ( empty( $all_fonts ) )
+	
+	if ( is_null( $all_fonts ) )
 		return;
 
 	// Loop through fonts and add to array
@@ -380,7 +369,6 @@ function horizon_get_google_fonts( $api = "AIzaSyCLXgNjOCHlE_3fHng8HUMkTTXd7DVfu
 		if ( gettype( $fonts ) !== "string" ) {
 			foreach ( $fonts as $font ) {
 				$google_fonts[] = $font;
->>>>>>> 001d8cc58a16bf80d9f7cc57320937b338c855e7
 			}
 		}
 	}

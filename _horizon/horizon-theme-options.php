@@ -730,13 +730,6 @@ function horizon_font_preview_styling( $args ) {
 	foreach ( $args['defaults'] as $default => $value ) {
 		$args[$default . '_value'] = get_option( $args['name'] . '_' . $default, $value );
 	}
-<<<<<<< HEAD
-	
-	$loaded_fonts = array();
-	$google_fonts = horizon_get_google_fonts();
-	foreach((array)$google_fonts as $google_font){
-		$google_fonts_array[$google_font->family] = $google_font;
-=======
 	extract( $args );
 
 
@@ -772,7 +765,6 @@ function horizon_font_preview_styling( $args ) {
 		default:
 			$style .= 'font-weight:normal;';
 			break;
->>>>>>> 001d8cc58a16bf80d9f7cc57320937b338c855e7
 	}
 
 	return $style;
@@ -781,8 +773,10 @@ function horizon_font_preview_styling( $args ) {
 
 $loaded_fonts = array();
 $google_fonts = horizon_get_google_fonts();
-foreach ( $google_fonts as $google_font ) {
-	$google_fonts_array[$google_font->family] = $google_font;
+if( !is_null( $google_fonts ) ) {
+	foreach ( $google_fonts as $google_font ) {
+		$google_fonts_array[$google_font->family] = $google_font;
+	}
 }
 $basic_fonts = array(
 	'Arial'               => array( "regular", "700", "italic", "700italic" ),

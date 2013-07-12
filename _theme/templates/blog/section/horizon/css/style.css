@@ -1,65 +1,44 @@
 .page-builder-blog.horizon-style h2 {
-	margin-bottom: 5px;
-}
-
+  margin-bottom: 5px; }
 .page-builder-blog.horizon-style .blog-item {
-	margin-bottom: 50px;
-	min-height: 200px;
-	position: relative;
-}
-
+  margin-bottom: 50px;
+  min-height: 200px;
+  position: relative; }
 .page-builder-blog.horizon-style .blog-thumbnail {
-	border-radius: 4px;
-	-moz-border-radius: 4px;
-	-ms-border-radius: 4px;
-	-o-border-radius: 4px;
-	-webkit-border-radius: 4px;
-	margin-bottom: 30px;
-	overflow: hidden;
-}
-
-.page-builder-blog.horizon-style .blog-thumbnail .flexslider img {
-	border-radius: 4px;
-	-moz-border-radius: 4px;
-	-ms-border-radius: 4px;
-	-o-border-radius: 4px;
-	-webkit-border-radius: 4px;
-}
-
-.page-builder-blog.horizon-style .blog-thumbnail .flexslider li {
-	list-style: none;
-}
-
-.page-builder-blog.horizon-style .blog-thumbnail .flexslider .slides li {
-	margin: 0;
-}
-
-.page-builder-blog.horizon-style .blog-thumbnail .link-thumbnail,
-.page-builder-blog.horizon-style .blog-thumbnail .quote-thumbnail {
-	line-height: 2em;
-	padding: 30px 30px 30px 80px;
-	position: relative;
-}
-
-.page-builder-blog.horizon-style .blog-thumbnail .link-thumbnail i,
-.page-builder-blog.horizon-style .blog-thumbnail .quote-thumbnail i {
-	display: block;
-	height: 100px;
-	width: 60px;
-	position: absolute;
-	top: 30px;
-	left: 30px;
-}
-
-.page-builder-blog.horizon-style .blog-thumbnail .link-thumbnail p:last-child,
-.page-builder-blog.horizon-style .blog-thumbnail .quote-thumbnail p:last-child {
-	margin: 0;
-}
-
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  margin-bottom: 30px;
+  overflow: hidden; }
+  .page-builder-blog.horizon-style .blog-thumbnail .flexslider img {
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    -webkit-border-radius: 4px; }
+  .page-builder-blog.horizon-style .blog-thumbnail .flexslider li {
+    list-style: none; }
+  .page-builder-blog.horizon-style .blog-thumbnail .flexslider .slides li {
+    margin: 0; }
+  .page-builder-blog.horizon-style .blog-thumbnail .link-thumbnail,
+  .page-builder-blog.horizon-style .blog-thumbnail .quote-thumbnail {
+    line-height: 2em;
+    padding: 30px 30px 30px 80px;
+    position: relative; }
+    .page-builder-blog.horizon-style .blog-thumbnail .link-thumbnail i,
+    .page-builder-blog.horizon-style .blog-thumbnail .quote-thumbnail i {
+      display: block;
+      height: 100px;
+      width: 60px;
+      position: absolute;
+      top: 30px;
+      left: 30px; }
+    .page-builder-blog.horizon-style .blog-thumbnail .link-thumbnail p:last-child,
+    .page-builder-blog.horizon-style .blog-thumbnail .quote-thumbnail p:last-child {
+      margin: 0; }
 .page-builder-blog.horizon-style .post-info {
-	margin-bottom: 20px;
-}
-
-.page-builder-blog.horizon-style .post-info a {
-	margin-right: 5px;
-}
+  margin-bottom: 20px; }
+  .page-builder-blog.horizon-style .post-info a {
+    margin-right: 5px; }

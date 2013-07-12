@@ -22,29 +22,29 @@
  *
  *	Horizon Framework is built and maintained by Joe McKie (http://joemck.ie/)
  *
-*/
+ */
 
-(function() {  
-    tinymce.create('tinymce.plugins.list', {  
-        init : function(ed, url) {  
-            ed.addButton('list', {  
-                title : 'Insert List',  
-                image : url + "/images/list.png",
-                onclick : function() {
+(function () {
+	tinymce.create( 'tinymce.plugins.list', {
+		init : function ( ed, url ) {
+			ed.addButton( 'list', {
+				title : 'Insert List',
+				image : url + "/images/list.png",
+				onclick : function () {
 					ed.focus();
-					ed.selection.setContent('[list type="check"]<br />\
+					ed.selection.setContent( '[list type="check"]<br />\
 					<ul>\
 					<li>LIST ITEM</li>\
 					<li>LIST ITEM</li>\
 					<li>LIST ITEM</li>\
 					</ul>\
-					[/list]<br />');
-                }
-            });
-        },
-		createControl : function(n, cm) {
+					[/list]<br />' );
+				}
+			} );
+		},
+		createControl : function ( n, cm ) {
 			return null;
 		}
-    });
-    tinymce.PluginManager.add('list', tinymce.plugins.list);  
+	} );
+	tinymce.PluginManager.add( 'list', tinymce.plugins.list );
 })();

@@ -1,120 +1,60 @@
 @import '../../../../../includes/config.scss';
 
 $dev_mode_path: '../';
-$path: '_theme/templates/blog/revelio/';
+$path: '_theme/templates/blog/horizon/';
 
-.page-builder-blog.revelio-style {
-	
-	h2 {margin-bottom: 5px;}
-	
-	.blog-item {
-		margin-bottom: 95px;
-		min-height: 200px;
-		position: relative;
-	}
-	.blog-thumbnail {
+.page-builder-blog.horizon-style {
+
+  h2 {
+	margin-bottom: 5px;
+  }
+
+  .blog-item {
+	margin-bottom: 50px;
+	min-height: 200px;
+	position: relative;
+  }
+  .blog-thumbnail {
+	@include border-radius(4px);
+	margin-bottom: 30px;
+	overflow: hidden;
+
+	.flexslider {
+	  img {
 		@include border-radius(4px);
-		margin-bottom: 30px;
-		overflow: hidden;
-				
-		.flexslider {
-			img{@include border-radius(4px);}
-			li {list-style: none;}
-			.slides li {margin: 0;}
-		}
-		
-		.link-thumbnail,
-		.quote-thumbnail {
-			line-height: 2em;
-			padding: 30px 30px 30px 80px;
-			position: relative;
-			
-			i {
-				display: block;
-					height:100px;
-					width:60px;
-				position: absolute;
-					top:30px;
-					left: 30px;
-			}
-			p:last-child {margin: 0;}
-		}
+	  }
+	  li {
+		list-style: none;
+	  }
+	  .slides li {
+		margin: 0;
+	  }
 	}
-	.blog-line {
-		@include border-radius(6px);
-		position: absolute;
-			top:-20px;
-		width: 6px;
-	}
-	
-	.post-info {
-		position: absolute;
-		top: 45px;
-		
-		a {
-			@include border-radius(4px);
-			margin: 0 auto 10px auto;
-			overflow: visible;
-			position: relative;
-			@include transition(background-color .2s linear);
-		}
-		
-		.post-icon.date {
-			height:50px;
-			width:60px;
-			padding-top: 10px;
-			text-decoration: none;
-			
-			.day,
-			.month {
-				display: block;
-				font-weight: bold;
-				text-align: center;
-			}
-			
-			.day {font-size: 30px;}
-			.month {margin-top: -2px; font-size: 13px; text-transform: uppercase;}
-		}
-		
-		.post-icon {
-			display: block;
-				height:30px;
-				width:30px;
-			text-align: center;
-			
-			i {line-height: 30px;}
-				
-			span.tooltip {
-				position: absolute;
-				top: 0;
-				left: 25px;
-				padding: 0 12px;
-				text-align: center;
-				font-size: 13px;
-				font-weight: 600;
-				display: inline-table;
-				width: 150px;
-				height: 30px;
-				line-height: 30px;
-				@include border-radius(4px);
-				@include opacity(0);
-				display: none;
-				z-index: 1000;
-			}
-		}
-	}
-}
 
-.left-sidebar {
-	.page-builder-blog.revelio-style {
-		.blog-line {right: -46px;}
-		.post-info {right: -83px;}
+	.link-thumbnail,
+	.quote-thumbnail {
+	  line-height: 2em;
+	  padding: 30px 30px 30px 80px;
+	  position: relative;
+
+	  i {
+		display: block;
+		height: 100px;
+		width: 60px;
+		position: absolute;
+		top: 30px;
+		left: 30px;
+	  }
+	  p:last-child {
+		margin: 0;
+	  }
 	}
-}
-.right-sidebar,
-.no-sidebar {
-	.page-builder-blog.revelio-style {
-		.blog-line {left: -46px;}
-		.post-info {left: -83px;}
+  }
+  .post-info {
+	margin-bottom: 20px;
+
+	a {
+	  margin-right: 5px;
 	}
+  }
 }

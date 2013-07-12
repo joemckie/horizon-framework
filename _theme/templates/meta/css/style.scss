@@ -1,24 +1,37 @@
 @import '../../../includes/config.scss';
 
 .horizon-buttons a {
-	float: left;
-	color: #fff;
+  float: left;
+  color: #fff;
 }
 
 .horizon-button {
-	box-shadow: 0 1px 2px -1px;
-	display: inline-block;
-	text-align: center;
-	text-decoration: none;
-	margin: 0 10px 10px 0;
-	padding: 8px 15px;
-	outline: none;
-	width: auto;
-	
-	&.rounded {@include border-radius(4px);}
-	&.small {font-size:12px; padding: 8px 16px;}
-	&.medium {font-size:14px; padding: 10px 18px;}
-	&.large {font-size:16px; padding: 12px 20px;}
+  box-shadow: 0 1px 2px -1px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 10px 10px 0;
+  padding: 8px 15px;
+  outline: none;
+  width: auto;
+
+  &.rounded {
+	@include border-radius(4px);
+  }
+  &.small {
+	font-size: 12px;
+	padding: 8px 16px;
+  }
+  &.medium {
+	font-size: 14px;
+	padding: 10px 18px;
+  }
+  &.large {
+	font-size: 16px;
+	padding: 12px 20px;
+  }
 }
 
-.horizon-button:hover {	font-weight: inherit;}
+.horizon-button:hover {
+  font-weight: inherit;
+}

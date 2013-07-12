@@ -1,1 +1,2 @@
-... <div class="clear"></div><a class="horizon-button rounded" href="<?php echo get_permalink();?>">Read More</a>
+...
+<div class="clear"></div><a class="horizon-button rounded" href="<?php echo get_permalink(); ?>">Read More</a>

@@ -22,23 +22,23 @@
  *
  *	Horizon Framework is built and maintained by Joe McKie (http://joemck.ie/)
  *
-*/
+ */
 
-(function() {  
-    tinymce.create('tinymce.plugins.youtube', {  
-        init : function(ed, url) {  
-            ed.addButton('youtube', {  
-                title : 'Insert YouTube Video',  
-                image : url + "/images/youtube.png",
-                onclick : function() {
+(function () {
+	tinymce.create( 'tinymce.plugins.youtube', {
+		init : function ( ed, url ) {
+			ed.addButton( 'youtube', {
+				title : 'Insert YouTube Video',
+				image : url + "/images/youtube.png",
+				onclick : function () {
 					ed.focus();
-					ed.selection.setContent('[youtube height="315" width="560" title="TITLE"]YOUTUBE VIDEO URL[/youtube]');
-                }
-            });
-        },
-		createControl : function(n, cm) {
+					ed.selection.setContent( '[youtube height="315" width="560" title="TITLE"]YOUTUBE VIDEO URL[/youtube]' );
+				}
+			} );
+		},
+		createControl : function ( n, cm ) {
 			return null;
 		}
-    });
-    tinymce.PluginManager.add('youtube', tinymce.plugins.youtube);  
+	} );
+	tinymce.PluginManager.add( 'youtube', tinymce.plugins.youtube );
 })();

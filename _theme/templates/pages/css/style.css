@@ -1,5 +1,29 @@
 .page-wrapper {
-  padding: 0; }
+	padding: 0;
+}
+
+#page-header {
+	margin: 20px 10px;
+	text-align: center;
+}
 
 .horizon-slider {
-  margin: 0 10px; }
+	margin: 0 10px;
+}
+
+.horizon_page_content > :last-child {
+	margin-bottom: 70px !important;
+}
+
+.horizon_page_builder > :last-child {
+	margin-bottom: 0 !important;
+}
+
+.horizon_page_item > :last-child {
+	margin-bottom: 0 !important;
+}
+
+.horizon-divider {
+	height: 6px;
+	width: 100%;
+}

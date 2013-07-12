@@ -1,37 +1,43 @@
-$dev_mode: true;
+$dev_mode: false;
 
 @function format_image_path($dev_mode, $dev_mode_path, $path) {
   @if ($dev_mode == true) {
-    @return $dev_mode_path;
+	@return $dev_mode_path;
   } @else {
-    @return $path;
+	@return $path;
   }
 }
 
 @mixin border-radius($radius) {
-	border-radius: $radius;
-	-moz-border-radius: $radius;
-	-ms-border-radius: $radius;
-	-o-border-radius: $radius;
-	-webkit-border-radius: $radius;
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  -webkit-border-radius: $radius;
 }
 
 @mixin clear {
-    &:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+  &:after {
+	content: "\0020";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+  }
 }
 
-@mixin transition ($transition) {
-	transition: $transition;
-	-moz-transition: $transition;
-	-ms-transition: $transition;
-	-o-transition: $transition;
-	-webkit-transition: $transition;
+@mixin transition($transition) {
+  transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  -webkit-transition: $transition;
 }
 
-@mixin opacity ($opacity) {
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$opacity+")";
-	filter: alpha(opacity=$opacity);
-	-moz-opacity: $opacity;
-	-khtml-opacity: $opacity;
-	opacity: $opacity;
+@mixin opacity($opacity) {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$opacity+")";
+  filter: alpha(opacity=$opacity);
+  -moz-opacity: $opacity;
+  -khtml-opacity: $opacity;
+  opacity: $opacity;
 }

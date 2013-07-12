@@ -1,2 +1,42 @@
 .search_results.blog-results.horizon-style {
-  display: block; }
+  position: relative; }
+  .search_results.blog-results.horizon-style h2 {
+    margin-bottom: 5px; }
+  .search_results.blog-results.horizon-style .blog-item {
+    margin-bottom: 50px;
+    min-height: 200px;
+    position: relative; }
+  .search_results.blog-results.horizon-style .blog-thumbnail {
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    margin-bottom: 30px;
+    overflow: hidden; }
+    .search_results.blog-results.horizon-style .blog-thumbnail .flexslider img {
+      border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      -webkit-border-radius: 4px; }
+    .search_results.blog-results.horizon-style .blog-thumbnail .flexslider li {
+      list-style: none; }
+    .search_results.blog-results.horizon-style .blog-thumbnail .flexslider .slides li {
+      margin: 0; }
+    .search_results.blog-results.horizon-style .blog-thumbnail .link-thumbnail,
+    .search_results.blog-results.horizon-style .blog-thumbnail .quote-thumbnail {
+      line-height: 2em;
+      padding: 30px 30px 30px 80px;
+      position: relative; }
+      .search_results.blog-results.horizon-style .blog-thumbnail .link-thumbnail i,
+      .search_results.blog-results.horizon-style .blog-thumbnail .quote-thumbnail i {
+        display: block;
+        height: 100px;
+        width: 60px;
+        position: absolute;
+        top: 30px;
+        left: 30px; }
+      .search_results.blog-results.horizon-style .blog-thumbnail .link-thumbnail p:last-child,
+      .search_results.blog-results.horizon-style .blog-thumbnail .quote-thumbnail p:last-child {
+        margin: 0; }

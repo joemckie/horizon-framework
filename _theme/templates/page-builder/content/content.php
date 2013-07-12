@@ -1,7 +1,7 @@
 <?php
 global $attributes;
-extract($attributes);
+extract( $attributes );
 ?>
 <div class="horizon-content">
-	<?php the_content();?>
+	<?php the_content(); ?>
 </div>

@@ -1,7 +1,58 @@
 @import '../../../../../includes/config.scss';
 
 $dev_mode_path: '../';
-$path: '_theme/templates/blog/single-post/XXXX/';
+$path: '_theme/templates/blog/single-post/horizon/';
 
-.single-blog-post.XXXX-style {
+.single-blog-post.horizon-style {
+	position: relative;
+
+	.blog-thumbnail {
+		@include border-radius(4px);
+		margin-bottom: 30px;
+		overflow: hidden;
+				
+		.flexslider {
+			img{@include border-radius(4px);}
+			li {list-style: none;}
+			.slides li {margin: 0;}
+		}
+		
+		.link-thumbnail,
+		.quote-thumbnail {
+			line-height: 2em;
+			padding: 30px 30px 30px 80px;
+			position: relative;
+			
+			i {
+				display: block;
+					height:100px;
+					width:60px;
+				position: absolute;
+					top:30px;
+					left: 30px;
+			}
+			p:last-child {margin: 0;}
+		}
+		.link-thumbnail .icon {background-image: url(format_image_path($dev_mode, $dev_mode_path, $path) + 'images/url.png');}
+		.quote-thumbnail .icon {background-image: url(format_image_path($dev_mode, $dev_mode_path, $path) + 'images/post_quotes.png');}
+
+	}
+	
+	ul li {list-style:disc; margin: 0 0 6px 40px;}
+	
+	.author-info {
+		position: relative;
+		
+		.avatar {
+			@include border-radius(4px);
+			float: left;
+			margin: 0 20px 20px 0;
+		}
+		
+		h6 {line-height: 12px;}
+		.author-name {
+			padding: 2px 0 5px 0;
+			a {color: inherit; font-weight: inherit;}
+		}
+	}
 }

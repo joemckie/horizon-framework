@@ -1,0 +1,60 @@
+.single-blog-post.horizon-style {
+  position: relative; }
+  .single-blog-post.horizon-style .blog-thumbnail {
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    margin-bottom: 30px;
+    overflow: hidden; }
+    .single-blog-post.horizon-style .blog-thumbnail .flexslider img {
+      border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      -webkit-border-radius: 4px; }
+    .single-blog-post.horizon-style .blog-thumbnail .flexslider li {
+      list-style: none; }
+    .single-blog-post.horizon-style .blog-thumbnail .flexslider .slides li {
+      margin: 0; }
+    .single-blog-post.horizon-style .blog-thumbnail .link-thumbnail,
+    .single-blog-post.horizon-style .blog-thumbnail .quote-thumbnail {
+      line-height: 2em;
+      padding: 30px 30px 30px 80px;
+      position: relative; }
+      .single-blog-post.horizon-style .blog-thumbnail .link-thumbnail i,
+      .single-blog-post.horizon-style .blog-thumbnail .quote-thumbnail i {
+        display: block;
+        height: 100px;
+        width: 60px;
+        position: absolute;
+        top: 30px;
+        left: 30px; }
+      .single-blog-post.horizon-style .blog-thumbnail .link-thumbnail p:last-child,
+      .single-blog-post.horizon-style .blog-thumbnail .quote-thumbnail p:last-child {
+        margin: 0; }
+    .single-blog-post.horizon-style .blog-thumbnail .link-thumbnail .icon {
+      background-image: url("_theme/templates/blog/single-post/horizon/images/url.png"); }
+    .single-blog-post.horizon-style .blog-thumbnail .quote-thumbnail .icon {
+      background-image: url("_theme/templates/blog/single-post/horizon/images/post_quotes.png"); }
+  .single-blog-post.horizon-style ul li {
+    list-style: disc;
+    margin: 0 0 6px 40px; }
+  .single-blog-post.horizon-style .author-info {
+    position: relative; }
+    .single-blog-post.horizon-style .author-info .avatar {
+      border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      float: left;
+      margin: 0 20px 20px 0; }
+    .single-blog-post.horizon-style .author-info h6 {
+      line-height: 12px; }
+    .single-blog-post.horizon-style .author-info .author-name {
+      padding: 2px 0 5px 0; }
+      .single-blog-post.horizon-style .author-info .author-name a {
+        color: inherit;
+        font-weight: inherit; }

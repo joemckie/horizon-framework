@@ -22,27 +22,27 @@
  *
  *	Horizon Framework is built and maintained by Joe McKie (http://joemck.ie/)
  *
-*/
+ */
 
-(function() {  
-    tinymce.create('tinymce.plugins.tabs', {  
-        init : function(ed, url) {  
-            ed.addButton('tabs', {  
-                title : 'Insert Tabs',  
-                image : url + "/images/tabs.png",
-                onclick : function() {
+(function () {
+	tinymce.create( 'tinymce.plugins.tabs', {
+		init : function ( ed, url ) {
+			ed.addButton( 'tabs', {
+				title : 'Insert Tabs',
+				image : url + "/images/tabs.png",
+				onclick : function () {
 					ed.focus();
-					ed.selection.setContent('[tabs]<br />\
+					ed.selection.setContent( '[tabs]<br />\
 						[tab_item title="TAB TITLE"]TAB CONTENT[/tab_item]<br />\
 						[tab_item title="TAB TITLE"]TAB CONTENT[/tab_item]<br />\
 						[tab_item title="TAB TITLE"]TAB CONTENT[/tab_item]<br />\
-					[/tabs]');
-                }
-            });
-        },
-		createControl : function(n, cm) {
+					[/tabs]' );
+				}
+			} );
+		},
+		createControl : function ( n, cm ) {
 			return null;
 		}
-    });
-    tinymce.PluginManager.add('tabs', tinymce.plugins.tabs);  
+	} );
+	tinymce.PluginManager.add( 'tabs', tinymce.plugins.tabs );
 })();

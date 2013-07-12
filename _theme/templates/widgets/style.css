@@ -1,0 +1,21 @@
+.widget-portfolio .portfolio-item {
+	float: left;
+	margin: 0 10px 10px 0;
+}
+
+.widget-portfolio .portfolio-item img {
+	border: 3px solid #666;
+	transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-ms-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+}
+
+.widget-portfolio .portfolio-item img:hover {
+	opacity: 0.85;
+}
+
+.horizon-twitter-widget p {
+	margin: 0;
+}

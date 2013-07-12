@@ -10,7 +10,7 @@
 }
 
 .minicolors.minicolors-theme-default .minicolors-input {
-    margin: 0px;
+	margin: 0px;
 	margin-right: 3px;
 	border: solid 1px #ddd;
 	width: 65px;
@@ -27,8 +27,8 @@
 }
 
 .minicolors-theme-default.minicolors-swatch-left .minicolors-input {
-    margin-left: -1px;
-    margin-right: auto;
+	margin-left: -1px;
+	margin-right: auto;
 }
 
 .minicolors-theme-default.minicolors-focus .minicolors-input,
@@ -210,12 +210,11 @@
 	display: inline-block;
 }
 
-
 /*
  * Bootstrap Theme (theme: 'bootstrap')
  *
  */
- 
+
 /* Input styles */
 .minicolors-theme-bootstrap .minicolors-input {
 	padding: 4px 6px;

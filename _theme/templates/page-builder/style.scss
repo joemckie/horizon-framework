@@ -4,16 +4,70 @@ $dev_mode_path: '';
 $path: '_theme/templates/page-builder/';
 
 .horizon-col-services {
+  margin-bottom: 30px;
+  padding-left: 65px;
+  position: relative;
+
+  .icon {
+	@include border-radius(4px);
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 46px;
+	width: 46px;
+	text-align: center;
+
+	i {
+	  line-height: 46px;
+	}
+  }
 }
 
 .horizon-call-to-action {
+  background: #fff;
+  border: 1px solid #efefef;
+  border-left: 3px solid #00cbe9;
+  padding: 10px 140px 10px 10px;
+
+  .horizon-button {
+	position: absolute;
+	right: 18px;
+	top: 16px;
+  }
+  h5 {
+	margin-bottom: 5px;
+  }
+  p {
+	margin: 0;
+  }
 }
 
 .horizon-full-width-wrapper {
+  padding: 20px 0;
+  h1 {
+	margin-bottom: 0;
+  }
+  & > h1,
+  & > div {
+	text-align: center;
+  }
 }
 
-.horizon-section {
+.horizon-post-scroller {
+  .flex-control-nav {
+	display: none;
+  }
 }
 
 .horizon-testimonials {
+  background: #f5f5f5;
+  padding: 20px;
+  margin-top: 20px;
+
+  &.shortcode-testimonial {
+	background: none;
+  }
+  div {
+	display: none;
+  }
 }

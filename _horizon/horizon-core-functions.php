@@ -345,6 +345,17 @@ function horizon_get_file( $url ) {
 	if ( $tmp != false ) {
 		return $tmp;
 	}
+<<<<<<< HEAD
+	
+	// Get all google fonts
+	function horizon_get_google_fonts($api="AIzaSyCLXgNjOCHlE_3fHng8HUMkTTXd7DVfuyE"){
+		$all_fonts = json_decode(horizon_get_file("https://www.googleapis.com/webfonts/v1/webfonts?key=".$api));
+		foreach ((array)$all_fonts as $fonts){
+			if(gettype($fonts) !== "string") {
+				foreach($fonts as $font){
+					$google_fonts[] = $font;
+				}
+=======
 }
 
 // Format slug
@@ -369,6 +380,7 @@ function horizon_get_google_fonts( $api = "AIzaSyCLXgNjOCHlE_3fHng8HUMkTTXd7DVfu
 		if ( gettype( $fonts ) !== "string" ) {
 			foreach ( $fonts as $font ) {
 				$google_fonts[] = $font;
+>>>>>>> 001d8cc58a16bf80d9f7cc57320937b338c855e7
 			}
 		}
 	}

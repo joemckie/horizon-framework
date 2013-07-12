@@ -1,5 +1,66 @@
 <?php
 
+<<<<<<< HEAD
+	/*
+	*
+	*	@version: 1.0.0
+	*	@author: Joe McKie
+	*	@link: http://joemck.ie/
+	*	@copyright: Joe McKie 2013
+	*
+	*	This file is part of the Horizon Framework.
+	*
+	*   Horizon Framework is free software: you can redistribute it and/or modify
+	*   it under the terms of the GNU General Public License as published by
+	*   the Free Software Foundation, either version 3 of the License, or
+	*   (at your option) any later version.
+	*
+	*   Horizon Framework is distributed in the hope that it will be useful,
+	*   but WITHOUT ANY WARRANTY; without even the implied warranty of
+	*   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	*   GNU General Public License for more details.
+	*
+	*   You should have received a copy of the GNU General Public License
+	*   along with the Horizon Framework.  If not, see <http://www.gnu.org/licenses/>.
+	*
+	*	Horizon Framework is built and maintained by Joe McKie (http://joemck.ie/)
+	*
+	*/
+	
+	//add_action( 'init', 'horizon_set_variable_styles' );
+	add_action( 'horizon_set_variable_styles', 'horizon_set_variable_styles' );
+	function horizon_set_variable_styles() {
+		global $config_array;
+		
+		if(!defined('BLOG_STYLE'))
+			define( 'BLOG_STYLE', horizon_create_slug(get_option( THEME_SHORT_NAME.'_options_blog_type', '' )) );
+			
+		if(!defined('BLOG_ARCHIVE_STYLE'))
+			define( 'BLOG_ARCHIVE_STYLE', horizon_create_slug(get_option( THEME_SHORT_NAME.'_options_blog_archive_type', '' )) );
+			
+		if(!defined('BLOG_SINGLE_STYLE'))
+			define( 'BLOG_SINGLE_STYLE', horizon_create_slug(get_option( THEME_SHORT_NAME.'_options_blog_single_type', '' )) );
+			
+		if(!defined('PORTFOLIO_STYLE'))
+			define( 'PORTFOLIO_STYLE', horizon_create_slug(get_option( THEME_SHORT_NAME.'_options_portfolio_type', '' )) );
+			
+		if(!defined('PORTFOLIO_ARCHIVE_STYLE'))
+			define( 'PORTFOLIO_ARCHIVE_STYLE', horizon_create_slug(get_option( THEME_SHORT_NAME.'_options_portfolio_archive_type', '' )) );
+			
+		if(!defined('PORTFOLIO_SINGLE_STYLE'))
+			define( 'PORTFOLIO_SINGLE_STYLE', horizon_create_slug(get_option( THEME_SHORT_NAME.'_options_portfolio_single_type', '' )) );
+			
+		$config_array = array(
+			TEMPLATE_PATH.'/blog/single-post/'.BLOG_SINGLE_STYLE.'horizon/config/config.php',
+			TEMPLATE_PATH.'/blog/section/'.BLOG_STYLE.'horizon/config/config.php',
+			TEMPLATE_PATH.'/blog/archive/'.BLOG_ARCHIVE_STYLE.'horizon/config/config.php',
+			TEMPLATE_PATH.'/portfolio/single-post/'.PORTFOLIO_SINGLE_STYLE.'horizon/config/config.php',
+			TEMPLATE_PATH.'/portfolio/section/'.PORTFOLIO_STYLE.'horizon/config/config.php',
+			TEMPLATE_PATH.'/portfolio/archive/'.PORTFOLIO_ARCHIVE_STYLE.'horizon/config/config.php',
+		);
+		
+		return $config_array;
+=======
 /*
 *
 *	@version: 1.0.0
@@ -25,6 +86,7 @@
 *	Horizon Framework is built and maintained by Joe McKie (http://joemck.ie/)
 *
 */
+>>>>>>> 001d8cc58a16bf80d9f7cc57320937b338c855e7
 
 //add_action( 'init', 'horizon_set_variable_styles' );
 add_action( 'horizon_set_variable_styles', 'horizon_set_variable_styles' );
@@ -54,6 +116,21 @@ function horizon_set_variable_styles() {
 	if ( !defined( 'PORTFOLIO_SINGLE_STYLE' ) ) {
 		define( 'PORTFOLIO_SINGLE_STYLE', horizon_create_slug( get_option( THEME_SHORT_NAME . '_options_portfolio_single_type', 'horizon' ) ) );
 	}
+<<<<<<< HEAD
+	
+	add_action('horizon_include_theme_admin_scripts', 'horizon_include_theme_admin_scripts');
+	function horizon_include_theme_admin_scripts(){
+		$js_array = array(
+			TEMPLATE_PATH.'/blog/single-post/'.BLOG_SINGLE_STYLE.'horizon/config/config.js',
+			TEMPLATE_PATH.'/blog/section/'.BLOG_STYLE.'horizon/config/config.js',
+			TEMPLATE_PATH.'/blog/archive/'.BLOG_ARCHIVE_STYLE.'horizon/config/config.js',
+		);
+		$i=0;
+		foreach($js_array as $path){
+			wp_enqueue_script('script-'.$i, ROOT.'/'.$path, false, '1.0', true);
+			$i++;
+		}
+=======
 
 	$config_array = array(
 		TEMPLATE_PATH . '/blog/single-post/' . BLOG_SINGLE_STYLE . '/config/config.php',
@@ -79,6 +156,7 @@ function horizon_include_theme_admin_scripts() {
 	foreach ( $js_array as $path ) {
 		wp_enqueue_script( 'script-' . $i, ROOT . '/' . $path, false, '1.0', true );
 		$i++;
+>>>>>>> 001d8cc58a16bf80d9f7cc57320937b338c855e7
 	}
 }
 

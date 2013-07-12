@@ -336,14 +336,13 @@ function horizon_get_post_list( $post_type ) {
 
 // Get remote file contents
 function horizon_get_file( $url ) {
-	$ch = curl_init();
-	curl_setopt( $ch, CURLOPT_HEADER, 0 );
-	curl_setopt( $ch, CURLOPT_URL, $url );
-	curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );
-	$tmp = curl_exec( $ch );
-	curl_close( $ch );
-	if ( $tmp != false ) {
-		return $tmp;
+	$response = wp_remote_get( $url );
+	
+	if( $response->errors ) {
+		// if response has errors
+		return;
+	} else {
+		return $response['body'];
 	}
 }
 
@@ -357,8 +356,8 @@ function horizon_create_slug( $str ) {
 }
 
 // Get all google fonts
-function horizon_get_google_fonts( $api = "AIzaSyCLXgNjOCHlE_3fHng8HUMkTTXd7DVfuyE" ) {
-	$all_fonts = json_decode( horizon_get_file( "https://www.googleapis.com/webfonts/v1/webfonts?key=" . $api ) );
+function horizon_get_google_fonts( $api = 'AIzaSyCLXgNjOCHlE_3fHng8HUMkTTXd7DVfuyE' ) {
+	$all_fonts = json_decode( horizon_get_file( "https://www.googleapis.com/webfonts/v1/webfonts?key=$api") );
 
 	// If no fonts are returned (i.e. no internet), return the function
 	

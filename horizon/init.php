@@ -100,6 +100,7 @@ $import_styles = array(
 
 // Init vendor classes
 include_once( 'vendor/tgm-plugin-activation/init.php' );
+include_once( 'vendor/aqua-resizer/aq_resizer.php' );
 
 do_action( 'horizon_config' );
 

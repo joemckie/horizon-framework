@@ -55,8 +55,6 @@ function horizon_set_variable_styles() {
 		define( 'PORTFOLIO_SINGLE_STYLE', horizon_create_slug( get_option( THEME_SHORT_NAME . '_options_portfolio_single_type', 'horizon' ) ) );
 	}
 
-	echo BLOG_SINGLE_STYLE;
-
 	$config_array = array(
 		TEMPLATE_PATH . '/blog/single-post/' . BLOG_SINGLE_STYLE . '/config/config.php',
 		TEMPLATE_PATH . '/blog/section/' . BLOG_STYLE . '/config/config.php',
@@ -77,10 +75,8 @@ function horizon_include_theme_admin_scripts() {
 		TEMPLATE_PATH . '/blog/section/' . BLOG_STYLE . '/config/config.js',
 		TEMPLATE_PATH . '/blog/archive/' . BLOG_ARCHIVE_STYLE . '/config/config.js',
 	);
-	$i = 0;
-	foreach ( $js_array as $path ) {
-		wp_enqueue_script( 'script-' . $i, ROOT . '/' . $path, false, '1.0', true );
-		$i++;
+	foreach ( $js_array as $key => $path ) {
+		wp_enqueue_script( 'script-' . $key, ROOT . '/' . $path, false, '1.0', true );
 	}
 }
 
@@ -122,6 +118,3 @@ function horizon_get_page_builder_additional_row_class() {
 			return ' mb0';
 	}
 }
-
-
-?>

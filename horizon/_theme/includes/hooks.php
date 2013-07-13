@@ -55,6 +55,8 @@ function horizon_set_variable_styles() {
 		define( 'PORTFOLIO_SINGLE_STYLE', horizon_create_slug( get_option( THEME_SHORT_NAME . '_options_portfolio_single_type', 'horizon' ) ) );
 	}
 
+	echo BLOG_SINGLE_STYLE;
+
 	$config_array = array(
 		TEMPLATE_PATH . '/blog/single-post/' . BLOG_SINGLE_STYLE . '/config/config.php',
 		TEMPLATE_PATH . '/blog/section/' . BLOG_STYLE . '/config/config.php',

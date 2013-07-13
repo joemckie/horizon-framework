@@ -145,7 +145,7 @@ function horizon_output_styles() {
 	wp_enqueue_style( 'base' );
 
 	wp_deregister_style( 'custom-styles' );
-	wp_register_style( 'custom-styles', ROOT . '/custom-styles.css', false, '1.0', 'all' );
+	wp_register_style( 'custom-styles', get_template_directory_uri() . '/custom-styles.css', false, '1.0', 'all' );
 	wp_enqueue_style( 'custom-styles' );
 
 	wp_deregister_style( 'lightbox' );

@@ -76,5 +76,3 @@ function horizon_theme_scripts() {
 	wp_register_script( 'horizon-scripts', ROOT . '/_theme/js/horizon-scripts.js', array( 'horizon-core-scripts' ), '1.0', true );
 	wp_enqueue_script( 'horizon-scripts' );
 }
-
-?>

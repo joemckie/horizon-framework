@@ -121,5 +121,3 @@ function horizon_custom_theme_styles() {
 	$temp_att = horizon_style_attribute( 'padding-left', ( get_option( THEME_SHORT_NAME . '_options_comments_avatar_size', '60' ) + 20 ) . 'px' );
 	horizon_build_selector( '.horizon-comment', $temp_att );
 }
-
-?>

@@ -597,5 +597,3 @@ function horizon_save_meta_data( $post_id, $new_meta, $old_meta, $name ) {
 
 	}
 }
-
-?>

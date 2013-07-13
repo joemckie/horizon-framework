@@ -718,5 +718,3 @@ add_action( 'horizon_after_testimonials', 'horizon_after_testimonials' );
 function horizon_after_testimonials() {
 	return get_template_part( TEMPLATE_PATH . '/page-builder/testimonial/after-testimonials' );
 }
-
-?>

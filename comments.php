@@ -28,5 +28,3 @@
 
 
 get_template_part( TEMPLATE_PATH . '/comments/comments' );
-
-?>

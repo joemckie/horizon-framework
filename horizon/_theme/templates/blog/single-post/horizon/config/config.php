@@ -510,5 +510,3 @@ $post_meta_boxes = array(
 		),
 	),
 );
-
-?>

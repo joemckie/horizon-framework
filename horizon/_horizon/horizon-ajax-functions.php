@@ -49,5 +49,3 @@ function horizon_ajax_function() {
 	die;
 
 }
-
-?>

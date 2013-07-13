@@ -110,5 +110,3 @@ function register_external_plugins( $plugin_array ) {
 
 	return $plugin_array;
 }
-
-?>

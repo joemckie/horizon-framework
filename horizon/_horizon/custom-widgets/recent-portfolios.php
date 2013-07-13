@@ -138,5 +138,3 @@ class horizon_recent_portfolio_widget extends WP_Widget {
 
 	}
 }
-
-?>

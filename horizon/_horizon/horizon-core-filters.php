@@ -166,5 +166,3 @@ add_filter( 'excerpt_length', 'horizon_custom_excerpt_length', 999 );
 function horizon_custom_excerpt_length( $length ) {
 	return get_option( THEME_SHORT_NAME . '_options_excerpt_length', 55 );
 }
-
-?>

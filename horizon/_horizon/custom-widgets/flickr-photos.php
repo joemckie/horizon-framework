@@ -150,5 +150,3 @@ class horizon_flickr_photos_widget extends WP_Widget {
 
 	}
 }
-
-?>

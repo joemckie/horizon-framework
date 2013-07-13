@@ -454,5 +454,3 @@ function horizon_save_page_options( $id ) {
 		endforeach;
 	endforeach;
 }
-
-?>

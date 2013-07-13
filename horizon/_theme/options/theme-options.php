@@ -1986,5 +1986,3 @@ $elements_array = array(
 $custom_fonts = array(
 	'Helvetica Neue' => array( "300", "regular", "700", "italic", "700italic" )
 );
-
-?>

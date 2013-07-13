@@ -207,6 +207,3 @@ function horizon_save_portfolio_options( $id ) {
 
 	endforeach;
 }
-
-
-?>

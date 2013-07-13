@@ -127,5 +127,3 @@ class horizon_twitter_widget extends WP_Widget {
 
 	}
 }
-
-?>

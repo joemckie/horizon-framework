@@ -806,5 +806,3 @@ $weight_types = array(
 $size_types = array( "px", "em", "pt" );
 $decoration_types = array( "none", "underline" );
 $transform_types = array( "none", "uppercase" );
-
-?>

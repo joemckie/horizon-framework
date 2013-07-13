@@ -33,5 +33,3 @@ if ( $post_meta['sidebar_type'] == "Right Sidebar" ) {
 } elseif ( $post_meta['sidebar_type'] == "Both Sidebars" ) {
 	get_template_part( TEMPLATE_PATH . '/sidebars/right/both-sidebar' );
 }
-
-?>

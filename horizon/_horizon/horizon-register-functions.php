@@ -93,5 +93,3 @@ function horizon_add_admin_bar_buttons() {
 		) );
 	}
 }
-
-?>

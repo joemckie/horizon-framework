@@ -492,5 +492,3 @@ $page_meta_boxes = array(
 		),
 	),
 );
-
-?>

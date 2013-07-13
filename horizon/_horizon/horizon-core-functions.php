@@ -465,5 +465,3 @@ function horizon_format_tags( $tags, $echo = true, $separator = ", ", $link = tr
 		return $tag_string;
 	}
 }
-
-?>

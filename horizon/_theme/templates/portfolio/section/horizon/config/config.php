@@ -144,5 +144,3 @@ $page_meta_boxes['page-builder']['Page Builder']['elements']['Portfolio'] = arra
 		"selected_value" => "Yes",
 	),
 );
-
-?>

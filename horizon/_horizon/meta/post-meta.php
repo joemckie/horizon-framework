@@ -120,5 +120,3 @@ function horizon_save_post_options( $id ) {
 
 	endforeach;
 }
-
-?>

@@ -116,5 +116,3 @@ function horizon_register_testimonial() {
 		}
 	}
 }
-
-?>

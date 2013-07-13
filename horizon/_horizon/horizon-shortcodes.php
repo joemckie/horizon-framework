@@ -578,5 +578,3 @@ function horizon_fix_p_br( $content ) {
 }
 
 add_filter( 'the_content', 'horizon_fix_p_br', 0 );
-
-?>

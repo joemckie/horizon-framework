@@ -48,4 +48,3 @@ $elements_array[__( 'Portfolio Archive Settings - Horizon Style' )] =
 			),
 		),
 	);
-?>

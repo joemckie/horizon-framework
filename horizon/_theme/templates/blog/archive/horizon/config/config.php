@@ -271,4 +271,3 @@ $elements_array[__( 'Archive Settings - Horizon Style' )] =
 			)
 		)
 	);
-?>

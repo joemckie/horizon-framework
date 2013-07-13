@@ -235,6 +235,3 @@ function horizon_save_staff_options( $id ) {
 
 	endforeach;
 }
-
-
-?>

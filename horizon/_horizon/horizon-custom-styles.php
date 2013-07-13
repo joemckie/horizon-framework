@@ -246,5 +246,3 @@ function horizon_get_custom_style_content() {
 	horizon_custom_theme_styles();
 
 }
-
-?>

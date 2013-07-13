@@ -245,6 +245,3 @@ function horizon_save_price_table_options( $id ) {
 
 	endforeach;
 }
-
-
-?>

@@ -64,5 +64,3 @@ if ( is_admin() ) {
 		require_once( $t . $include );
 	}
 }
-
-?>

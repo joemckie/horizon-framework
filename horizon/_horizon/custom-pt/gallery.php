@@ -171,6 +171,3 @@ function horizon_save_gallery_options( $id ) {
 
 	endforeach;
 }
-
-
-?>

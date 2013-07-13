@@ -44,9 +44,6 @@ if ( $options['footer_enable_copyright_bar'] == "Yes" ) {
 do_action( 'horizon_after_footer' );
 do_action( 'horizon_after_wrapper' );
 
-?>
-
-<?php
 if ( DEV_MODE ) {
 	global $start;
 
@@ -57,4 +54,3 @@ if ( DEV_MODE ) {
 	$total_time = round( ( $finish - $start ), 4 );
 	echo '<div class="dev_toolbar">Page generated in ' . $total_time . ' seconds.</div>';
 }
-?>

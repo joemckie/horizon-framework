@@ -191,5 +191,3 @@ function horizon_load_colour_picker() {
 	wp_register_style( 'colorpicker', ROOT . '/_horizon/css/colourpicker.css', false, '1.0', false );
 	wp_enqueue_style( 'colorpicker' );
 }
-
-?>

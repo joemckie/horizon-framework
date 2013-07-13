@@ -410,5 +410,3 @@ $page_meta_boxes['page-builder']['Page Builder']['elements']['Blog'] = array(
 		"selected_value" => "Yes",
 	),
 );
-
-?>

@@ -821,5 +821,3 @@ function horizon_page_builder_output( $xml, $area ) {
 
 	return $output;
 }
-
-?>

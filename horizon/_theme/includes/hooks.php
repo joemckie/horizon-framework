@@ -71,10 +71,11 @@ function horizon_set_variable_styles() {
 add_action( 'horizon_include_theme_admin_scripts', 'horizon_include_theme_admin_scripts' );
 function horizon_include_theme_admin_scripts() {
 	$js_array = array(
-		TEMPLATE_PATH . '/blog/single-post/' . BLOG_SINGLE_STYLE . '/config/config.js',
-		TEMPLATE_PATH . '/blog/section/' . BLOG_STYLE . '/config/config.js',
-		TEMPLATE_PATH . '/blog/archive/' . BLOG_ARCHIVE_STYLE . '/config/config.js',
+		STYLES_PATH . '/blog/single-post/' . BLOG_SINGLE_STYLE . '/config/config.js',
+		STYLES_PATH . '/blog/section/' . BLOG_STYLE . '/config/config.js',
+		STYLES_PATH . '/blog/archive/' . BLOG_ARCHIVE_STYLE . '/config/config.js',
 	);
+
 	foreach ( $js_array as $key => $path ) {
 		wp_enqueue_script( 'script-' . $key, ROOT . '/' . $path, false, '1.0', true );
 	}

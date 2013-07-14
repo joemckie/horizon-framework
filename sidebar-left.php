@@ -35,5 +35,3 @@ if ( $post_meta['sidebar_type'] == "Left Sidebar" ) {
 	dynamic_sidebar( $post_meta['left_sidebar'] );
 	echo "</div>";
 }
-
-?>

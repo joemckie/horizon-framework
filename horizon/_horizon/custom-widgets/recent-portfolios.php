@@ -55,7 +55,6 @@ class horizon_recent_portfolio_widget extends WP_Widget {
 			echo $before_title . $title . $after_title;
 		}
 
-
 		$args = array(
 			'post_type'      => 'portfolio',
 			'posts_per_page' => $num,
@@ -110,6 +109,7 @@ class horizon_recent_portfolio_widget extends WP_Widget {
 		$defaults = array( 'title' => '', 'num' => '9', 'category' => 'All' );
 		$instance = wp_parse_args( (array) $instance, $defaults );
 
+		$html = "";
 		$html .= '<p>';
 		$html .= '<label for="' . $this->get_field_id( 'title' ) . '">' . __( 'Title:', 'lt-admin' ) . '</label>';
 		$html .= '<input id="' . $this->get_field_id( 'title' ) . '" name="' . $this->get_field_name( 'title' ) . '" value="' . $instance['title'] . '" style="width:100%;" type="text" />';

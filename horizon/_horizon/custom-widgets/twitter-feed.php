@@ -108,6 +108,7 @@ class horizon_twitter_widget extends WP_Widget {
 		$defaults = array( 'title' => '', 'num' => '3', 'category' => 'All' );
 		$instance = wp_parse_args( (array) $instance, $defaults );
 
+		$html = "";
 		$html .= '<p>';
 		$html .= '<label for="' . $this->get_field_id( 'title' ) . '">' . __( 'Title:', 'lt-admin' ) . '</label>';
 		$html .= '<input id="' . $this->get_field_id( 'title' ) . '" name="' . $this->get_field_name( 'title' ) . '" value="' . $instance['title'] . '" type="text" style="width:100%;" />';

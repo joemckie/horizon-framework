@@ -29,5 +29,3 @@ if ( $post_meta['thumbnail_type'] == "Featured Image" ) {
 		}
 	}
 }
-
-?>

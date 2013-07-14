@@ -43,4 +43,3 @@ if ( get_option( THEME_SHORT_NAME . '_options_blog_horizon_single_quote_thumb_bg
 		}
 	}
 }
-?>

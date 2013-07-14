@@ -122,6 +122,7 @@ class horizon_flickr_photos_widget extends WP_Widget {
 		$defaults = array( 'title' => '', 'num' => '9', 'user_id' => '' );
 		$instance = wp_parse_args( (array) $instance, $defaults );
 
+		$html = "";
 		$html .= '<p>';
 		$html .= '<label for="' . $this->get_field_id( 'title' ) . '">' . __( 'Title:', 'lt-admin' ) . '</label>';
 		$html .= '<input id="' . $this->get_field_id( 'title' ) . '" name="' . $this->get_field_name( 'title' ) . '" value="' . $instance['title'] . '" style="width:100%;" />';

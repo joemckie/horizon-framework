@@ -13,4 +13,4 @@ if ( $meta['blog_meta']['thumbnail_type'] == "Featured Image" ) {
 		);
 		do_action( 'horizon_image_flexslider', $flexslider_args, 'blog-slider' );
 	}
-} ?>
+}

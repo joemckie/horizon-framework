@@ -153,6 +153,7 @@ function horizon_save_gallery_options( $id ) {
 
 			if ( isset( $_POST[$meta_box['name']] ) ) {
 				if ( gettype( $_POST[$meta_box['name']] ) == "array" ) {
+					$arraystring = "";
 					foreach ( $_POST[$meta_box['name']] as $key ) {
 						$arraystring .= $key . ', ';
 					}

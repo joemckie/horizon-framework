@@ -29,5 +29,3 @@ if ( $meta['portfolio_meta']['thumbnail_type'] == "Featured Image" ) {
 		}
 	}
 }
-
-?>

@@ -56,12 +56,12 @@ function horizon_set_variable_styles() {
 	}
 
 	$config_array = array(
-		TEMPLATE_PATH . '/blog/single-post/' . BLOG_SINGLE_STYLE . '/config/config.php',
-		TEMPLATE_PATH . '/blog/section/' . BLOG_STYLE . '/config/config.php',
-		TEMPLATE_PATH . '/blog/archive/' . BLOG_ARCHIVE_STYLE . '/config/config.php',
-		TEMPLATE_PATH . '/portfolio/single-post/' . PORTFOLIO_SINGLE_STYLE . '/config/config.php',
-		TEMPLATE_PATH . '/portfolio/section/' . PORTFOLIO_STYLE . '/config/config.php',
-		TEMPLATE_PATH . '/portfolio/archive/' . PORTFOLIO_ARCHIVE_STYLE . '/config/config.php',
+		STYLES_PATH . '/blog/single-post/' . BLOG_SINGLE_STYLE . '/config/config.php',
+		STYLES_PATH . '/blog/section/' . BLOG_STYLE . '/config/config.php',
+		STYLES_PATH . '/blog/archive/' . BLOG_ARCHIVE_STYLE . '/config/config.php',
+		STYLES_PATH . '/portfolio/single-post/' . PORTFOLIO_SINGLE_STYLE . '/config/config.php',
+		STYLES_PATH . '/portfolio/section/' . PORTFOLIO_STYLE . '/config/config.php',
+		STYLES_PATH . '/portfolio/archive/' . PORTFOLIO_ARCHIVE_STYLE . '/config/config.php',
 	);
 
 	return $config_array;

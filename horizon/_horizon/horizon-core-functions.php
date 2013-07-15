@@ -74,12 +74,11 @@ function horizon_build_twitter_link( $user ) {
 	return '<a href="http://www.twitter.com/' . $username . '">@' . $username . '</a>';
 }
 
-function horizon_format_soundcloud_link( $track_url ) {
-
+function horizon_format_soundcloud_link( $track_url = null ) {
 	$track = json_decode( horizon_get_file( 'http://api.soundcloud.com/resolve.json?url=' . $track_url . '&client_id=a0535974761c794c9e5c1cce78aabce7' ) );
-	$track_info = json_decode( horizon_get_file( $track->location ) );
+	$track_info = isset( $track->locatione) ? json_decode( horizon_get_file( $track->location ) ) : '';
 
-	return urlencode( $track_info->uri );
+	return isset($track_info->uri) ? urlencode( $track_info->uri ) : '';
 }
 
 // Get the ID from youtube and form a valid iframe with it
@@ -435,14 +434,14 @@ function horizon_get_image_meta( $image_id, $image_size = 'full' ) {
 	$src = wp_get_attachment_image_src( $image_id, $image_size );
 
 	return array(
-		'alt'         => $image->post_title,
-		'caption'     => $image->post_excerpt,
-		'description' => $image->post_content,
-		'href'        => get_permalink( $image->ID ),
+		'alt'         => isset( $image->post_title ) ? $image->post_title : '',
+		'caption'     => isset( $image->post_excerpt ) ? $image->post_excerpt : '',
+		'description' => isset( $image->post_content ) ? $image->post_content : '',
+		'href'        => isset( $image->ID) ? get_permalink( $image->ID ) : '',
 		'src'         => $src[0],
 		'width'       => $src[1],
 		'height'      => $src[2],
-		'title'       => $image->post_title
+		'title'       => isset( $image->post_title ) ? $image->post_title : ''
 	);
 }
 

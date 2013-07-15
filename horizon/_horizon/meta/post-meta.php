@@ -96,6 +96,8 @@ function horizon_save_post_options( $id ) {
 
 		foreach ( $meta_boxes as $meta_box ):
 			$arraystring = '';
+			$meta_box['name'] = isset( $meta_box['name'] ) ? $meta_box['name'] : '';
+
 			if ( isset( $_POST[$meta_box['name']] ) ) {
 				if ( gettype( $_POST[$meta_box['name']] ) == "array" ) {
 					foreach ( $_POST[$meta_box['name']] as $key ) {

@@ -48,7 +48,7 @@ function horizon_get_options() {
 // Get post meta
 add_action( 'horizon_get_post_meta', 'horizon_get_post_meta' );
 function horizon_get_post_meta( $variable ) {
-	global $post, $post_meta, $portfolio_meta, $blog_meta, $archive_post_meta;
+	global $post, $post_meta, $portfolio_meta, $blog_meta, $archive_post_meta, $metas;
 
 	if ( !is_null( $post ) ) {
 		foreach ( get_post_custom() as $meta => $args ) {

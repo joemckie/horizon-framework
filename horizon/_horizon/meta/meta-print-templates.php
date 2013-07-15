@@ -30,6 +30,7 @@ function horizon_sort_meta_boxes( $meta_box, $type = NULL ) {
 	// Add default values in case they're missing
 	$meta_box['default'] = isset( $meta_box['default'] ) ? $meta_box['default'] : '';
 	$meta_box['meta_body'] = isset( $meta_box['meta_body'] ) ? $meta_box['meta_body'] : '';
+	$meta_box['type'] = isset( $meta_box['type'] ) ? $meta_box['type'] : '';
 
 	if ( $type == "sub_item" ) {
 		switch ( $meta_box['type'] ):
@@ -104,6 +105,7 @@ function horizon_display_meta_colourpicker( $args ) {
 	$value = $value == "transparent" ? "" : $value;
 	$checked = $value == "" ? "checked" : "";
 
+	$html = "";
 	$html .= '<div class="meta_box' . $status . '">';
 	$html .= '<div class="meta_title">';
 	$html .= __( $title );
@@ -124,7 +126,14 @@ function horizon_display_meta_select( $a ) {
 	global $post;
 	extract( $a );
 
+	$default = isset( $default ) ? $default : '';
 	$value = ( empty( $value ) ) ? $default : $value;
+	$slidecontrol = isset( $slidecontrol ) ? 'slidecontrol' : '';
+	$pretty_select = isset( $pretty_select ) ? $pretty_select : '';
+	$default_open_value = isset( $default_open_value ) ? $default_open_value : '';
+	$find_value = isset( $find_value ) ? $find_value : '';
+	$title = isset( $title ) ? $title : '';
+	$name= isset( $name ) ? $name : '';
 
 	if ( !empty( $open_value ) ) {
 		$val = get_post_meta( $post->ID, 'post_meta_' . $find_value, true );
@@ -135,8 +144,6 @@ function horizon_display_meta_select( $a ) {
 	} else {
 		$status = '';
 	}
-
-	$slidecontrol = $slidecontrol ? 'slidecontrol' : '';
 
 	if ( $pretty_select !== false ) {
 		$pretty_select = "pretty-select";
@@ -177,7 +184,7 @@ function horizon_display_meta_icon_select( $a ) {
 		$status = '';
 	}
 
-	$slidecontrol = $slidecontrol ? 'slidecontrol' : '';
+	$slidecontrol = isset( $slidecontrol ) ? 'slidecontrol' : '';
 
 	if ( $pretty_select !== false ) {
 		$pretty_select = "pretty-select";
@@ -229,6 +236,7 @@ function horizon_display_meta_radio_image( $args ) {
 
 	$slidecontrol = $slidecontrol ? 'slidecontrol' : '';
 
+	$html = '';
 	$html .= '<div class="meta_title">';
 	$html .= '<label for="' . $name . '">' . __( $title ) . '</label>';
 	$html .= '</div>';
@@ -251,6 +259,12 @@ function horizon_display_meta_radio_image( $args ) {
 function horizon_display_meta_textarea( $a ) {
 	global $post;
 	extract( $a );
+
+	$value = isset( $value ) ? $value : '';
+	$default = isset( $default ) ? $default : '';
+	$find_value = isset( $find_value ) ? $find_value : '';
+	$name = isset( $name ) ? $name : '';
+	$title = isset( $title ) ? $title : '';
 
 	$value = $value == '' ? esc_html( $default ) : esc_html( $value );
 
@@ -284,6 +298,19 @@ function horizon_display_meta_input( $a ) {
 	global $post;
 	extract( $a );
 
+	$value = isset( $value ) ? $value : '';
+	$default = isset( $default ) ? $default : '';
+	$find_value = isset( $find_value ) ? $find_value : '';
+	$name = isset( $name ) ? $name : '';
+	$title = isset( $title ) ? $title : '';
+	$max_value = isset( $max_value ) ? $max_value : '';
+	$min_value = isset( $min_value ) ? $min_value : '';
+
+	// initialize variables
+	$spinner_class = '';
+	$max = '';
+	$min = '';
+
 	$value = $value == '' ? esc_html( $default ) : esc_html( $value );
 
 	if ( !empty( $open_value ) ) {
@@ -293,7 +320,7 @@ function horizon_display_meta_input( $a ) {
 		$status = '';
 	}
 
-	if ( $spinner ) {
+	if ( isset( $spinner ) ) {
 		$spinner_class = "input_spinner";
 		$max = 'aria-custom-max="' . $max_value . '"';
 		$min = 'aria-custom-min="' . $min_value . '"';
@@ -319,6 +346,9 @@ function horizon_display_meta_input( $a ) {
 
 function horizon_display_div_open( $a ) {
 	extract( $a );
+
+	$id = isset( $id ) ? $id : '';
+	$status = isset( $status ) ? $status : '';
 
 	return '<div id="' . $id . '" class="' . $id . ' ' . $status . '">';
 }
@@ -347,6 +377,8 @@ function horizon_display_description( $a ) {
 function horizon_display_checktoggle( $a ) {
 	global $post;
 	extract( $a );
+
+	$value = isset( $value ) ? $value : '';
 
 	if ( $value == '' ) {
 		$checked = $default == $selected_value ? 'checked' : '';
@@ -502,6 +534,8 @@ function horizon_display_sub_select( $a ) {
 
 function horizon_display_sub_checktoggle( $a ) {
 	extract( $a );
+
+	$value = isset( $value ) ? $value : '';
 
 	if ( $value == '' ) {
 		$checked = $default == $selected_value ? 'checked' : '';

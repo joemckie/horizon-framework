@@ -338,7 +338,7 @@ function horizon_get_post_list( $post_type ) {
 function horizon_get_file( $url ) {
 	$response = wp_remote_get( $url );
 	
-	if( isset($response->errors) ) {
+	if( isset( $response->errors ) ) {
 		// if response has errors
 		return;
 	} else {

@@ -199,6 +199,7 @@ function horizon_build_page_options() {
 	// Get the post details and also all of our custom boxes we'll need
 	global $post, $page_tabs, $page_meta_boxes, $element_sizes;
 
+	$html = "";
 	$html .= "<div class='horizon_over_wrap'>";
 	$html .= "<div class='horizon_over_content'>";
 	$html .= '<div class="overlay"></div>';
@@ -213,12 +214,14 @@ function horizon_build_page_options() {
 	$html .= '</ul>';
 	$html .= '</div>';
 
-	if ( $page_meta_boxes['page-builder']['Page Builder']['elements']['Gallery'] !== NULL ) {
-		$page_meta_boxes['page-builder']['Page Builder']['elements']['Gallery']['gallery_name']['options'] = horizon_get_post_list( 'gallery' );
+	$page_meta_boxes_gallery = isset( $page_meta_boxes['page-builder']['Page Builder']['elements']['Gallery'] ) ? $page_meta_boxes['page-builder']['Page Builder']['elements']['Gallery'] : NULL;
+	if ( $page_meta_boxes_gallery !== NULL ) {
+		$page_meta_boxes_gallery['gallery_name']['options'] = horizon_get_post_list( 'gallery' );
 	}
 
-	if ( $page_meta_boxes['page-builder']['Page Builder']['elements']['Price-Table'] !== NULL ) {
-		$page_meta_boxes['page-builder']['Page Builder']['elements']['Price-Table']['category']['options'] = horizon_get_taxonomy_list( 'price-table-category' );
+	$page_meta_boxes_price_tables = isset( $page_meta_boxes['page-builder']['Page Builder']['elements']['Price-Table'] ) ? $page_meta_boxes['page-builder']['Page Builder']['elements']['Price-Table'] : NULL;
+	if ( $page_meta_boxes_price_tables !== NULL ) {
+		$page_meta_boxes_price_tables['category']['options'] = horizon_get_taxonomy_list( 'price-table-category' );
 	}
 
 	if ( $page_meta_boxes['page-builder']['Page Builder']['elements']['Testimonial'] !== NULL ) {
@@ -329,8 +332,8 @@ function horizon_build_element_templates( $meta_box ) {
 			} else {
 				$html .= horizon_sort_meta_boxes( $args );
 			}
-			if ( !$args['no_hr'] ) {
-				if ( $args['type'] != 'open' && $args['type'] != 'close' ) {
+			if ( !isset( $args['no_hr'] ) ) {
+				if ( !isset( $args['type'] ) || ( $args['type'] != 'open' && $args['type'] != 'close' ) ) {
 					$html .= '<hr class="separator mt20">';
 				}
 			}

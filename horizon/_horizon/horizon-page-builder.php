@@ -641,6 +641,8 @@ function horizon_build_saved_element( $saved_element, $element_type ) {
 	if ( !is_null( horizon_return_array_attributes( $saved_element ) ) ) {
 		extract( horizon_return_array_attributes( $saved_element ) );
 	}
+	
+	$html = '';
 	$html .= '<div class="column ' . horizon_format_width( $saved_element->size, 'back-end' ) . '" rel="' . $saved_element->getName() . '">';
 	$html .= '<div class="page-builder-element">';
 	$html .= '<div class="size-changer"><span class="larger"></span><span class="smaller"></span></div>';
@@ -671,7 +673,7 @@ function horizon_build_saved_element( $saved_element, $element_type ) {
 					break;
 			}
 		}
-		if ( !$args['no_hr'] ) {
+		if ( isset($args['no_hr']) && $args['no_hr'] == true ) {
 			if ( $args['type'] != 'open' && $args['type'] != 'close' ) {
 				$html .= '<hr class="separator mt20">';
 			}
@@ -687,7 +689,8 @@ function horizon_build_saved_element( $saved_element, $element_type ) {
 function horizon_build_sub_items( $element, $element_type, $sub_type ) {
 	global $page_meta_boxes;
 	$meta_box = $page_meta_boxes;
-
+	
+	$html = '';
 	$html .= '<div class="add_sub_item">';
 	$html .= '<div class="meta_box">';
 	$html .= '<div class="meta_title"><a class="button add-sub-item">ADD ITEM</a></div>';
@@ -722,6 +725,8 @@ function horizon_build_sub_items( $element, $element_type, $sub_type ) {
 
 function horizon_page_builder_output( $xml, $area ) {
 	global $additional_class, $additional_row_class, $node, $in_section, $no_end;
+	
+	$output = '';
 	if ( $area == "front-end" ) {
 		foreach ( $xml as $node ) {
 			$node_name = (string) $node->getName();

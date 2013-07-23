@@ -24,7 +24,7 @@ do_action( 'horizon_before_content' ); ?>
 			<div class="twelve columns">
 				<div class="horizon_page_builder">
 					<?php
-					if ( $post_meta['page_layout_xml'] != '' ) {
+					if ( isset($post_meta['page_layout_xml']) && $post_meta['page_layout_xml'] != '' ) {
 						do_action( 'horizon_page_builder' );
 					}
 					?>

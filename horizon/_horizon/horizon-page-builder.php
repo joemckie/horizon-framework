@@ -654,7 +654,7 @@ function horizon_build_saved_element( $saved_element, $element_type ) {
 	$html .= '<div class="page-builder-options">';
 	foreach ( $clone_meta_boxes['page-builder']['Page Builder']['elements'][$element_type] as $element => $args ) {
 		$args['pretty_select'] = false;
-		$args['name'] = $args['name'] . '[]';
+		$args['name'] = isset($args['name']) ? $args['name'] . '[]' : NULL;
 		$args['value'] = $saved_element->$element;
 
 		$html .= horizon_sort_meta_boxes( $args );
@@ -730,6 +730,7 @@ function horizon_page_builder_output( $xml, $area ) {
 	if ( $area == "front-end" ) {
 		foreach ( $xml as $node ) {
 			$node_name = (string) $node->getName();
+			$row_size = isset($row_size) ? $row_size : 0;
 			$additional_class = apply_filters( 'additional_class', $additional_class );
 			$additional_row_class = apply_filters( 'additional_row_class', $additional_row_class );
 			if ( !$in_section && $node_name !== "Section-End" ) {

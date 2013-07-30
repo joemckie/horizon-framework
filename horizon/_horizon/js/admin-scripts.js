@@ -33,7 +33,7 @@ jQuery( document ).ready( function ( $ ) {
 	var subcheckbox = $( "label.subcheckbox" );
 	var radio = $( "label.radio" );
 	var icon_trigger = $( ".trigger-icon" );
-
+	
 	// Switch between sidebars
 	$( sidebar_link ).parent().click( function ( e ) {
 		e.preventDefault();
@@ -114,7 +114,7 @@ jQuery( document ).ready( function ( $ ) {
 		tb_remove();
 	};
 
-	checkbox.click( function () {
+	$(document).on('click', 'label.checkbox', function () {
 		$( this ).toggleClass( "checked" );
 	} );
 
@@ -123,11 +123,11 @@ jQuery( document ).ready( function ( $ ) {
 		$( this ).next( ".trigger-icon-container" ).children( "i" ).attr( "class", "icon-" + val );
 	} );
 
-	subcheckbox.click( function () {
-		$( this ).next( 'input:checkbox' ).attr( 'checked', function ( idx, oldAttr ) {
+	$(document).on("click", 'label.subcheckbox', function () {
+		$(this).toggleClass("checked");
+		$( this ).parent().find( 'input:checkbox' ).attr( 'checked', function ( idx, oldAttr ) {
 			return !oldAttr;
 		} );
-		$( this ).toggleClass( "checked" );
 	} );
 
 	radio.click( function () {

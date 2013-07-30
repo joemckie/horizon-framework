@@ -357,12 +357,10 @@ function horizon_save_page_options( $id ) {
 	global $page_meta_boxes;
 	$tabs = $page_meta_boxes;
 
-	//var_dump($_POST); exit;
-
 	foreach ( $tabs as $meta_boxes ):
-
 		foreach ( $meta_boxes as $meta_box ):
 
+			// Save page builder
 			if ( $meta_box['type'] == "page-builder-element" ) {
 			
 				$page_builder_size = isset($_POST[$meta_box['size']]) ? $_POST[$meta_box['size']] : NULL;
@@ -378,6 +376,7 @@ function horizon_save_page_options( $id ) {
 					$page_builder_xml .= '<' . $element_type . '>';
 					$element_size = $_POST[$meta_box['size']][$i];
 					$page_builder_xml .= horizon_xml_tag( 'size', horizon_format_width( $element_size ) );
+					$sub_item_type = '';
 
 					if ( !isset( $sub_item_num[$element_type] ) ) {
 						$sub_item_num[$element_type] = 0;
@@ -396,7 +395,8 @@ function horizon_save_page_options( $id ) {
 							}
 						}
 					}
-
+					
+					// Sub item sorting
 					if ( $element_type == 'Accordion' || $element_type == 'Tabs' || $element_type == 'Toggle' ) {
 
 						$sub_item_count = isset($_POST[$meta_box['elements'][$element_type][$sub_item_type]['sub_item_count']['name']][$sub_item_num[$element_type]]) ? $_POST[$meta_box['elements'][$element_type][$sub_item_type]['sub_item_count']['name']][$sub_item_num[$element_type]] : 0;
@@ -404,6 +404,7 @@ function horizon_save_page_options( $id ) {
 						for ( $s = 0; $s < $sub_item_count; $s++ ) {
 							$page_builder_xml .= '<' . $sub_item_type . '>';
 							foreach ( $meta_box['elements'][$element_type][$sub_item_type] as $sub_item => $sub_item_elements ) {
+								$sub_item_elements['cdata'] = isset($sub_item_elements['cdata']) ? true : false;
 								if ( $sub_item_elements['type'] != 'count' ) {
 									if ( $sub_item_elements['type'] == "textarea" && $sub_item_elements['cdata'] ) {
 										$content = apply_filters( 'horizon_encode_xml_string', $_POST[$sub_item_elements['name']][$sub_item_num[$sub_item_type]] );
@@ -417,6 +418,8 @@ function horizon_save_page_options( $id ) {
 							$sub_item_num[$sub_item_type]++;
 						}
 					}
+					
+					// Save page builder meta
 					foreach ( $meta_box['elements'][$element_type] as $tag_name => $args ) {
 						$type = isset($args['type']) ? $args['type'] : NULL;
 						if ( $type != "description" && $tag_name !== $sub_item_type ) {
@@ -436,8 +439,11 @@ function horizon_save_page_options( $id ) {
 				$old_meta = get_post_meta( $id, $meta_box['name'], true );
 				horizon_save_meta_data( $id, $page_builder_xml, $old_meta, $meta_box['name'] );
 
+			// Ignore open and close divs
 			} elseif ( $meta_box['type'] == "open" || $meta_box['type'] == "close" ) {
+			
 			} else {
+				// Check if element is posted
 				if ( isset( $_POST[$meta_box['name']] ) ) {
 					if ( gettype( $_POST[$meta_box['name']] ) == "array" ) {
 						foreach ( $_POST[$meta_box['name']] as $key ) {

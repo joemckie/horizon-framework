@@ -27,7 +27,7 @@
 */
 
 $element_sizes = array(
-	"Accordion"         => array(
+	"Accordion" => array(
 		"size1-4" => "1/4",
 		"size1-3" => "1/3",
 		"size1-2" => "1/2",
@@ -36,7 +36,7 @@ $element_sizes = array(
 		"size1-1" => "1/1",
 		"default" => "size1-4"
 	),
-	"Blog"              => array(
+	"Blog" => array(
 		"size1-4" => "1/4",
 		"size1-3" => "1/3",
 		"size1-2" => "1/2",
@@ -45,7 +45,7 @@ $element_sizes = array(
 		"size1-1" => "1/1",
 		"default" => "size1-1"
 	),
-	"Call-To-Action"    => array(
+	"Call-To-Action" => array(
 		"size1-4" => "1/4",
 		"size1-3" => "1/3",
 		"size1-2" => "1/2",
@@ -54,7 +54,7 @@ $element_sizes = array(
 		"size1-1" => "1/1",
 		"default" => "size1-1"
 	),
-	"Column"            => array(
+	"Column" => array(
 		"size1-4" => "1/4",
 		"size1-3" => "1/3",
 		"size1-2" => "1/2",
@@ -63,7 +63,7 @@ $element_sizes = array(
 		"size1-1" => "1/1",
 		"default" => "size1-3"
 	),
-	"Column-Service"    => array(
+	"Column-Service" => array(
 		"size1-4" => "1/4",
 		"size1-3" => "1/3",
 		"size1-2" => "1/2",
@@ -72,11 +72,11 @@ $element_sizes = array(
 		"size1-1" => "1/1",
 		"default" => "size1-3"
 	),
-	"Contact-Form"      => array(
+	"Contact-Form" => array(
 		"size1-1" => "1/1",
 		"default" => "size1-1"
 	),
-	"Content"           => array(
+	"Content" => array(
 		"size1-4" => "1/4",
 		"size1-3" => "1/3",
 		"size1-2" => "1/2",
@@ -85,7 +85,7 @@ $element_sizes = array(
 		"size1-1" => "1/1",
 		"default" => "size1-1"
 	),
-	"Divider"           => array(
+	"Divider" => array(
 		"size1-1" => "1/1",
 		"default" => "size1-1"
 	),
@@ -93,7 +93,7 @@ $element_sizes = array(
 		"size1-1" => "1/1",
 		"default" => "size1-1"
 	),
-	"Gallery"           => array(
+	"Gallery" => array(
 		"size1-4" => "1/4",
 		"size1-3" => "1/3",
 		"size1-2" => "1/2",
@@ -102,7 +102,7 @@ $element_sizes = array(
 		"size1-1" => "1/1",
 		"default" => "size1-1"
 	),
-	"Message-Box"       => array(
+	"Message-Box" => array(
 		"size1-4" => "1/4",
 		"size1-3" => "1/3",
 		"size1-2" => "1/2",
@@ -111,7 +111,7 @@ $element_sizes = array(
 		"size1-1" => "1/1",
 		"default" => "size1-1"
 	),
-	"Price-Table"       => array(
+	"Price-Table" => array(
 		"size1-4" => "1/4",
 		"size1-3" => "1/3",
 		"size1-2" => "1/2",
@@ -120,7 +120,7 @@ $element_sizes = array(
 		"size1-1" => "1/1",
 		"default" => "size1-1"
 	),
-	"Portfolio"         => array(
+	"Portfolio" => array(
 		"size1-4" => "1/4",
 		"size1-3" => "1/3",
 		"size1-2" => "1/2",
@@ -129,37 +129,19 @@ $element_sizes = array(
 		"size1-1" => "1/1",
 		"default" => "size1-1"
 	),
-	"Post-Slider"       => array(
+	"Post-Slider" => array(
 		"size1-1" => "1/1",
 		"default" => "size1-1"
 	),
-	"Section-Start"     => array(
+	"Section-Start" => array(
 		"size1-1" => "1/1",
 		"default" => "size1-1"
 	),
-	"Section-End"       => array(
+	"Section-End" => array(
 		"size1-1" => "1/1",
 		"default" => "size1-1"
 	),
-	"Sidebar"           => array(
-		"size1-4" => "1/4",
-		"size1-3" => "1/3",
-		"size1-2" => "1/2",
-		"size2-3" => "2/3",
-		"size3-4" => "3/4",
-		"size1-1" => "1/1",
-		"default" => "size1-3"
-	),
-	"Staff"             => array(
-		"size1-4" => "1/4",
-		"size1-3" => "1/3",
-		"size1-2" => "1/2",
-		"size2-3" => "2/3",
-		"size3-4" => "3/4",
-		"size1-1" => "1/1",
-		"default" => "size1-1"
-	),
-	"Tabs"              => array(
+	"Sidebar" => array(
 		"size1-4" => "1/4",
 		"size1-3" => "1/3",
 		"size1-2" => "1/2",
@@ -168,7 +150,16 @@ $element_sizes = array(
 		"size1-1" => "1/1",
 		"default" => "size1-3"
 	),
-	"Testimonial"       => array(
+	"Staff" => array(
+		"size1-4" => "1/4",
+		"size1-3" => "1/3",
+		"size1-2" => "1/2",
+		"size2-3" => "2/3",
+		"size3-4" => "3/4",
+		"size1-1" => "1/1",
+		"default" => "size1-1"
+	),
+	"Tabs" => array(
 		"size1-4" => "1/4",
 		"size1-3" => "1/3",
 		"size1-2" => "1/2",
@@ -177,7 +168,16 @@ $element_sizes = array(
 		"size1-1" => "1/1",
 		"default" => "size1-3"
 	),
-	"Toggle"            => array(
+	"Testimonial" => array(
+		"size1-4" => "1/4",
+		"size1-3" => "1/3",
+		"size1-2" => "1/2",
+		"size2-3" => "2/3",
+		"size3-4" => "3/4",
+		"size1-1" => "1/1",
+		"default" => "size1-3"
+	),
+	"Toggle" => array(
 		"size1-4" => "1/4",
 		"size1-3" => "1/3",
 		"size1-2" => "1/2",

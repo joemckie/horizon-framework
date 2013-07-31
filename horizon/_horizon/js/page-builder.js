@@ -25,9 +25,12 @@
  */
 
 jQuery( document ).ready( function ( $ ) {
-	var element_sizes = [];
-	var page_elements = $( "#page_builder_elements" );
-	var page_templates = $( "#page_builder_templates" );
+	wp.media.editor.send.attachment_original = wp.media.editor.send.attachment;
+	var element_sizes = [],
+			page_elements = $( "#page_builder_elements" ),
+			page_templates = $( "#page_builder_templates" ),
+			is_custom_editor = false,
+			_this;
 	element_sizes["Defaults"] = {
 		"Accordion" 				: "size1-4",
 		"Blog" 							: "size1-1",
@@ -142,17 +145,25 @@ jQuery( document ).ready( function ( $ ) {
 		}
 	} );
 
-	$('.horizon-uploader .button').live( 'click', function(e){
+	$(document).on( 'click', '.horizon-uploader .button', function(e){
 		e.preventDefault();
-		var that = $(this);
-		wp.media.editor.send.attachment = function(props, attachment){
-			$(that).siblings('input').val(attachment.url);
-			$(that).siblings('.image').attr('src', attachment.url);
-		}
-		wp.media.editor.open(this);
-
-		return false;
+		_this = $(this);
+		is_custom_editor = true;
+		return wp.media.editor.open(this);
 	});
+	
+	wp_media_editor_send_attachment_original = wp.media.editor.send.attachment;
+	wp.media.editor.send.attachment = function(props, attachment){
+		if(is_custom_editor) {
+			_this.siblings('input').val(attachment.url);
+			_this.siblings('.image').attr('src', attachment.url);
+			
+			return is_custom_editor = false;
+		} else {
+			return wp_media_editor_send_attachment_original(props, attachment);
+		}
+	}
+
 
 	function show_pagebuilder_editor() {
 		var parent = $( clicked_id ).parents( ".page-builder-element" );

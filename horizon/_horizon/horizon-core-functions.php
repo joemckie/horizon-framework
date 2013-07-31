@@ -63,10 +63,12 @@ function horizon_build_twitter_link( $user ) {
 	if ( substr( $user, 0, 1 ) == "@" ) :
 		// Handle is formatted as '@username'
 		$username_parts = explode( '@', $user );
-		$username = $username_parts[1]; elseif ( substr( $user, 0, 7 ) == "http://" ) :
+		$username = $username_parts[1]; 
+	elseif ( substr( $user, 0, 7 ) == "http://" ) :
 		// Handle is formatted as 'http://www.twitter.com/username'
 		$username_parts = explode( '/', $user );
-		$username = $username_parts[3]; else:
+		$username = $username_parts[3]; 
+	else:
 		// Handle is formatted as 'username'
 		$username = $user;
 	endif;
@@ -75,21 +77,20 @@ function horizon_build_twitter_link( $user ) {
 }
 
 function horizon_format_soundcloud_link( $track_url = null ) {
-	$track = json_decode( horizon_get_file( 'http://api.soundcloud.com/resolve.json?url=' . $track_url . '&client_id=a0535974761c794c9e5c1cce78aabce7' ) );
-	$track_info = isset( $track->locatione) ? json_decode( horizon_get_file( $track->location ) ) : '';
-
-	return isset($track_info->uri) ? urlencode( $track_info->uri ) : '';
+	$track = json_decode(horizon_get_file( 'http://api.soundcloud.com/resolve.json?url=' . $track_url . '&client_id=a0535974761c794c9e5c1cce78aabce7' ));
+	
+	return isset($track->uri) ? urlencode( $track->uri ) : '';
 }
 
 // Get the ID from youtube and form a valid iframe with it
-function horizon_filter_id_youtube( $src, $height, $title, $width ) {
+function horizon_format_youtube_video( $src, $height=315, $title='', $width=420 ) {
 	$id = preg_replace( "#[&\?].+$#", "", preg_replace( "#http://(?:www\.)?youtu\.?be(?:\.com)?/(embed/|watch\?v=|\?v=|v/|e/|.+/|watch.*v=|)#i", "", $src ) );
 
 	return '<iframe height="' . $height . '" src="http://www.youtube.com/embed/' . $id . '" title="' . $title . '" width="' . $width . '"></iframe>';
 }
 
 // Get the ID from vimeo and form a valid iframe with it
-function horizon_filter_id_vimeo( $src, $height, $title, $width ) {
+function horizon_format_vimeo_video( $src, $height=315, $title='', $width=420 ) {
 	$id = preg_match( '#.+?(\d+)$#', $src, $matches );
 
 	return '<iframe height="' . $height . '" src="http://player.vimeo.com/video/' . $matches[1] . '" title="' . $title . '" width="' . $width . '"></iframe>';
@@ -277,7 +278,7 @@ function horizon_num_col_row( $size ) {
 	endswitch;
 }
 
-function horizon_font_awesome_icons() {
+function horizon_get_font_awesome_icons() {
 	$pattern = '/.icon-*?(?:[A-Za-z0-9_\-.]+):*?before/';
 	$subject = file_get_contents( ROOT . '/_horizon/plugins/font-awesome/css/font-awesome.min.css' );
 
@@ -305,7 +306,7 @@ function horizon_xml_tag( $tag_name, $tag_content ) {
 	return '<' . $tag_name . '>' . $tag_content . '</' . $tag_name . '>';
 }
 
-// Get all taxonimies
+// Get all taxonomies
 function horizon_get_taxonomy_list( $taxonomy ) {
 	$taxonomies = array();
 	$taxonomies['All'] = "All";
@@ -359,7 +360,6 @@ function horizon_get_google_fonts( $api = 'AIzaSyCLXgNjOCHlE_3fHng8HUMkTTXd7DVfu
 	$all_fonts = json_decode( horizon_get_file( "https://www.googleapis.com/webfonts/v1/webfonts?key=$api") );
 
 	// If no fonts are returned (i.e. no internet), return the function
-	
 	if ( is_null( $all_fonts ) )
 		return;
 
@@ -393,7 +393,6 @@ function horizon_filter_content( $content, $remove_readmore = false ) {
 	}
 
 	$content = apply_filters( 'the_content', $content );
-
 	$content = str_replace( ']]>', ']]&gt;', $content );
 
 	return $content;

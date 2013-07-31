@@ -6,4 +6,4 @@ extract( shortcode_atts( array(
 	"width"  => "560"
 ), $shortcode_atts['atts'] ) );
 
-echo horizon_filter_id_vimeo( $shortcode_atts['content'], $height, $title, $width );
+echo horizon_format_vimeo_video( $shortcode_atts['content'], $height, $title, $width );

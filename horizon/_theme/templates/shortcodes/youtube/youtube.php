@@ -6,4 +6,4 @@ extract( shortcode_atts( array(
 	"width"  => "560"
 ), $shortcode_atts['atts'] ) );
 
-echo horizon_filter_id_youtube( $shortcode_atts['content'], $height, $title, $width );
+echo horizon_format_youtube_video( $shortcode_atts['content'], $height, $title, $width );

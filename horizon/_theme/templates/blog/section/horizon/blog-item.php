@@ -13,5 +13,6 @@
 		</div>
 
 		<?php echo horizon_filter_content( get_the_excerpt() ); ?>
+		<?php //echo get_the_excerpt(); ?>
 	</div>
 </div>

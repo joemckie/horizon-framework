@@ -190,7 +190,7 @@ function horizon_display_meta_icon_select( $a ) {
 		$pretty_select = "pretty-select";
 	}
 
-	$options = horizon_font_awesome_icons();
+	$options = horizon_get_font_awesome_icons();
 
 	$value = ( empty( $value ) ) ? $options[0] : $value;
 

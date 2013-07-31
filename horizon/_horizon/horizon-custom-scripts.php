@@ -32,6 +32,11 @@ function horizon_custom_scripts() {
 		add_action( 'admin_print_scripts', 'horizon_output_admin_scripts' );
 		add_action( 'admin_print_styles', 'horizon_output_admin_styles' );
 		add_action( 'admin_footer', 'horizon_load_colour_picker' );
+		
+	wp_deregister_script( 'pretty-select' );
+	wp_register_script( 'pretty-select', ROOT . '/_horizon/js/selectbox.js', array( 'jquery-ui-widget' ), '1.0', true );
+	wp_enqueue_script( 'pretty-select' );
+		
 	} else {
 		add_action( 'wp_print_scripts', 'horizon_output_scripts' );
 		add_action( 'wp_print_styles', 'horizon_output_styles' );
@@ -50,10 +55,6 @@ function horizon_output_admin_scripts() {
 	wp_deregister_script( 'admin-scripts' );
 	wp_register_script( 'admin-scripts', ROOT . '/_horizon/js/admin-scripts.js', array( 'jquery-ui-spinner', 'font-preview' ), '1.0', true );
 	wp_enqueue_script( 'admin-scripts' );
-
-	wp_deregister_script( 'pretty-select' );
-	wp_register_script( 'pretty-select', ROOT . '/_horizon/js/selectbox.js', array( 'jquery-ui-widget' ), '1.0', true );
-	wp_enqueue_script( 'pretty-select' );
 
 	if ( $post_type == "page" || $post_type == "post" ) {
 		wp_deregister_script( 'page-builder' );

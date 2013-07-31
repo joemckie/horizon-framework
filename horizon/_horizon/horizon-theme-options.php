@@ -539,7 +539,7 @@ function horizon_display_option_colourpicker( $args ) {
 function horizon_display_option_typography( $args ) {
 	global $loaded_fonts, $google_fonts_array, $google_fonts, $basic_fonts, $custom_fonts, $size_types, $weight_types, $transform_types, $decoration_types;
 	extract( $args );
-
+	
 	$preview = isset($preview) ? $preview : '';
 	$description = isset($description) ? $description : NULL;
 	$font_value = isset($font_value) ? $font_value : NULL;

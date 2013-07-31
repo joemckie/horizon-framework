@@ -18,6 +18,11 @@ Feel free to use this however you want, and please contact me if you need any he
 2. Dry-save the admin panel (load it up and hit save)
 3. Set the left and right menus respectively in the menu page
 
+**Wiki**
+========
+
+I'm building a wiki! Check it out [here](https://github.com/joemckie/horizon-framework/wiki)!
+
 **Features**
 ============
 

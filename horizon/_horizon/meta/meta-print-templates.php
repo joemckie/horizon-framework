@@ -82,6 +82,9 @@ function horizon_sort_meta_boxes( $meta_box, $type = NULL ) {
 			case "colourpicker":
 				return horizon_display_meta_colourpicker( $meta_box );
 				break;
+			case "image" :
+				return horizon_display_meta_image( $meta_box );
+				break;
 		endswitch;
 	}
 }
@@ -344,6 +347,34 @@ function horizon_display_meta_input( $a ) {
 	return $html;
 }
 
+function horizon_display_meta_image( $args ) {
+	extract( $args );
+
+	$value = ( empty( $value ) ) ? ' ' : $value;
+
+	if ( !empty( $open_value ) ) {
+		$val = get_option( THEME_SHORT_NAME . '_options_' . $find_value );
+		$status = in_array( $val, $open_value ) || ( !$val && $default_open == true ) ? ' open' : ' closed';
+	} else {
+		$status = '';
+	}
+
+	$html .= '<div class="meta_box' . $status . '">';
+	$html .= '<div class="meta_title">';
+	$html .= __( $title );
+	$html .= '</div>';
+	$html .= '<div class="meta_input">';
+	$html .= '<div class="horizon-uploader"><img style="max-width:200px;" src="' . $value . '" class="image"/><br><input class="' . $name . '" type="text" name="' . $name . '" id="' . $name . '" value="' . $value . '" /><input class="button" name="button-' . $name . '" id="button-' . $name . '" value="Upload" /></div>';
+	$html .= '</div>';
+	if ( isset( $description ) ) {
+		$html .= '<div class="meta_description">' . __( $description ) . '</div>';
+	}
+	$html .= '</div>';
+	$html .= '<div class="clear"></div>';
+
+	return $html;
+}
+
 function horizon_display_div_open( $a ) {
 	extract( $a );
 
@@ -560,6 +591,7 @@ function horizon_display_sub_checktoggle( $a ) {
 
 	return $html;
 }
+
 
 // Determine which save function to run depending on the post type
 add_action( 'save_post', 'horizon_save_metas' );

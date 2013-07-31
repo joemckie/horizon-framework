@@ -142,6 +142,18 @@ jQuery( document ).ready( function ( $ ) {
 		}
 	} );
 
+	$('.horizon-uploader .button').live( 'click', function(e){
+		e.preventDefault();
+		var that = $(this);
+		wp.media.editor.send.attachment = function(props, attachment){
+			$(that).siblings('input').val(attachment.url);
+			$(that).siblings('.image').attr('src', attachment.url);
+		}
+		wp.media.editor.open(this);
+
+		return false;
+	});
+
 	function show_pagebuilder_editor() {
 		var parent = $( clicked_id ).parents( ".page-builder-element" );
 		var cloned_content = $( parent ).siblings( ".page-builder-options" ).clone( true );

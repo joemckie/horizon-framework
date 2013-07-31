@@ -290,7 +290,27 @@ $page_meta_boxes = array(
 						"title" => __( "BACKGROUND COLOUR" ),
 						"name"  => "page-option-section-background-colour",
 						"type"  => "colourpicker",
-					)
+					),
+					"image"   => array(
+						"title" => __( "BACKGROUND IMAGE" ),
+						"name"  => "page-option-section-background-image",
+						"type"  => "image",
+						"value" => "",
+					),
+					"type"    => array(
+						"title"   => __( "BACKGROUND IMAGE TYPE" ),
+						"name"    => "page-option-section-background-type",
+						"type"    => "select",
+						"default" => "scroll",
+						"options" => array( "scroll", "fixed" )
+					),
+					"repeat" => array(
+						"title"          => __( "BACKGROUND IMAGE REPEAT" ),
+						"name"           => "page-option-section-background-repeat",
+						"type"           => "checktoggle",
+						"default" 		 => "no-repeat",
+						"selected_value" => "repeat",
+					),
 				),
 				"Section-End"       => array(
 					"background_colour" => array(

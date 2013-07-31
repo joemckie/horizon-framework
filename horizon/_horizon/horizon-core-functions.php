@@ -399,7 +399,7 @@ function horizon_filter_content( $content, $remove_readmore = false ) {
 }
 
 // Hex string to RGB (#000000 => rgb(0,0,0))
-function horizon_hex2rgb( $hex ) {
+function horizon_hex2rgb( $hex, $array = true ) {
 	$hex = str_replace( "#", "", $hex );
 
 	if ( strlen( $hex ) == 3 ) {
@@ -413,8 +413,11 @@ function horizon_hex2rgb( $hex ) {
 	}
 	$rgb = array( $r, $g, $b );
 
-	//return implode(",", $rgb); // returns the rgb values separated by commas
-	return $rgb; // returns an array with the rgb values
+	if($array) {
+		return $rgb; // returns an array with the rgb values
+	} else {
+		return implode(",", $rgb); // returns the rgb values separated by commas
+	}
 }
 
 // Output comments number

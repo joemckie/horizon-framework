@@ -166,6 +166,7 @@ function horizon_display_theme_options_menu( $sidebars ) {
 	foreach ( $sidebars as $sidebar => $args ):
 		extract( $args );
 
+		$args['default'] = isset($args['default']) ? $args['default'] : NULL;
 		$active = $args['default'] ? "active" : "";
 
 		$html .= '<li class="menu-icon ' . $menu_icon . ' ' . $active . ' ">';
@@ -173,6 +174,7 @@ function horizon_display_theme_options_menu( $sidebars ) {
 		$html .= '<div class="wp-menu-name"><a class="parent" href="#">' . $sidebar . '</a></div>';
 		$html .= '<ul class="' . $active . '">';
 		foreach ( $args['menus'] as $menu => $menu_args ):
+			$menu_args['default'] = isset($menu_args['default']) ? $menu_args['default'] : NULL;
 			$sub_active = $menu_args['default'] ? "active" : "";
 			$html .= '<li><a class="panel_link ' . $sub_active . '" rel="' . $menu_args['id'] . '" href="#">' . $menu . '</a></li>';
 		endforeach;
@@ -192,11 +194,15 @@ function horizon_display_theme_options_elements( $panels ) {
 	foreach ( $panels as $panel => $args ):
 		extract( $args );
 
+		$args['default'] = isset($args['default']) ? $args['default'] : NULL;
 		$active = $args['default'] ? "active" : "";
 
 		$html .= '<div class="panel ' . $active . '" id="' . $id . '">';
 		$html .= '<h2>' . $panel . '</h2>';
 		foreach ( $elements as $element ):
+			$element['name'] = isset($element['name']) ? $element['name'] : NULL;
+			$element['default'] = isset($element['default']) ? $element['default'] : NULL;
+		
 			if ( $element['type'] == "typography" || $element['type'] == "text" ) {
 				foreach ( $element['defaults'] as $default => $value ) {
 					$element[$default . '_value'] = get_option( $element['name'] . '_' . $default, $value );
@@ -253,7 +259,7 @@ function horizon_display_theme_options_elements( $panels ) {
 
 function horizon_build_theme_options_panel() {
 	global $menu_array, $elements_array, $sidebar_array, $google_fonts, $basic_fonts, $custom_fonts;
-
+	
 	$html = '';
 	$html .= '<div id="theme-options" class="postbox">';
 	//$html .= build_variant_types($google_fonts, $basic_fonts, $custom_fonts);
@@ -303,8 +309,9 @@ function horizon_display_option_select( $args ) {
 		$status = '';
 	}
 
-	$slidecontrol = $slidecontrol ? 'slidecontrol' : '';
+	$slidecontrol = isset($slidecontrol) && $slidecontrol ? 'slidecontrol' : '';
 
+	$html = '';
 	$html .= '<div class="option ' . $status . '">';
 	$html .= '<div class="option_title">';
 	$html .= '<label for="' . $name . '">' . __( $title ) . '</label>';
@@ -338,9 +345,12 @@ function horizon_display_option_radio_image( $args ) {
 		$status = '';
 	}
 
+	$image_width = isset($image_width) ? $image_width : NULL;
+	$image_height = isset($image_height) ? $image_height : NULL;
 	$thumb_width = $image_width ? ' width="' . $image_width . '"' : '';
 	$thumb_height = $image_height ? ' height="' . $image_height . '"' : '';
 
+	$html = '';
 	$html .= '<div class="option' . $status . '">';
 	$html .= '<div class="option_title">';
 	$html .= '<label for="' . $name . '">' . __( $title ) . '</label>';
@@ -366,6 +376,7 @@ function horizon_display_option_radio_image( $args ) {
 function horizon_display_option_textarea( $args ) {
 	extract( $args );
 
+	$html = '';
 	$html .= '<div class="option">';
 	$html .= '<div class="option_title">';
 	$html .= '<label for="' . $name . '">' . __( $title ) . '</label>';
@@ -388,6 +399,12 @@ function horizon_display_option_textarea( $args ) {
 function horizon_display_option_input( $args ) {
 	extract( $args );
 
+	$spinner_class = '';
+	$spinner = isset($spinner) ? $spinner : NULL;
+	$decimal = isset($decimal) ? $decimal : NULL;
+	$max = isset($max) ? $max : NULL;
+	$min = isset($min) ? $min : NULL;
+
 	if ( $spinner ) {
 		$spinner_class = "input_spinner";
 		if ( $decimal ) {
@@ -397,6 +414,7 @@ function horizon_display_option_input( $args ) {
 		$min = 'aria-custom-min="' . $min_value . '"';
 	}
 
+	$html = '';
 	$html .= '<div class="option">';
 	$html .= '<div class="option_title">';
 	$html .= '<label for="' . $name . '">' . __( $title ) . '</label>';
@@ -426,6 +444,7 @@ function horizon_display_option_checktoggle( $args ) {
 		$checked = $value == $selected_value ? 'checked' : '';
 	}
 
+	$html = '';
 	$html .= '<div class="option">';
 	$html .= '<div class="option_title">';
 	$html .= __( $title );
@@ -449,11 +468,13 @@ function horizon_display_option_file_upload( $args ) {
 
 	if ( !empty( $open_value ) ) {
 		$val = get_option( THEME_SHORT_NAME . '_options_' . $find_value );
+		$default_open = isset($default_open) ? $default_open : NULL;
 		$status = in_array( $val, $open_value ) || ( !$val && $default_open == true ) ? ' open' : ' closed';
 	} else {
 		$status = '';
 	}
-
+	
+	$html = '';
 	$html .= '<div class="option' . $status . '">';
 	$html .= '<div class="option_title">';
 	$html .= '<label for="' . $name . '">' . __( $title ) . '</label>';
@@ -487,6 +508,7 @@ function horizon_display_option_colourpicker( $args ) {
 
 	if ( !empty( $open_value ) ) {
 		$val = get_option( THEME_SHORT_NAME . '_options_' . $find_value );
+		$default_open = isset($default_open) ? $default_open : NULL;
 		$status = in_array( $val, $open_value ) || ( !$val && $default_open == true ) ? ' open' : ' closed';
 	} else {
 		$status = '';
@@ -494,7 +516,8 @@ function horizon_display_option_colourpicker( $args ) {
 
 	$checked = $value == "transparent" ? "checked" : "";
 	$value = $value == "transparent" ? "" : $value;
-
+	
+	$html = '';
 	$html .= '<div class="option' . $status . '">';
 	$html .= '<div class="option_title">';
 	$html .= __( $title );
@@ -517,9 +540,15 @@ function horizon_display_option_typography( $args ) {
 	global $loaded_fonts, $google_fonts_array, $google_fonts, $basic_fonts, $custom_fonts, $size_types, $weight_types, $transform_types, $decoration_types;
 	extract( $args );
 
+	$preview = isset($preview) ? $preview : '';
+	$description = isset($description) ? $description : NULL;
+	$font_value = isset($font_value) ? $font_value : NULL;
+	
 	$handle = $preview === NULL ? "typography-handle" : "";
 
 	$fonts = $google_fonts;
+	
+	$html = '';
 	$html .= '<div class="option">';
 	$html .= '<div class="option_title">';
 	$html .= __( $title );
@@ -638,6 +667,7 @@ function horizon_display_option_typography( $args ) {
 function horizon_display_option_add_sidebar( $args ) {
 	extract( $args );
 
+	$html = '';
 	$html .= '<div class="option">';
 	$html .= '<div class="option_input add_sub_item">';
 	$html .= '<input class="add-sub-item button" type="button" value="Add Sidebar" />';

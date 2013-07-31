@@ -29,49 +29,49 @@ jQuery( document ).ready( function ( $ ) {
 	var page_elements = $( "#page_builder_elements" );
 	var page_templates = $( "#page_builder_templates" );
 	element_sizes["Defaults"] = {
-		"Accordion" : "size1-4",
-		"Blog" : "size1-1",
-		"Call-To-Action" : "size1-1",
-		"Column" : "size1-3",
-		"Column-Service" : "size1-3",
-		"Contact-Form" : "size1-1",
-		"Content" : "size1-1",
-		"Divider" : "size1-1",
+		"Accordion" 				: "size1-4",
+		"Blog" 							: "size1-1",
+		"Call-To-Action" 		: "size1-1",
+		"Column" 						: "size1-3",
+		"Column-Service" 		: "size1-3",
+		"Contact-Form" 			: "size1-1",
+		"Content"						: "size1-1",
+		"Divider" 					: "size1-1",
 		"Full-Width-Banner" : "size1-1",
-		"Gallery" : "size1-1",
-		"Message-Box" : "size1-1",
-		"Price-Table" : "size1-1",
-		"Portfolio" : "size1-1",
-		"Post-Slider" : "size1-1",
-		"Section-Start" : "size1-1",
-		"Section-End" : "size1-1",
-		"Sidebar" : "size1-3",
-		"Staff" : "size1-1",
-		"Tabs" : "size1-3",
-		"Testimonial" : "size1-3",
-		"Toggle" : "size1-3"
+		"Gallery" 					: "size1-1",
+		"Message-Box" 			: "size1-1",
+		"Price-Table" 			: "size1-1",
+		"Portfolio" 				: "size1-1",
+		"Post-Slider" 			: "size1-1",
+		"Section-Start" 		: "size1-1",
+		"Section-End" 			: "size1-1",
+		"Sidebar" 					: "size1-3",
+		"Staff" 						: "size1-1",
+		"Tabs" 							: "size1-3",
+		"Testimonial" 			: "size1-3",
+		"Toggle" 						: "size1-3"
 	};
-	element_sizes["Accordion"] = ["size1-6", "size1-4", "size1-3", "size1-2", "size2-3", "size3-4", "size1-1"];
-	element_sizes["Blog"] = ["size1-4", "size1-3", "size1-2", "size2-3", "size3-4", "size1-1"];
-	element_sizes["Call-To-Action"] = ["size1-4", "size1-3", "size1-2", "size2-3", "size3-4", "size1-1"];
-	element_sizes["Column"] = ["size1-4", "size1-3", "size1-2", "size2-3", "size3-4", "size1-1"];
-	element_sizes["Column-Service"] = ["size1-4", "size1-3", "size1-2", "size2-3", "size3-4", "size1-1"];
-	element_sizes["Contact-Form"] = ["size1-1"];
-	element_sizes["Content"] = ["size1-4", "size1-3", "size1-2", "size2-3", "size3-4", "size1-1"];
-	element_sizes["Divider"] = ["size1-1"];
-	element_sizes["Full-Width-Banner"] = ["size1-1"];
-	element_sizes["Gallery"] = ["size1-4", "size1-3", "size1-2", "size2-3", "size3-4", "size1-1"];
-	element_sizes["Message-Box"] = ["size1-4", "size1-3", "size1-2", "size2-3", "size3-4", "size1-1"];
-	element_sizes["Price-Table"] = ["size1-4", "size1-3", "size1-2", "size2-3", "size3-4", "size1-1"];
-	element_sizes["Portfolio"] = ["size1-4", "size1-3", "size1-2", "size2-3", "size3-4", "size1-1"];
-	element_sizes["Post-Slider"] = ["size1-1"];
-	element_sizes["Section-Start"] = ["size1-1"];
-	element_sizes["Section-End"] = ["size1-1"];
-	element_sizes["Sidebar"] = ["size1-4", "size1-3", "size1-2", "size2-3", "size3-4", "size1-1"];
-	element_sizes["Staff"] = ["size1-4", "size1-3", "size1-2", "size2-3", "size3-4", "size1-1"];
-	element_sizes["Tabs"] = ["size1-4", "size1-3", "size1-2", "size2-3", "size3-4", "size1-1"];
-	element_sizes["Testimonial"] = ["size1-4", "size1-3", "size1-2", "size2-3", "size3-4", "size1-1"];
-	element_sizes["Toggle"] = ["size1-4", "size1-3", "size1-2", "size2-3", "size3-4", "size1-1"];
+	element_sizes["Accordion"] 					= ["size1-6", "size1-4", "size1-3", "size1-2", "size2-3", "size3-4", "size1-1"];
+	element_sizes["Blog"] 							= ["size1-4", "size1-3", "size1-2", "size2-3", "size3-4", "size1-1"];
+	element_sizes["Call-To-Action"] 		= ["size1-4", "size1-3", "size1-2", "size2-3", "size3-4", "size1-1"];
+	element_sizes["Column"] 						= ["size1-4", "size1-3", "size1-2", "size2-3", "size3-4", "size1-1"];
+	element_sizes["Column-Service"] 		= ["size1-4", "size1-3", "size1-2", "size2-3", "size3-4", "size1-1"];
+	element_sizes["Contact-Form"]				= ["size1-1"];
+	element_sizes["Content"] 						= ["size1-4", "size1-3", "size1-2", "size2-3", "size3-4", "size1-1"];
+	element_sizes["Divider"] 						= ["size1-1"];
+	element_sizes["Full-Width-Banner"] 	= ["size1-1"];
+	element_sizes["Gallery"] 						= ["size1-4", "size1-3", "size1-2", "size2-3", "size3-4", "size1-1"];
+	element_sizes["Message-Box"] 				= ["size1-4", "size1-3", "size1-2", "size2-3", "size3-4", "size1-1"];
+	element_sizes["Price-Table"] 				= ["size1-4", "size1-3", "size1-2", "size2-3", "size3-4", "size1-1"];
+	element_sizes["Portfolio"]					= ["size1-4", "size1-3", "size1-2", "size2-3", "size3-4", "size1-1"];
+	element_sizes["Post-Slider"] 				= ["size1-1"];
+	element_sizes["Section-Start"] 			= ["size1-1"];
+	element_sizes["Section-End"] 				= ["size1-1"];
+	element_sizes["Sidebar"] 						= ["size1-4", "size1-3", "size1-2", "size2-3", "size3-4", "size1-1"];
+	element_sizes["Staff"] 							= ["size1-4", "size1-3", "size1-2", "size2-3", "size3-4", "size1-1"];
+	element_sizes["Tabs"] 							= ["size1-4", "size1-3", "size1-2", "size2-3", "size3-4", "size1-1"];
+	element_sizes["Testimonial"] 				= ["size1-4", "size1-3", "size1-2", "size2-3", "size3-4", "size1-1"];
+	element_sizes["Toggle"] 						= ["size1-4", "size1-3", "size1-2", "size2-3", "size3-4", "size1-1"];
 
 	$( "#page_builder_elements" ).sortable( {
 		connectWith : ".column",

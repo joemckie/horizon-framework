@@ -399,7 +399,7 @@ function horizon_filter_content( $content, $remove_readmore = false ) {
 }
 
 // Hex string to RGB (#000000 => rgb(0,0,0))
-function horizon_hex2rgb( $hex, $array = true ) {
+function horizon_hex2rgb( $hex, $array = false ) {
 	$hex = str_replace( "#", "", $hex );
 
 	if ( strlen( $hex ) == 3 ) {

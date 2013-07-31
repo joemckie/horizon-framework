@@ -285,7 +285,7 @@ $page_meta_boxes = array(
 						"value" => "4",
 					),
 				),
-				"Section-Start"     => array(
+				"Section-Start" => array(
 					"background_colour" => array(
 						"title" => __( "BACKGROUND COLOUR" ),
 						"name"  => "page-option-section-background-colour",
@@ -294,10 +294,10 @@ $page_meta_boxes = array(
 					"image"   => array(
 						"title" => __( "BACKGROUND IMAGE" ),
 						"name"  => "page-option-section-background-image",
-						"type"  => "image",
+						"type"  => "upload",
 						"value" => "",
 					),
-					"type"    => array(
+					"type" => array(
 						"title"   => __( "BACKGROUND IMAGE TYPE" ),
 						"name"    => "page-option-section-background-type",
 						"type"    => "select",
@@ -308,7 +308,7 @@ $page_meta_boxes = array(
 						"title"          => __( "BACKGROUND IMAGE REPEAT" ),
 						"name"           => "page-option-section-background-repeat",
 						"type"           => "checktoggle",
-						"default" 		 => "no-repeat",
+						"default" 		 	 => "no-repeat",
 						"selected_value" => "repeat",
 					),
 				),
@@ -317,7 +317,7 @@ $page_meta_boxes = array(
 						"description" => "Ends a section.",
 					)
 				),
-				"Tabs"              => array(
+				"Tabs" => array(
 					"header"   => array(
 						"title" => __( "TABS TITLE" ),
 						"name"  => "page-option-tabs-title",
@@ -326,13 +326,13 @@ $page_meta_boxes = array(
 					),
 					"tab_item" => array(
 						"sub_item_count" => array( "type" => "count", "name" => "tab-item-tab-count" ),
-						"title"          => array(
+						"title"  => array(
 							"title" => __( "TAB ITEM TITLE" ),
 							"name"  => "page-option-tab-item-title",
 							"type"  => "input",
 							"value" => "",
 						),
-						"content"        => array(
+						"content"  => array(
 							"title" => __( "TAB ITEM CONTENT" ),
 							"name"  => "page-option-tab-item-content",
 							"type"  => "textarea",
@@ -341,7 +341,7 @@ $page_meta_boxes = array(
 						),
 					),
 				),
-				"Testimonial"       => array(
+				"Testimonial" => array(
 					"title"    => array(
 						"title" => __( "TESTIMONIAL TITLE" ),
 						"name"  => "page-option-testimonial-title",
@@ -361,8 +361,8 @@ $page_meta_boxes = array(
 						"value" => "4",
 					),
 				),
-				"Toggle"            => array(
-					"header"      => array(
+				"Toggle" => array(
+					"header" => array(
 						"title" => __( "TOGGLE TITLE" ),
 						"name"  => "page-option-toggle-title",
 						"type"  => "input",
@@ -370,19 +370,19 @@ $page_meta_boxes = array(
 					),
 					"toggle_item" => array(
 						"sub_item_count" => array( "type" => "count", "name" => "toggle-item-tab-count" ),
-						"title"          => array(
+						"title" => array(
 							"title" => __( "TOGGLE ITEM TITLE" ),
 							"name"  => "page-option-toggle-item-title",
 							"type"  => "input",
 							"value" => "",
 						),
-						"content"        => array(
+						"content" => array(
 							"title" => __( "TOGGLE ITEM CONTENT" ),
 							"name"  => "page-option-toggle-item-content",
 							"type"  => "textarea",
 							"value" => "",
 						),
-						"active"         => array(
+						"active" => array(
 							"title"          => __( "ACTIVE TOGGLE" ),
 							"name"           => "page-option-toggle-item-active",
 							"type"           => "checktoggle",

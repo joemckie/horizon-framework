@@ -82,8 +82,8 @@ function horizon_sort_meta_boxes( $meta_box, $type = NULL ) {
 			case "colourpicker":
 				return horizon_display_meta_colourpicker( $meta_box );
 				break;
-			case "image" :
-				return horizon_display_meta_image( $meta_box );
+			case "upload" :
+				return horizon_display_meta_upload( $meta_box );
 				break;
 		endswitch;
 	}
@@ -347,7 +347,7 @@ function horizon_display_meta_input( $a ) {
 	return $html;
 }
 
-function horizon_display_meta_image( $args ) {
+function horizon_display_meta_upload( $args ) {
 	extract( $args );
 
 	$value = ( empty( $value ) ) ? ' ' : $value;
@@ -359,12 +359,13 @@ function horizon_display_meta_image( $args ) {
 		$status = '';
 	}
 
+	$html = '';
 	$html .= '<div class="meta_box' . $status . '">';
 	$html .= '<div class="meta_title">';
 	$html .= __( $title );
 	$html .= '</div>';
 	$html .= '<div class="meta_input">';
-	$html .= '<div class="horizon-uploader"><img style="max-width:200px;" src="' . $value . '" class="image"/><br><input class="' . $name . '" type="text" name="' . $name . '" id="' . $name . '" value="' . $value . '" /><input class="button" name="button-' . $name . '" id="button-' . $name . '" value="Upload" /></div>';
+	$html .= '<div class="horizon-uploader"><img style="max-width:200px;" src="' . $value . '" class="image"/><br><input class="' . $name . '" type="text" name="' . $name . '" id="' . $name . '" value="' . $value . '" /><input class="button" type="button" name="button-' . $name . '" id="button-' . $name . '" value="Upload" /></div>';
 	$html .= '</div>';
 	if ( isset( $description ) ) {
 		$html .= '<div class="meta_description">' . __( $description ) . '</div>';

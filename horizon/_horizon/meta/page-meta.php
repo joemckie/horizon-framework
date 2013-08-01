@@ -376,30 +376,35 @@ function horizon_save_page_options( $id ) {
 					$page_builder_xml .= '<' . $element_type . '>';
 					$element_size = $_POST[$meta_box['size']][$i];
 					$page_builder_xml .= horizon_xml_tag( 'size', horizon_format_width( $element_size ) );
-					$sub_item_type = '';
 
 					if ( !isset( $sub_item_num[$element_type] ) ) {
 						$sub_item_num[$element_type] = 0;
 						if ( $element_type == 'Accordion' ) {
 							$sub_item_type = "acc_item";
 							$sub_item_num[$sub_item_type] = 0;
+						} else if ( $element_type == 'Tabs' ) {
+							$sub_item_type = "tab_item";
+							$sub_item_num[$sub_item_type] = 0;
+						} else if ( $element_type == 'Toggle' ) {
+							$sub_item_type = "toggle_item";
+							$sub_item_num[$sub_item_type] = 0;
 						} else {
-							if ( $element_type == 'Tabs' ) {
-								$sub_item_type = "tab_item";
-								$sub_item_num[$sub_item_type] = 0;
-							} else {
-								if ( $element_type == 'Toggle' ) {
-									$sub_item_type = "toggle_item";
-									$sub_item_num[$sub_item_type] = 0;
-								}
-							}
+							$sub_item_type = '';
 						}
 					}
 					
 					// Sub item sorting
 					if ( $element_type == 'Accordion' || $element_type == 'Tabs' || $element_type == 'Toggle' ) {
+					
+						$_POST[$meta_box['elements'][$element_type][$sub_item_type]['sub_item_count']['name']][$sub_item_num[$element_type]]
+						= isset($_POST[$meta_box['elements'][$element_type][$sub_item_type]['sub_item_count']['name']][$sub_item_num[$element_type]])
+						? $_POST[$meta_box['elements'][$element_type][$sub_item_type]['sub_item_count']['name']][$sub_item_num[$element_type]]
+						: NULL;
 
-						$sub_item_count = isset($_POST[$meta_box['elements'][$element_type][$sub_item_type]['sub_item_count']['name']][$sub_item_num[$element_type]]) ? $_POST[$meta_box['elements'][$element_type][$sub_item_type]['sub_item_count']['name']][$sub_item_num[$element_type]] : 0;
+						$sub_item_count 
+						=	!is_null($_POST[$meta_box['elements'][$element_type][$sub_item_type]['sub_item_count']['name']][$sub_item_num[$element_type]]) 
+						? $_POST[$meta_box['elements'][$element_type][$sub_item_type]['sub_item_count']['name']][$sub_item_num[$element_type]] 
+						: 0;
 
 						for ( $s = 0; $s < $sub_item_count; $s++ ) {
 							$page_builder_xml .= '<' . $sub_item_type . '>';
@@ -422,7 +427,7 @@ function horizon_save_page_options( $id ) {
 					// Save page builder meta
 					foreach ( $meta_box['elements'][$element_type] as $tag_name => $args ) {
 						$type = isset($args['type']) ? $args['type'] : NULL;
-						if ( $type != "description" && $tag_name !== $sub_item_type ) {
+						if ( $type != "description" && $tag_name !== $sub_item_type && isset($args['name']) ) {
 							$content = apply_filters( 'horizon_encode_xml_string', $_POST[$args['name']][$sub_item_num[$element_type]] );
 							$page_builder_xml .= horizon_xml_tag( $tag_name, $content );
 						}

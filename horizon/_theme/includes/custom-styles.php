@@ -35,11 +35,11 @@ function horizon_custom_theme_styles() {
 	$portfolio_single_style = horizon_create_slug( get_option( THEME_SHORT_NAME . '_options_portfolio_single_type' ) );
 
 	$custom_styles_array = array(
-		STYLES_PATH . '/blog/single-post/' . $blog_single_style . '/config/custom-styles.php',
-		STYLES_PATH . '/blog/section/' . $blog_style . '/config/custom-styles.php',
-		STYLES_PATH . '/blog/archive/' . $blog_archive_style . '/config/custom-styles.php',
-		STYLES_PATH . '/portfolio/single-post/' . $portfolio_single_style . '/config/custom-styles.php',
-		STYLES_PATH . '/portfolio/section/' . $portfolio_style . '/config/custom-styles.php'
+		TEMPLATE_PATH . '/blog/single-post/' . $blog_single_style . '/config/custom-styles.php',
+		TEMPLATE_PATH . '/blog/section/' . $blog_style . '/config/custom-styles.php',
+		TEMPLATE_PATH . '/blog/archive/' . $blog_archive_style . '/config/custom-styles.php',
+		TEMPLATE_PATH . '/portfolio/single-post/' . $portfolio_single_style . '/config/custom-styles.php',
+		TEMPLATE_PATH . '/portfolio/section/' . $portfolio_style . '/config/custom-styles.php'
 	);
 
 	foreach ( $custom_styles_array as $path ) {

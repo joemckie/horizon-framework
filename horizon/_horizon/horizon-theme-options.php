@@ -46,7 +46,7 @@ function horizon_save_theme_options( $values ) {
 			$parsed_values[$key['name']] = $key;
 		}
 	endforeach;
-	
+
 	$return_data = array( "success" => "-1", "message" => "Failed - please check your error logs for more info." );
 	$all_options = '';
 
@@ -54,9 +54,7 @@ function horizon_save_theme_options( $values ) {
 		foreach ( $panel['elements'] as $element => $args ):
 
 			if ( $args['type'] !== "typography" && $args['type'] !== "colourpicker" && $args['type'] !== "link" ) {
-				if(isset($args['name'])) {
-					$all_options .= str_replace( THEME_SHORT_NAME . '_options_', '', $args['name'] ) . ',';
-				}
+				$all_options .= str_replace( THEME_SHORT_NAME . '_options_', '', $args['name'] ) . ',';
 			}
 
 			// FILE UPLOAD
@@ -68,10 +66,10 @@ function horizon_save_theme_options( $values ) {
 					return ( $return_data = array( "success" => "-1", "message" => "Failed!" ) );
 				}
 
-			} else {
 				// CHECK TOGGLE
+			} else {
 				if ( $args['type'] == "checktoggle" ) {
-					if ( !isset($parsed_values[$args['name']]['value']) ) {
+					if ( $parsed_values[$args['name']]['value'] == '' ) {
 						$parsed_values[$args['name']]['value'] = "No";
 					}
 					if ( !horizon_save_option( $args['name'], get_option( $args['name'] ), stripslashes( $parsed_values[$args['name']]['value'] ) ) ) {
@@ -80,13 +78,33 @@ function horizon_save_theme_options( $values ) {
 					// TYPOGRAPHY
 				} else {
 					if ( $args['type'] == "typography" ) {
-						if(array_key_exists('font', $args['attr'])) {
-							$submitted_font = str_replace( "-", " ", stripslashes( $parsed_values[$args['name'] . '_font']['value'] ) );
-						}
+						$submitted_font = str_replace( "-", " ", stripslashes( $parsed_values[$args['name'] . '_font']['value'] ) );
 
-						foreach($args['attr'] as $row=>$key) {
-							if ( !horizon_save_option( $args['name'] . '_' . $row, get_option( $args['name'] . '_' . $row ), stripslashes( $parsed_values[$args['name'] . '_' . $row]['value'] ) ) ) {
+						if ( !horizon_save_option( $args['name'] . '_colour', get_option( $args['name'] . '_colour' ), stripslashes( $parsed_values[$args['name'] . '_colour']['value'] ) ) ) {
+							return ( $return_data = array( "success" => "-1", "message" => "Failed!" ) );
+						} else {
+							if ( !horizon_save_option( $args['name'] . '_font', get_option( $args['name'] . '_font' ), $submitted_font ) ) {
 								return ( $return_data = array( "success" => "-1", "message" => "Failed!" ) );
+							} else {
+								if ( !horizon_save_option( $args['name'] . '_size', get_option( $args['name'] . '_size' ), stripslashes( $parsed_values[$args['name'] . '_size']['value'] ) ) ) {
+									return ( $return_data = array( "success" => "-1", "message" => "Failed!" ) );
+								} else {
+									if ( !horizon_save_option( $args['name'] . '_size_type', get_option( $args['name'] . '_size_type' ), stripslashes( $parsed_values[$args['name'] . '_size_type']['value'] ) ) ) {
+										return ( $return_data = array( "success" => "-1", "message" => "Failed!" ) );
+									} else {
+										if ( !horizon_save_option( $args['name'] . '_weight', get_option( $args['name'] . '_weight' ), stripslashes( $parsed_values[$args['name'] . '_weight']['value'] ) ) ) {
+											return ( $return_data = array( "success" => "-1", "message" => "Failed!" ) );
+										} else {
+											if ( !horizon_save_option( $args['name'] . '_transform', get_option( $args['name'] . '_transform' ), stripslashes( $parsed_values[$args['name'] . '_transform']['value'] ) ) ) {
+												return ( $return_data = array( "success" => "-1", "message" => "Failed!" ) );
+											} else {
+												if ( !horizon_save_option( $args['name'] . '_decoration', get_option( $args['name'] . '_decoration' ), stripslashes( $parsed_values[$args['name'] . '_decoration']['value'] ) ) ) {
+													return ( $return_data = array( "success" => "-1", "message" => "Failed!" ) );
+												}
+											}
+										}
+									}
+								}
 							}
 						}
 
@@ -94,22 +112,15 @@ function horizon_save_theme_options( $values ) {
 					} else {
 						if ( $args['type'] == "add_sidebar" ) {
 							$sidebar_string = '';
-
-							if(isset($parsed_values[$args['name']])
-							&& $parsed_values[$args['name']]['value'] !== '') {
-								for ( $i = 0; $i < sizeof( $parsed_values[$args['name'] . '[]'] ); $i++ ) {
-									$sidebar_string .= $parsed_values[$args['name'] . '[]'][$i]['value'] . ',';
-								}
-								if ( !horizon_save_option( $args['name'], get_option( $args['name'] ), $sidebar_string ) ) {
-									return ( $return_data = array( "success" => "-1", "message" => "Failed!" ) );
-								}
+							for ( $i = 0; $i < sizeof( $parsed_values[$args['name'] . '[]'] ); $i++ ) {
+								$sidebar_string .= $parsed_values[$args['name'] . '[]'][$i]['value'] . ',';
+							}
+							if ( !horizon_save_option( $args['name'], get_option( $args['name'] ), $sidebar_string ) ) {
+								return ( $return_data = array( "success" => "-1", "message" => "Failed!" ) );
 							}
 						} else {
-							if(isset($args['name'])) {
-								$parsed_values[$args['name']] = isset($parsed_values[$args['name']]) ? $parsed_values[$args['name']] : NULL;
-								if ( !horizon_save_option( $args['name'], get_option( $args['name'] ), stripslashes( $parsed_values[$args['name']]['value'] ) ) ) {
-									return ( $return_data = array( "success" => "-1", "message" => "Failed!" ) );
-								}
+							if ( !horizon_save_option( $args['name'], get_option( $args['name'] ), stripslashes( $parsed_values[$args['name']]['value'] ) ) ) {
+								return ( $return_data = array( "success" => "-1", "message" => "Failed!" ) );
 							}
 						}
 					}
@@ -529,11 +540,11 @@ function horizon_display_option_typography( $args ) {
 	global $loaded_fonts, $google_fonts_array, $google_fonts, $basic_fonts, $custom_fonts, $size_types, $weight_types, $transform_types, $decoration_types;
 	extract( $args );
 	
-	$preview = isset($preview) ? $preview : TRUE;
+	$preview = isset($preview) ? $preview : '';
 	$description = isset($description) ? $description : NULL;
 	$font_value = isset($font_value) ? $font_value : NULL;
 	
-	$handle = !($preview) ? "typography-handle" : "";
+	$handle = $preview === NULL ? "typography-handle" : "";
 
 	$fonts = $google_fonts;
 	
@@ -636,7 +647,7 @@ function horizon_display_option_typography( $args ) {
 		$html .= '</select>';
 	}
 
-	if ( $preview ) {
+	if ( $preview === NULL ) {
 		$html .= '<div class="clear"></div>';
 		$html .= '<div class="font-preview" style="' . horizon_font_preview_styling( $args ) . '">';
 		$html .= 'Sphinx of black quartz, judge my vow.';
@@ -750,12 +761,6 @@ function horizon_font_preview_styling( $args ) {
 		$args[$default . '_value'] = get_option( $args['name'] . '_' . $default, $value );
 	}
 	extract( $args );
-	
-	$colour_value = isset( $colour_value ) ? $colour_value : NULL;
-	$font_value = isset( $font_value ) ? $font_value : NULL;
-	$size_value = isset( $size_value ) ? $size_value : NULL;
-	$size_type_value = isset( $size_type_value ) ? $size_type_value : NULL;
-	$transform_value = isset( $transform_value ) ? $transform_value : NULL;
 
 
 	$style = '';

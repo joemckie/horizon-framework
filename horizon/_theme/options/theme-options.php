@@ -46,84 +46,84 @@ $theme_defaults = array(
 
 // MAIN MENUS => SUB MENUS
 $sidebar_array = array(
-	__( "General", 'horizon-framework' ) => array(
-		'id' => 'general-settings',
+	__( "General", 'horizon-framework' )     => array(
+		'id'        => 'general-settings',
 		'menu_icon' => 'general',
-		'default' => true,
-		'menus' => array(
-			__( 'Settings', 'horizon-framework' ) 							=> array( 'id' => "general-settings", "default" => true ),
-			__( 'Typography', 'horizon-framework' ) 						=> array( 'id' => "general-typography" ),
-			__( 'Colours', 'horizon-framework' ) 								=> array( 'id' => "general-colours" ),
+		'default'   => true,
+		'menus'     => array(
+			__( 'Settings', 'horizon-framework' )               => array( 'id' => "general-settings", "default" => true ),
+			__( 'Typography', 'horizon-framework' )             => array( 'id' => "general-typography" ),
+			__( 'Colours', 'horizon-framework' )                => array( 'id' => "general-colours" ),
 			__( 'Archive / Search Style', 'horizon-framework' ) => array( "id" => "archive-search-style" ),
-			__( 'Favicon', 'horizon-framework' ) 								=> array( "id" => "favicon" ),
+			__( 'Favicon', 'horizon-framework' )                => array( "id" => "favicon" ),
 		)
 	),
-	__( "Header", 'horizon-framework' ) => array(
-		"id" => "header",
+	__( "Header", 'horizon-framework' )      => array(
+		"id"        => "header",
 		"menu_icon" => "header",
-		"menus" => array(
-			__( "Settings", 'horizon-framework' ) 							=> array( "id" => "header-settings" ),
-			__( "Typography", 'horizon-framework' ) 						=> array( "id" => "header-typography" ),
-			__( "Colours", 'horizon-framework' ) 								=> array( "id" => "header-colours" ),
+		"menus"     => array(
+			__( "Settings", 'horizon-framework' )   => array( "id" => "header-settings" ),
+			__( "Typography", 'horizon-framework' ) => array( "id" => "header-typography" ),
+			__( "Colours", 'horizon-framework' )    => array( "id" => "header-colours" ),
 		),
 	),
-	__( "Footer", 'horizon-framework' ) => array(
-		"id" => "footer",
+	__( "Footer", 'horizon-framework' )      => array(
+		"id"        => "footer",
 		"menu_icon" => "footer",
-		"menus" => array(
-			__( "Settings", 'horizon-framework' ) 							=> array( "id" => "footer-settings" ),
-			__( "Typography", 'horizon-framework' ) 						=> array( "id" => "footer-typography" ),
-			__( "Colours", 'horizon-framework' ) 								=> array( "id" => "footer-colours" ),
+		"menus"     => array(
+			__( "Settings", 'horizon-framework' )   => array( "id" => "footer-settings" ),
+			__( "Typography", 'horizon-framework' ) => array( "id" => "footer-typography" ),
+			__( "Colours", 'horizon-framework' )    => array( "id" => "footer-colours" ),
 		),
 	),
-	__( "Elements", 'horizon-framework' ) => array(
-		"id" => "elements",
+	__( "Elements", 'horizon-framework' )    => array(
+		"id"        => "elements",
 		"menu_icon" => "elements",
-		"menus" => array(
-			__( "Accordion / Toggle", 'horizon-framework' ) 		=> array( "id" => "elements-accordion-toggle" ),
-			__( "Blockquote", 'horizon-framework' )         		=> array( "id" => "elements-blockquote" ),
-			__( "Button", 'horizon-framework' )             		=> array( "id" => "elements-button" ),
-			__( "Column Services", 'horizon-framework' )    		=> array( "id" => "elements-column-services" ),
-			__( "Divider", 'horizon-framework' )            		=> array( "id" => "elements-divider" ),
-			__( "Full Width Banner", 'horizon-framework' )  		=> array( "id" => "elements-full-width-banner" ),
-			__( "Highlight", 'horizon-framework' )          		=> array( "id" => "elements-highlight" ),
-			__( "Input", 'horizon-framework' )              		=> array( "id" => "elements-input" ),
-			__( "Post Slider", 'horizon-framework' )        		=> array( "id" => "elements-post-slider" ),
-			__( "Pre", 'horizon-framework' )                		=> array( "id" => "elements-pre" ),
-			__( "Table", 'horizon-framework' )              		=> array( "id" => "elements-table" ),
-			__( "Tabs", 'horizon-framework' )               		=> array( "id" => "elements-tabs" ),
-			__( "Testimonial", 'horizon-framework' )        		=> array( "id" => "elements-testimonial" ),
+		"menus"     => array(
+			__( "Accordion / Toggle", 'horizon-framework' ) => array( "id" => "elements-accordion-toggle" ),
+			__( "Blockquote", 'horizon-framework' )         => array( "id" => "elements-blockquote" ),
+			__( "Button", 'horizon-framework' )             => array( "id" => "elements-button" ),
+			__( "Column Services", 'horizon-framework' )    => array( "id" => "elements-column-services" ),
+			__( "Divider", 'horizon-framework' )            => array( "id" => "elements-divider" ),
+			__( "Full Width Banner", 'horizon-framework' )  => array( "id" => "elements-full-width-banner" ),
+			__( "Highlight", 'horizon-framework' )          => array( "id" => "elements-highlight" ),
+			__( "Input", 'horizon-framework' )              => array( "id" => "elements-input" ),
+			__( "Post Slider", 'horizon-framework' )        => array( "id" => "elements-post-slider" ),
+			__( "Pre", 'horizon-framework' )                => array( "id" => "elements-pre" ),
+			__( "Table", 'horizon-framework' )              => array( "id" => "elements-table" ),
+			__( "Tabs", 'horizon-framework' )               => array( "id" => "elements-tabs" ),
+			__( "Testimonial", 'horizon-framework' )        => array( "id" => "elements-testimonial" ),
 		),
 	),
-	__( "Pages", 'horizon-framework' ) => array(
-		"id" => "pages",
+	__( "Pages", 'horizon-framework' )       => array(
+		"id"        => "pages",
 		"menu_icon" => "page",
-		"menus" => array(
-			__( "Search", 'horizon-framework' )     						=> array( "id" => "pages-search" ),
-			__( "Categories", 'horizon-framework' ) 						=> array( "id" => "pages-categories" ),
-			__( "Author", 'horizon-framework' )    							=> array( "id" => "pages-author" ),
-			__( "Typography", 'horizon-framework') 							=> array( "id" => "pages-typography" ),
+		"menus"     => array(
+			__( "Search", 'horizon-framework' )     => array( "id" => "pages-search" ),
+			__( "Categories", 'horizon-framework' ) => array( "id" => "pages-categories" ),
+			__( "Author", 'horizon-framework' )     => array( "id" => "pages-author" ),
+			__( "Typography", 'horizon-framework') => array( "id" => "pages-typography" ),
 		),
 	),
-	__( "Blog", 'horizon-framework' ) => array(
-		"id" => "blog",
+	__( "Blog", 'horizon-framework' )        => array(
+		"id"        => "blog",
 		"menu_icon" => "blog",
-		"menus" => array(
-			__( "General Settings", 'horizon-framework' ) 			=> array( "id" => "blog-settings" ),
+		"menus"     => array(
+			__( "General Settings", 'horizon-framework' ) => array( "id" => "blog-settings" ),
 		),
 	),
 	__( "Portfolio", 'horizon-framework' )   => array(
-		"id" => "portfolio",
+		"id"        => "portfolio",
 		"menu_icon" => "portfolio",
-		"menus" => array(
-			__( "General Settings", 'horizon-framework' ) 			=> array( "id" => "portfolio-settings" ),
+		"menus"     => array(
+			__( "General Settings", 'horizon-framework' ) => array( "id" => "portfolio-settings" ),
 		),
 	),
-	__( "Comments", 'horizon-framework' ) => array(
-		"id" => "comments",
+	__( "Comments", 'horizon-framework' )    => array(
+		"id"        => "comments",
 		"menu_icon" => "comments",
-		"menus" => array(
-			__( "General Settings", 'horizon-framework' ) 			=> array( "id" => "comments-settings" ),
+		"menus"     => array(
+			__( "General Settings", 'horizon-framework' ) => array( "id" => "comments-settings" ),
 		),
 	),
 	/*__("Social Networks", 'horizon-framework') => array(
@@ -133,20 +133,20 @@ $sidebar_array = array(
 				__("Social Networks", 'horizon-framework') => array ("id" => "social-networks"),
 			),
 		),*/
-	__( "Sidebars", 'horizon-framework' ) => array(
-		"id" => "custom-sidebars",
+	__( "Sidebars", 'horizon-framework' )    => array(
+		"id"        => "custom-sidebars",
 		"menu_icon" => "sidebars",
-		"menus" => array(
-			__( "Custom Sidebars", 'horizon-framework' ) 				=> array( "id" => "custom-sidebars" ),
-			__( "Typography", 'horizon-framework' ) 						=> array( "id" => "sidebars-typography" ),
+		"menus"     => array(
+			__( "Custom Sidebars", 'horizon-framework' ) => array( "id" => "custom-sidebars" ),
+			__( "Typography", 'horizon-framework' )      => array( "id" => "sidebars-typography" ),
 		),
 	),
 	__( "Custom Code", 'horizon-framework' ) => array(
-		"id" => "custom-code",
+		"id"        => "custom-code",
 		"menu_icon" => "custom-code",
-		"menus" => array(
-			__( "Custom Styles", 'horizon-framework' )  				=> array( "id" => "custom-styles" ),
-			__( "Custom Scripts", 'horizon-framework' )	 				=> array( "id" => "custom-scripts" ),
+		"menus"     => array(
+			__( "Custom Styles", 'horizon-framework' )  => array( "id" => "custom-styles" ),
+			__( "Custom Scripts", 'horizon-framework' ) => array( "id" => "custom-scripts" ),
 		),
 	),
 );
@@ -155,11 +155,11 @@ do_action( 'horizon_include_theme_config' );
 
 // Array containing the panels & elements (ID = the ID of the corresponding menu in the array above)
 $elements_array = array(
-	__( "General Settings", 'horizon-framework' ) => array(
+	__( "General Settings", 'horizon-framework' )            => array(
 		"default"  => true,
-		"id" => "general-settings",
+		"id"       => "general-settings",
 		"elements" => array(
-			__( "Enable Full Width", 'horizon-framework' ) => array(
+			__( "Enable Full Width", 'horizon-framework' )     => array(
 				"type"           => "checktoggle",
 				"name"           => THEME_SHORT_NAME . "_options_enable_full_width",
 				"title"          => "Enable Full Width",

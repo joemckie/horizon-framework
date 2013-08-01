@@ -29,7 +29,7 @@
 function horizon_write_custom_styles() {
 	global $handle;
 
-	$custom_styles = get_template_directory() . '/custom-styles.css';
+	$custom_styles = SERVER_PATH . '/custom-styles.css';
 	$handle = fopen( $custom_styles, 'w' );
 
 	if ( !$handle ) {
@@ -46,10 +46,9 @@ function horizon_concat_stylecss() {
 
 	$concat_styles = $import_styles;
 	array_shift( $concat_styles );
-	$style = get_template_directory() . '/style.css';
+	$style = SERVER_PATH . '/style.css';
 	$header = file_get_contents( SERVER_PATH . '/_theme/css/header.css' );
 	$handle = fopen( $style, 'w' );
-	$contents = '';
 
 	foreach ( $concat_styles as $path ) {
 		$contents .= file_get_contents( SERVER_PATH . '/' . $path ) . "\r\n";
@@ -70,7 +69,7 @@ function horizon_build_selector( $selector, $args ) {
 
 function horizon_build_google_font_string( $args ) {
 	global $google_fonts_array;
-	
+
 	$web_font_string = "http://fonts.googleapis.com/css?family=";
 
 	foreach ( $args as $font => $variants ) {
@@ -91,20 +90,18 @@ function horizon_build_google_font_string( $args ) {
 				}
 				switch ( true ) {
 					case ( $i == 0 && $num == 1 ):
-						$separator['before'] 	= ':';
-						$separator['after'] 	= '|';
+						$separator['before'] = ":";
+						$separator['after'] = "|";
 						break;
 					case ( $i == 0 && $num > 1 ):
-						$separator['before'] 	= ':';
-						$separator['after'] 	= ',';
+						$separator['before'] = ":";
+						$separator['after'] = ",";
 						break;
 					case ( $num > 1 && $i < $num ):
-						$separator['before'] 	= '';
-						$separator['after'] 	= ',';
+						$separator['after'] = ",";
 						break;
 					default:
-						$separator['before'] 	= '';
-						$separator['after'] 	= '|';
+						$separator['after'] = "|";
 						break;
 				}
 				$web_font_string .= $separator['before'] . $variants[$i] . $separator['after'];
@@ -143,7 +140,7 @@ function horizon_get_custom_style_content() {
 	foreach ( $elements_array as $panel => $args ) {
 		foreach ( $args['elements'] as $element ) {
 
-			if ( !isset( $element['disable_style_save'] ) ) {
+			if ( $element['disable_style_save'] != true ) {
 				switch ( $element['type'] ) {
 
 					// Save colours
@@ -202,7 +199,7 @@ function horizon_get_custom_style_content() {
 										$temp_att .= horizon_style_attribute( $attr, $saved_size . $saved_size_type );
 									} else {
 										if ( $attr_name == "font" ) {
-											$temp_att .= horizon_style_attribute( $attr, '"' . $saved_value . '", sans-serif' );
+											$temp_att .= horizon_style_attribute( $attr, '"' . $saved_value . '", sans-serif;' );
 										} else {
 											$temp_att .= horizon_style_attribute( $attr, $saved_value );
 										}
@@ -210,14 +207,10 @@ function horizon_get_custom_style_content() {
 								}
 							endforeach;
 
-							if( isset( $element['defaults']['font'] ) ) {
-								$saved_font = get_option( $element['name'] . '_font', $element['defaults']['font'] );
-							}
-							if( isset( $element['defaults']['weight'] ) ) {
-								$saved_variant = get_option( $element['name'] . '_weight', $element['defaults']['weight'] );
-							}
+							$saved_font = get_option( $element['name'] . '_font', $element['defaults']['font'] );
+							$saved_variant = get_option( $element['name'] . '_weight', $element['defaults']['weight'] );
 
-							if ( !isset( $web_font_array[$saved_font] ) ) {
+							if ( !$web_font_array[$saved_font] ) {
 								$web_font_array[$saved_font] = array();
 							}
 							if ( !in_array( $saved_variant, $web_font_array[$saved_font] ) ) {

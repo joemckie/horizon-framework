@@ -14,7 +14,7 @@ Feel free to use this however you want, and please do contact me if you need any
 **What is Horizon?**
 ====================
 
-Horizon is a WordPress framework that allows for rapid development. Born out of the necessity to build websites quickly, Horizon allows you to make your own extremely customisable themes using the built-in page builder, theme options and shortcodes!
+Horizon is a WordPress framework that allows for rapid theme development. Born out of the necessity to build websites quickly, Horizon allows you to make your own extremely customisable themes using the built-in page builder, theme options and shortcodes!
 
 **Quick Start**
 ===============

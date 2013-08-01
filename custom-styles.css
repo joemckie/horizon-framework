@@ -119,8 +119,8 @@ table th{background-color: #ffffff;}
 .single-blog-post.horizon-style .blog-line{background-color: ;}
 .single-blog-post.horizon-style span.tooltip{background-color: ;}
 .single-blog-post.horizon-style span.tooltip{color: #333333;}
-.single-blog-post.horizon-style .link-thumbnail{background-image: url(http://themes/horizon/wp-content/themes/horizon/_horizon/images/patterns/3.jpg);}
-.single-blog-post.horizon-style .quote-thumbnail{background-image: url(http://themes/horizon/wp-content/themes/horizon/_horizon/images/patterns/3.jpg);}
+.single-blog-post.horizon-style .link-thumbnail{background-image: url(http://themes/horizon/wp-content/themes/horizon/horizon/_horizon/images/patterns/1.jpg);}
+.single-blog-post.horizon-style .quote-thumbnail{background-image: url(http://themes/horizon/wp-content/themes/horizon/horizon/_horizon/images/patterns/1.jpg);}
 .single-portfolio-post .portfolio-thumbnail a.lightbox img:hover, .single-portfolio-post .project-images a.lightbox img:hover{opacity: 0.85;}
 #logo{margin-top: 47px;}
 #logo{margin-bottom: 43px;}
@@ -129,7 +129,7 @@ table th{background-color: #ffffff;}
 .page-wrapper{-webkit-box-shadow:0 0 8px rgba(0,0,0,0.4);}
 .body-wrap{padding:20px 0;}
 .layout-style{margin:0 auto; max-width:1000px;}
-html{background-color: #f0f0f0;}
-footer{background-color: #292929;}
+html{background-image: url(http://themes/horizon/wp-content/themes/horizon/horizon/_horizon/images/patterns/1.jpg);}
+footer{background-image: url(http://themes/horizon/wp-content/themes/horizon/horizon/_horizon/images/patterns/1.jpg);}
 .depth-2, .depth-3, .depth-4, .depth-5{margin-left: 80px;}
 .horizon-comment{padding-left: 80px;}

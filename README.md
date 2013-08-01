@@ -9,7 +9,12 @@ Horizon Framework
 
 Here it is! A boilerplate theme for the Horizon Framework. 
 
-Feel free to use this however you want, and please contact me if you need any help, I'd be more than willing to help out.
+Feel free to use this however you want, and please do contact me if you need any help, during beta stages I'd like to get your opinions first hand.
+
+**What is Horizon?**
+====================
+
+Horizon is a WordPress framework that allows for rapid development. Born out of the necessity to build websites quickly, Horizon allows you to make your own extremely customisable themes using the built-in page builder, theme options and shortcodes!
 
 **Quick Start**
 ===============

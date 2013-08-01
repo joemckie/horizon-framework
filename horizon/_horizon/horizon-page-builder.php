@@ -674,7 +674,7 @@ function horizon_build_saved_element( $saved_element, $element_type ) {
 			}
 		}
 		if ( !isset( $args['no_hr'] ) || $args['no_hr'] !== true ) {
-			if ( $args['type'] != 'open' && $args['type'] != 'close' ) {
+			if ( isset($args['type']) && $args['type'] != 'open' && $args['type'] != 'close' ) {
 				$html .= '<hr class="separator mt20">';
 			}
 		}

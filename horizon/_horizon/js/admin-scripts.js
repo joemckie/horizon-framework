@@ -34,6 +34,9 @@ jQuery( document ).ready( function ( $ ) {
 	var radio = $( "label.radio" );
 	var icon_trigger = $( ".trigger-icon" );
 	
+	var first_link = $( sidebar_link ).parent().siblings( "ul" ).children( "li:first" ).children( "a" );
+	$("#" + first_link.attr( "rel" ) + " .pretty-select").selectBoxIt();
+	
 	// Switch between sidebars
 	$( sidebar_link ).parent().click( function ( e ) {
 		e.preventDefault();
@@ -47,13 +50,15 @@ jQuery( document ).ready( function ( $ ) {
 			return;
 		}
 
-		var first_link = $( this ).siblings( "ul" ).children( "li:first" ).children( "a" );
+		first_link = $( this ).siblings( "ul" ).children( "li:first" ).children( "a" );
 
 		active_menu_link.removeClass( "active" );
 		first_link.addClass( "active" );
 		panel_active.removeClass( "active" );
 		$( "#" + first_link.attr( "rel" ) ).addClass( "active" );
-
+		
+		$("#" + first_link.attr( "rel" ) + " .pretty-select").selectBoxIt();
+		
 		// Toggle the active class to show current tab
 		$( this ).parents( "li" ).toggleClass( "active" );
 		sidebar_active.removeClass( "active" );
@@ -61,6 +66,7 @@ jQuery( document ).ready( function ( $ ) {
 			menu_active.removeClass( "active" );
 		} );
 		$( this ).siblings( "ul" ).slideDown( 400 ).addClass( "active" );
+		
 	} );
 
 	// Switch individual panels
@@ -79,6 +85,8 @@ jQuery( document ).ready( function ( $ ) {
 		$( this ).addClass( "active" );
 		panel_active.removeClass( "active" );
 		$( "#" + requested_tab ).addClass( "active" );
+		
+		$("#" + requested_tab + " .pretty-select").selectBoxIt();
 
 	} );
 

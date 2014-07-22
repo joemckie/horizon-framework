@@ -356,9 +356,12 @@ function horizon_create_slug( $str ) {
 }
 
 // Get all google fonts
-function horizon_get_google_fonts( $api = 'AIzaSyCLXgNjOCHlE_3fHng8HUMkTTXd7DVfuyE' ) {
-	$all_fonts = json_decode( horizon_get_file( "https://www.googleapis.com/webfonts/v1/webfonts?key=$api") );
-
+function horizon_get_google_fonts() {
+	//$all_fonts = json_decode( horizon_get_file( "https://www.googleapis.com/webfonts/v1/webfonts?key=$api") );
+	
+	// to update fonts enter https://www.googleapis.com/webfonts/v1/webfonts?key=$api with your api key and copy paste the output to fonts/googleFontNames.json
+	$all_fonts = json_decode(file_get_contents(ROOT.'/_horizon/fonts/googleFontNames.json'), false);
+	
 	// If no fonts are returned (i.e. no internet), return the function
 	if ( is_null( $all_fonts ) )
 		return;
@@ -371,7 +374,7 @@ function horizon_get_google_fonts( $api = 'AIzaSyCLXgNjOCHlE_3fHng8HUMkTTXd7DVfu
 			}
 		}
 	}
-
+	
 	return $google_fonts;
 }
 

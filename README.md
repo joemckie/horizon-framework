@@ -1,3 +1,9 @@
+# This framework is DEPRECATED, it will not work with current versions of WordPress and I will not be maintaining it.
+
+*That said, feel free to [contact me](mailto:joe@joemck.ie) if you would like to maintain this project!*
+
+---
+
 Horizon Framework
 =================
 
